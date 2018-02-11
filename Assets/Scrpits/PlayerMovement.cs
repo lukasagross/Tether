@@ -6,13 +6,15 @@ public class PlayerMovement : MonoBehaviour
 {
     public float groundSpeed = 4f;
     public float swingSpeed = 6f;
-    public float jumpSpeed = 5f;
+    public float jumpSpeed = 6f;
     public float drag = 0.5f;
     public bool isGrounded;
     public bool grappleAttached;
+
     private Vector2 grappleAnchor;
     private Rigidbody2D rigidBody;
     private bool isJumping;
+    private bool canJump;
     private float jumpInput;
     private float horizontalInput;
 
@@ -24,11 +26,12 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        jumpInput = Input.GetAxis("Jump");
-        horizontalInput = Input.GetAxis("Horizontal");
+        jumpInput = Input.GetAxis("Controller-Jump");
+        horizontalInput = Input.GetAxis("Controller-Horizontal");
 
         //0.351 and 0.04 are magic numbers, they need to be tweaked if the collider is changed
         isGrounded = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - 0.351f), Vector2.down, 0.04f);
+        if (isGrounded) canJump = true;
     }
 
     void FixedUpdate()
@@ -61,14 +64,22 @@ public class PlayerMovement : MonoBehaviour
 
         if (!grappleAttached)
         {
-            if (!isGrounded) return;
-
             isJumping = jumpInput > 0.01f;
-            if (isJumping)
+
+            if (!isJumping || !canJump) return;
+
+            if (isGrounded)
             {
-                //Jumping resets y velocity, it doesn't add a force
                 rigidBody.velocity = new Vector2(rigidBody.velocity.x, jumpSpeed);
             }
+
+            else
+            {
+                rigidBody.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
+                //rigidBody.velocity = rigidBody.velocity.normalized * jumpSpeed;
+                //rigidBody.AddForce(rigidBody.velocity.normalized * jumpSpeed, ForceMode2D.Impulse);
+            }
+            canJump = false;
         }
     }
     //The following functions are the interface for PlayerMovement. Try to use only these functions.
