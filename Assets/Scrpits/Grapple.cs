@@ -41,7 +41,6 @@ public class Grapple : MonoBehaviour
         verticalInput = Input.GetAxis("Controller-Vertical");
 
         aimDirection = new Vector2(horizontalInput, verticalInput);
-        Debug.Log(aimDirection);
         playerPosition = transform.position;
 
         if (grappleAttached)

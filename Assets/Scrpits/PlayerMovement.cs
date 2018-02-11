@@ -65,12 +65,21 @@ public class PlayerMovement : MonoBehaviour
         if (!grappleAttached)
         {
             isJumping = jumpInput > 0.01f;
-            if (isJumping && canJump && !grappleAttached)
+
+            if (!isJumping || !canJump) return;
+
+            if (isGrounded)
+            {
+                rigidBody.velocity = new Vector2(rigidBody.velocity.x, jumpSpeed);
+            }
+
+            else
             {
                 rigidBody.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
-                //rigidBody.velocity = new Vector2(rigidBody.velocity.x, jumpSpeed);
-                canJump = false;
+                //rigidBody.velocity = rigidBody.velocity.normalized * jumpSpeed;
+                //rigidBody.AddForce(rigidBody.velocity.normalized * jumpSpeed, ForceMode2D.Impulse);
             }
+            canJump = false;
         }
     }
     //The following functions are the interface for PlayerMovement. Try to use only these functions.
