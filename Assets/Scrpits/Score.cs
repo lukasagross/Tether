@@ -12,6 +12,8 @@ public class Score : MonoBehaviour {
 	void Start () {
         playerOneText = transform.GetChild(0).GetComponent<Text>();
         playerTwoText = transform.GetChild(1).GetComponent<Text>();
+        playerOneText.text = "00";
+        playerTwoText.text = "00";
     }
 	
     public void AddScore(int playernum, int score)
@@ -19,13 +21,17 @@ public class Score : MonoBehaviour {
         if (playernum == 1)
         {
             playerOneScore += score;
-            playerOneText.text = playerOneScore.ToString();
+            var text = playerOneScore.ToString();
+            if (playerOneScore < 10) text = "0" + text;
+            playerOneText.text = text;
         }
 
         else if (playernum == 2)
         {
             playerTwoScore += score;
-            playerTwoText.text = playerTwoScore.ToString();
+            var text = playerTwoScore.ToString();
+            if (playerTwoScore < 10) text = "0" + text;
+            playerTwoText.text = text;
         }
     }
 }
