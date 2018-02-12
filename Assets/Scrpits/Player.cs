@@ -9,7 +9,7 @@ public class Player : MonoBehaviour {
     private string attackAxis;
     private string grappleAxis;
     private string jumpAxis;
-    public string playerNum;
+    public int playerNum;
 
     void Start()
     {

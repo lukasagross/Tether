@@ -9,7 +9,9 @@ public class WallBouncer : MonoBehaviour {
     private Transform pTransform;
     private Collider2D col;
     private Vector2 reboundDir;
+    private int playerNumber;
 
+    public Score score;
     public float hitboxDuration = 0.2f;
     public float coolDown = 0.6f;
     public float bounceMultiplier = 7;
@@ -21,6 +23,8 @@ public class WallBouncer : MonoBehaviour {
         pTransform = transform.parent;
         col = GetComponent<Collider2D>();
         reboundDir = Vector2.zero;
+        score = FindObjectOfType<Score>();
+        playerNumber = pTransform.parent.GetComponent<Player>().playerNum;
     }
 	
 	void Update () {
@@ -65,7 +69,9 @@ public class WallBouncer : MonoBehaviour {
             //Add code for victory condition
 
             collidedObject.GetComponent<PlayerMovement>().SetVelocity(-reboundDir);
+
             Debug.Log("Player " + collidedObject.GetComponent<Player>().playerNum + " was hit!");
+            score.AddScore(playerNumber, 1);
         }else if (collidedObject.GetComponent<Obstacle>())
         {
             GetComponentInParent<PlayerMovement>().SetVelocity(reboundDir);

@@ -11,6 +11,8 @@ public class Lance : MonoBehaviour
     private Collider2D col;
     private Vector2 reboundDir;
     private Vector2 dashDir;
+    private Score score;
+    private int playerNumber;
 
     public float hitboxDuration = 0.4f;
     public float coolDown = 1f;
@@ -22,6 +24,8 @@ public class Lance : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         pTransform = transform.parent;
         col = GetComponent<Collider2D>();
+        score = FindObjectOfType<Score>();
+        playerNumber = pTransform.parent.GetComponent<Player>().playerNum;
     }
 
     void Update()
@@ -71,6 +75,7 @@ public class Lance : MonoBehaviour
             GetComponentInParent<PlayerMovement>().AddVelocity(-0.8f*dashDir);
             collidedObject.GetComponent<PlayerMovement>().SetVelocity(dashDir);
             Debug.Log("Player " + collidedObject.GetComponent<Player>().playerNum + " was hit!");
+            score.AddScore(playerNumber, 1);
         }
     }
 
