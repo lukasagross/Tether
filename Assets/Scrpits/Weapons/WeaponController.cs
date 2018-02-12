@@ -21,7 +21,7 @@ public class WeaponController : MonoBehaviour {
 
     private void HandleInput()
     {
-        aimDirection = new Vector2(Input.GetAxis("Controller-Horizontal"), Input.GetAxis("Controller-Vertical"));
+        aimDirection = new Vector2(Input.GetAxis("Controller-Attack-Horizontal"), Input.GetAxis("Controller-Attack-Vertical"));
         attackInput = Input.GetAxis("Controller-Attack");
         
         if(attackInput == 1f)
