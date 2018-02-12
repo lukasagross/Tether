@@ -63,7 +63,9 @@ public class WallBouncer : MonoBehaviour {
         else if(collidedObject.GetComponent<PlayerMovement>() != null)
         {
             //Add code for victory condition
-            Debug.Log("Defeat Opponent");
+            
+
+            Debug.Log("Player " + collidedObject.GetComponent<Player>().playerNum + " was hit!");
         }else if (collidedObject.GetComponent<Obstacle>())
         {
             GetComponentInParent<PlayerMovement>().AddVelocity(reboundDir);
