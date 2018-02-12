@@ -7,13 +7,17 @@ public class WeaponController : MonoBehaviour {
     private Vector2 aimDirection;
     private float attackInput;
     private float rotation;
-    private Transform weapon;
+    private Transform wallBouncerTr;
+    private Transform lanceTr;
     private Player player;
-    
+
+    //To be set in unity
+    public string weapon;
 	
 	void Awake()
     {
-        weapon = transform.GetChild(0);
+        wallBouncerTr = transform.GetChild(0);
+        lanceTr = transform.GetChild(1);
         player = GetComponentInParent<Player>();
     }
 	
@@ -28,9 +32,13 @@ public class WeaponController : MonoBehaviour {
         
         if(attackInput == 1f)
         {
-            if (weapon.GetComponent<WallBouncer>() != null)
+            if (weapon == "WallBouncer")
             {
-                weapon.GetComponent<WallBouncer>().Attack(aimDirection);
+                wallBouncerTr.GetComponent<WallBouncer>().Attack(aimDirection);
+            }
+            if(weapon == "Lance")
+            {
+                lanceTr.GetComponent<Lance>().Attack(aimDirection);
             }
         }
     }
