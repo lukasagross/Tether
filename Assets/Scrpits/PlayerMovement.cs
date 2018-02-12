@@ -98,6 +98,11 @@ public class PlayerMovement : MonoBehaviour
 
     public void AddVelocity(Vector2 velocity)
     {
+        rigidBody.velocity += velocity;
+    }
+
+    public void SetVelocity(Vector2 velocity)
+    {
         rigidBody.velocity = velocity;
     }
 
