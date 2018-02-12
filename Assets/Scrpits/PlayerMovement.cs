@@ -17,17 +17,19 @@ public class PlayerMovement : MonoBehaviour
     private bool canJump;
     private float jumpInput;
     private float horizontalInput;
+    private Player player;
 
     void Awake()
     {
         rigidBody = GetComponent<Rigidbody2D>();
         rigidBody.drag = drag;
+        player = GetComponent<Player>();
     }
 
     void Update()
     {
-        jumpInput = Input.GetAxis("Controller-Jump");
-        horizontalInput = Input.GetAxis("Controller-Horizontal");
+        jumpInput = Input.GetAxis(player.getJumpAxis());
+        horizontalInput = Input.GetAxis(player.getHorizontalAxis());
 
         //0.351 and 0.04 are magic numbers, they need to be tweaked if the collider is changed
         isGrounded = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - 0.351f), Vector2.down, 0.04f);

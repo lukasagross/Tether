@@ -23,6 +23,7 @@ public class Grapple : MonoBehaviour
     private Vector2 anchorPosition;
     private Rigidbody2D grappleAnchorRb;
     private SpriteRenderer grappleAnchorSprite;
+    private Player player;
 
 
     void Awake()
@@ -32,13 +33,14 @@ public class Grapple : MonoBehaviour
         lineRenderer.positionCount = 2;
         joint.enabled = false;
         playerPosition = transform.position;
+        player = GetComponent<Player>();
     }
 
     void Update()
     {
-        grappleInput = Input.GetAxis("Controller-Grapple");
-        horizontalInput = Input.GetAxis("Controller-Horizontal");
-        verticalInput = Input.GetAxis("Controller-Vertical");
+        grappleInput = Input.GetAxis(player.getGrappleAxis());
+        horizontalInput = Input.GetAxis(player.getHorizontalAxis());
+        verticalInput = Input.GetAxis(player.getVerticalAxis());
 
         aimDirection = new Vector2(horizontalInput, verticalInput);
         playerPosition = transform.position;

@@ -8,11 +8,13 @@ public class WeaponController : MonoBehaviour {
     private float attackInput;
     private float rotation;
     private Transform weapon;
+    private Player player;
     
 	
 	void Awake()
     {
         weapon = transform.GetChild(0);
+        player = GetComponentInParent<Player>();
     }
 	
 	void Update () {
@@ -21,8 +23,8 @@ public class WeaponController : MonoBehaviour {
 
     private void HandleInput()
     {
-        aimDirection = new Vector2(Input.GetAxis("Controller-Attack-Horizontal"), Input.GetAxis("Controller-Attack-Vertical"));
-        attackInput = Input.GetAxis("Controller-Attack");
+        aimDirection = new Vector2(Input.GetAxis(player.getHorizontalAxis()), Input.GetAxis(player.getVerticalAxis()));
+        attackInput = Input.GetAxis(player.getAttackAxis());
         
         if(attackInput == 1f)
         {
