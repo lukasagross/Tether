@@ -10,6 +10,10 @@ public class WallBouncer : MonoBehaviour {
     private Collider2D col;
     private Vector2 reboundDir;
 
+    public float hitboxDuration = 0.2f;
+    public float coolDown = 0.6f;
+    public float bounceMultiplier = 7;
+
     void Awake()
     {
         timeElapsed = 35;
@@ -20,7 +24,7 @@ public class WallBouncer : MonoBehaviour {
     }
 	
 	void Update () {
-        if(timeElapsed > .2f) //Duration of hitbox in seconds
+        if(timeElapsed > hitboxDuration) 
         {
             sr.color = new Color(0, 0, 0, 0);
             col.enabled = false;
@@ -30,12 +34,12 @@ public class WallBouncer : MonoBehaviour {
 
     public void Attack(Vector2 aimDirection)
     {
-        if (timeElapsed > .6f) //Recovery time between attacks in seconds
+        if (timeElapsed > coolDown) 
         {
             timeElapsed = 0;
             col.enabled = true;
             sr.color = new Color(1, 0.92f, 0.016f, 1); //yellow!!
-            reboundDir = aimDirection.normalized*-7f; //The player rebounds opposite the direction they are aiming
+            reboundDir = aimDirection.normalized*-(bounceMultiplier); //The player rebounds opposite the direction they are aiming
             
             rotation = Vector2.Angle(aimDirection, Vector2.up);
             Vector3 tempCross = Vector3.Cross(aimDirection, Vector2.up);
