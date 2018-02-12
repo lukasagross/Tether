@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float groundSpeed = 4f;
-    public float swingSpeed = 6f;
+    public float swingSpeed = 10f;
     public float jumpSpeed = 6f;
     public float drag = 0.5f;
     public bool isGrounded;

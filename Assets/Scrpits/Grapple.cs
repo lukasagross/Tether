@@ -9,7 +9,7 @@ public class Grapple : MonoBehaviour
     public PlayerMovement playerMovement;
     public LineRenderer lineRenderer;
     public LayerMask layerMask;
-    public float climbSpeed = 7;
+    public float climbSpeed = 6;
     public float launchSpeed = 14;
 
     private bool grappleAttached;
