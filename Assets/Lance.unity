@@ -493,7 +493,7 @@ GameObject:
   - component: {fileID: 494712291}
   - component: {fileID: 494712290}
   - component: {fileID: 494712289}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: WallBouncer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -742,7 +742,7 @@ GameObject:
   - component: {fileID: 511143538}
   - component: {fileID: 511143537}
   - component: {fileID: 511143539}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Lance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -858,7 +858,7 @@ GameObject:
   - component: {fileID: 559335707}
   - component: {fileID: 559335706}
   - component: {fileID: 559335708}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Lance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2152,7 +2152,7 @@ GameObject:
   - component: {fileID: 1431888729}
   - component: {fileID: 1431888728}
   - component: {fileID: 1431888727}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: WallBouncer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
