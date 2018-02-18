@@ -10,6 +10,7 @@ public class WallBouncer : MonoBehaviour {
     private Collider2D col;
     private Vector2 reboundDir;
     private int playerNumber;
+    private Aim aim;
 
     public Score score;
     public float hitboxDuration = 0.2f;
@@ -25,6 +26,7 @@ public class WallBouncer : MonoBehaviour {
         reboundDir = Vector2.zero;
         score = FindObjectOfType<Score>();
         playerNumber = pTransform.parent.GetComponent<Player>().playerNum;
+        aim = GetComponentInParent<Player>().GetComponentInChildren<Aim>();
     }
 	
 	void Update () {
@@ -40,11 +42,17 @@ public class WallBouncer : MonoBehaviour {
     {
         if (timeElapsed > coolDown) 
         {
+            //Controls cd display
+            aim.ChangeColor(1f, 0f, 0f, 1f);
+            StartCoroutine(cdTimer());
+
+            //Resets variables
             timeElapsed = 0;
             col.enabled = true;
             sr.color = new Color(1, 0.92f, 0.016f, 1); //yellow!!
             reboundDir = aimDirection.normalized*-(bounceMultiplier); //The player rebounds opposite the direction they are aiming
             
+            //Controls rotating the weapon
             rotation = Vector2.Angle(aimDirection, Vector2.up);
             Vector3 tempCross = Vector3.Cross(aimDirection, Vector2.up);
             if (tempCross.z > 0)
@@ -77,6 +85,12 @@ public class WallBouncer : MonoBehaviour {
             GetComponentInParent<PlayerMovement>().SetVelocity(reboundDir);
         }
 
+    }
+
+    private IEnumerator cdTimer()
+    {
+        yield return new WaitForSeconds(coolDown - 0.05f);
+        aim.ChangeColor(1f, 1f, 1f, 1f);
     }
 
 }

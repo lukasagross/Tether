@@ -13,6 +13,7 @@ public class Lance : MonoBehaviour
     private Vector2 dashDir;
     private Score score;
     private int playerNumber;
+    private Aim aim;
 
     public float hitboxDuration = 0.4f;
     public float coolDown = 1f;
@@ -26,6 +27,7 @@ public class Lance : MonoBehaviour
         col = GetComponent<Collider2D>();
         score = FindObjectOfType<Score>();
         playerNumber = pTransform.parent.GetComponent<Player>().playerNum;
+        aim = GetComponentInParent<Player>().GetComponentInChildren<Aim>();
     }
 
     void Update()
@@ -42,6 +44,10 @@ public class Lance : MonoBehaviour
     {
         if (timeElapsed > coolDown)
         {
+            //Controls cd display
+            aim.ChangeColor(1f, 0f, 0f, 1f);
+            StartCoroutine(cdTimer());
+
             timeElapsed = 0;
             col.enabled = true;
             sr.color = new Color(0, 1, 1, 1); //cyan!!
@@ -77,6 +83,12 @@ public class Lance : MonoBehaviour
             Debug.Log("Player " + collidedObject.GetComponent<Player>().playerNum + " was hit!");
             score.AddScore(playerNumber, 1);
         }
+    }
+
+    private IEnumerator cdTimer()
+    {
+        yield return new WaitForSeconds(coolDown - 0.05f);
+        aim.ChangeColor(1f, 1f, 1f, 1f);
     }
 
 }

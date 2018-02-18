@@ -6,10 +6,12 @@ public class Aim : MonoBehaviour {
     private Vector2 aimDirection;
     private Player player;
     private float rotation;
+    private SpriteRenderer sr;
 
 	void Awake () {
         player = transform.parent.parent.GetComponent<Player>();
         aimDirection = Vector2.up;
+        sr = GetComponent<SpriteRenderer>();
 	}
 	
 	void Update () {
@@ -21,5 +23,10 @@ public class Aim : MonoBehaviour {
             rotation = 360 - rotation;
         }
         transform.parent.rotation = Quaternion.Euler(0, 0, rotation);
+    }
+
+    public void ChangeColor(float r, float g, float b, float a)
+    {
+        sr.color = new Color(r, g, b, a);
     }
 }
