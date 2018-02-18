@@ -9,6 +9,7 @@ public class WeaponController : MonoBehaviour {
     private float rotation;
     private Transform wallBouncerTr;
     private Transform lanceTr;
+    private Transform scytheTr;
     private Player player;
 
     //To be set in unity
@@ -18,6 +19,7 @@ public class WeaponController : MonoBehaviour {
     {
         wallBouncerTr = transform.GetChild(0);
         lanceTr = transform.GetChild(1);
+        scytheTr = transform.GetChild(2);
         player = GetComponentInParent<Player>();
     }
 	
@@ -39,6 +41,10 @@ public class WeaponController : MonoBehaviour {
             if(weapon == "Lance")
             {
                 lanceTr.GetComponent<Lance>().Attack(aimDirection);
+            }
+            if(weapon == "Scythe")
+            {
+                scytheTr.GetComponent<Scythe>().Attack(aimDirection);
             }
         }
     }
