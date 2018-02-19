@@ -23,7 +23,7 @@ public class Grapple : MonoBehaviour
     private Vector2 anchorPosition;
     private Rigidbody2D grappleAnchorRb;
     private SpriteRenderer grappleAnchorSprite;
-    private Player player;
+    private PlayerControls player;
 
 
     void Awake()
@@ -33,7 +33,7 @@ public class Grapple : MonoBehaviour
         lineRenderer.positionCount = 2;
         joint.enabled = false;
         playerPosition = transform.position;
-        player = GetComponent<Player>();
+        player = GetComponent<PlayerControls>();
     }
 
     void Update()

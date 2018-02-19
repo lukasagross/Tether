@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Aim : MonoBehaviour {
     private Vector2 aimDirection;
-    private Player player;
+    private PlayerControls player;
     private float rotation;
     private SpriteRenderer sr;
 
 	void Awake () {
-        player = transform.parent.parent.GetComponent<Player>();
+        player = transform.parent.parent.GetComponent<PlayerControls>();
         aimDirection = Vector2.up;
         sr = GetComponent<SpriteRenderer>();
 	}

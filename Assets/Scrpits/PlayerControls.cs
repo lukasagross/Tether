@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour {
+public class PlayerControls : MonoBehaviour {
 
     private string horizontalAxis;
     private string verticalAxis;

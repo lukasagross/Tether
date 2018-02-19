@@ -17,13 +17,13 @@ public class PlayerMovement : MonoBehaviour
     private bool canJump;
     private float jumpInput;
     private float horizontalInput;
-    private Player player;
+    private PlayerControls player;
 
     void Awake()
     {
         rigidBody = GetComponent<Rigidbody2D>();
         rigidBody.drag = drag;
-        player = GetComponent<Player>();
+        player = GetComponent<PlayerControls>();
     }
 
     void Update()

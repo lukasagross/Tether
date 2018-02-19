@@ -16,7 +16,7 @@ public class Scythe : MonoBehaviour
     public Score score;
     public float hitboxDuration = .25f;
     public float coolDown = .75f;
-    public float bounceMultiplier = 7;
+    public float bounceMultiplier = 5;
 
     void Awake()
     {
@@ -26,8 +26,8 @@ public class Scythe : MonoBehaviour
         col = GetComponent<Collider2D>();
         reboundDir = Vector2.zero;
         score = FindObjectOfType<Score>();
-        playerNumber = pTransform.parent.GetComponent<Player>().playerNum;
-        aim = GetComponentInParent<Player>().GetComponentInChildren<Aim>();
+        playerNumber = pTransform.parent.GetComponent<PlayerControls>().playerNum;
+        aim = GetComponentInParent<PlayerControls>().GetComponentInChildren<Aim>();
     }
 
     void Update()
@@ -54,6 +54,7 @@ public class Scythe : MonoBehaviour
             col.enabled = true;
             sr.color = new Color(0.8f, 0.7f, 0.85f, 1); //lavender bois!!
             reboundDir = aimDirection.normalized * -(bounceMultiplier); //The player rebounds opposite the direction they are aiming
+            GetComponentInParent<PlayerMovement>().AddVelocity(Vector2.up * bounceMultiplier);
 
             //Controls rotating the weapon
             rotation = Vector2.Angle(aimDirection, Vector2.up);
@@ -82,6 +83,7 @@ public class Scythe : MonoBehaviour
         if (collidedObject.GetComponent<Scythe>() != null)
         {
             GetComponentInParent<PlayerMovement>().SetVelocity(reboundDir);
+            col.enabled = false;
         }
         else if (collidedObject.GetComponent<PlayerMovement>() != null)
         {
@@ -89,8 +91,9 @@ public class Scythe : MonoBehaviour
 
             collidedObject.GetComponent<PlayerMovement>().SetVelocity(-reboundDir);
 
-            Debug.Log("Player " + collidedObject.GetComponent<Player>().playerNum + " was hit!");
+            Debug.Log("Player " + collidedObject.GetComponent<PlayerControls>().playerNum + " was hit!");
             score.AddScore(playerNumber, 1);
+            col.enabled = false;
         }
         
     }
@@ -104,8 +107,10 @@ public class Scythe : MonoBehaviour
    //The values in these coroutines are magic, found through experimentation.
     private IEnumerator cutRight()
     {
+        //Point up and right
         pTransform.localScale = new Vector3(-1, 1, 1);
         pTransform.rotation = Quaternion.Euler(0, 0, 0);
+
         for (int i = 0; i < 200; i++)
         {
             pTransform.rotation = Quaternion.Slerp(pTransform.rotation, Quaternion.Euler(0, 0, 180), .075f);
@@ -115,8 +120,10 @@ public class Scythe : MonoBehaviour
 
     private IEnumerator cutLeft()
     {
+        //Point up and left
         pTransform.localScale = new Vector3(1, 1, 1);
         pTransform.rotation = Quaternion.Euler(0, 0, 0);
+
         for (int i = 0; i < 200; i++)
         {
             pTransform.rotation = Quaternion.Slerp(pTransform.rotation, Quaternion.Euler(0, 0, -180), .075f);

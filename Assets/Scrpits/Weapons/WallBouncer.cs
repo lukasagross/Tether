@@ -25,8 +25,8 @@ public class WallBouncer : MonoBehaviour {
         col = GetComponent<Collider2D>();
         reboundDir = Vector2.zero;
         score = FindObjectOfType<Score>();
-        playerNumber = pTransform.parent.GetComponent<Player>().playerNum;
-        aim = GetComponentInParent<Player>().GetComponentInChildren<Aim>();
+        playerNumber = pTransform.parent.GetComponent<PlayerControls>().playerNum;
+        aim = GetComponentInParent<PlayerControls>().GetComponentInChildren<Aim>();
     }
 	
 	void Update () {
@@ -71,6 +71,7 @@ public class WallBouncer : MonoBehaviour {
         if(collidedObject.GetComponent<WallBouncer>() != null)
         {
             GetComponentInParent<PlayerMovement>().SetVelocity(reboundDir);
+            col.enabled = false;
         }
         else if(collidedObject.GetComponent<PlayerMovement>() != null)
         {
@@ -78,8 +79,9 @@ public class WallBouncer : MonoBehaviour {
 
             collidedObject.GetComponent<PlayerMovement>().SetVelocity(-reboundDir);
 
-            Debug.Log("Player " + collidedObject.GetComponent<Player>().playerNum + " was hit!");
+            Debug.Log("Player " + collidedObject.GetComponent<PlayerControls>().playerNum + " was hit!");
             score.AddScore(playerNumber, 1);
+            col.enabled = false;
         }else if (collidedObject.GetComponent<Obstacle>())
         {
             GetComponentInParent<PlayerMovement>().SetVelocity(reboundDir);

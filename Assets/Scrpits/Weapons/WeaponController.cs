@@ -10,7 +10,7 @@ public class WeaponController : MonoBehaviour {
     private Transform wallBouncerTr;
     private Transform lanceTr;
     private Transform scytheTr;
-    private Player player;
+    private PlayerControls player;
 
     //To be set in unity
     public string weapon;
@@ -20,7 +20,7 @@ public class WeaponController : MonoBehaviour {
         wallBouncerTr = transform.GetChild(0);
         lanceTr = transform.GetChild(1);
         scytheTr = transform.GetChild(2);
-        player = GetComponentInParent<Player>();
+        player = GetComponentInParent<PlayerControls>();
     }
 	
 	void Update () {

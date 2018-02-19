@@ -26,8 +26,8 @@ public class Lance : MonoBehaviour
         pTransform = transform.parent;
         col = GetComponent<Collider2D>();
         score = FindObjectOfType<Score>();
-        playerNumber = pTransform.parent.GetComponent<Player>().playerNum;
-        aim = GetComponentInParent<Player>().GetComponentInChildren<Aim>();
+        playerNumber = pTransform.parent.GetComponent<PlayerControls>().playerNum;
+        aim = GetComponentInParent<PlayerControls>().GetComponentInChildren<Aim>();
     }
 
     void Update()
@@ -74,14 +74,16 @@ public class Lance : MonoBehaviour
         if (collidedObject.GetComponent<Lance>() != null)
         {
             GetComponentInParent<PlayerMovement>().AddVelocity(reboundDir);
+            col.enabled = false;
         }
         else if (collidedObject.GetComponent<PlayerMovement>() != null)
         {
             //Add code for victory condition
             GetComponentInParent<PlayerMovement>().AddVelocity(-0.8f*dashDir);
             collidedObject.GetComponent<PlayerMovement>().SetVelocity(dashDir);
-            Debug.Log("Player " + collidedObject.GetComponent<Player>().playerNum + " was hit!");
+            Debug.Log("Player " + collidedObject.GetComponent<PlayerControls>().playerNum + " was hit!");
             score.AddScore(playerNumber, 1);
+            col.enabled = false;
         }
     }
 
