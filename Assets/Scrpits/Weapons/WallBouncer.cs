@@ -9,7 +9,10 @@ public class WallBouncer : MonoBehaviour {
     private Transform pTransform;
     private Collider2D col;
     private Vector2 reboundDir;
+    private int playerNumber;
+    private Aim aim;
 
+    public Score score;
     public float hitboxDuration = 0.2f;
     public float coolDown = 0.6f;
     public float bounceMultiplier = 7;
@@ -21,6 +24,9 @@ public class WallBouncer : MonoBehaviour {
         pTransform = transform.parent;
         col = GetComponent<Collider2D>();
         reboundDir = Vector2.zero;
+        score = FindObjectOfType<Score>();
+        playerNumber = pTransform.parent.GetComponent<PlayerControls>().playerNum;
+        aim = GetComponentInParent<PlayerControls>().GetComponentInChildren<Aim>();
     }
 	
 	void Update () {
@@ -36,11 +42,17 @@ public class WallBouncer : MonoBehaviour {
     {
         if (timeElapsed > coolDown) 
         {
+            //Controls cd display
+            aim.ChangeColor(1f, 0f, 0f, 1f);
+            StartCoroutine(cdTimer());
+
+            //Resets variables
             timeElapsed = 0;
             col.enabled = true;
             sr.color = new Color(1, 0.92f, 0.016f, 1); //yellow!!
             reboundDir = aimDirection.normalized*-(bounceMultiplier); //The player rebounds opposite the direction they are aiming
             
+            //Controls rotating the weapon
             rotation = Vector2.Angle(aimDirection, Vector2.up);
             Vector3 tempCross = Vector3.Cross(aimDirection, Vector2.up);
             if (tempCross.z > 0)
@@ -58,19 +70,29 @@ public class WallBouncer : MonoBehaviour {
 
         if(collidedObject.GetComponent<WallBouncer>() != null)
         {
-            GetComponentInParent<PlayerMovement>().AddVelocity(reboundDir);
+            GetComponentInParent<PlayerMovement>().SetVelocity(reboundDir);
+            col.enabled = false;
         }
         else if(collidedObject.GetComponent<PlayerMovement>() != null)
         {
             //Add code for victory condition
-            
 
-            Debug.Log("Player " + collidedObject.GetComponent<Player>().playerNum + " was hit!");
+            collidedObject.GetComponent<PlayerMovement>().SetVelocity(-reboundDir);
+
+            Debug.Log("Player " + collidedObject.GetComponent<PlayerControls>().playerNum + " was hit!");
+            score.AddScore(playerNumber, 1);
+            col.enabled = false;
         }else if (collidedObject.GetComponent<Obstacle>())
         {
-            GetComponentInParent<PlayerMovement>().AddVelocity(reboundDir);
+            GetComponentInParent<PlayerMovement>().SetVelocity(reboundDir);
         }
 
+    }
+
+    private IEnumerator cdTimer()
+    {
+        yield return new WaitForSeconds(coolDown - 0.05f);
+        aim.ChangeColor(1f, 1f, 1f, 1f);
     }
 
 }
