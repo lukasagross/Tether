@@ -1985,7 +1985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81a7581412ebdda46bc87eeaf77dcedd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: Lance
+  weapon: Scythe
 --- !u!1 &718496753
 GameObject:
   m_ObjectHideFlags: 0

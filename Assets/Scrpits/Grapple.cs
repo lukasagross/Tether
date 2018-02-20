@@ -16,7 +16,7 @@ public class Grapple : MonoBehaviour
     private float grappleInput;
     private float horizontalInput;
     private float verticalInput;
-    private float grappleMaxDistance = 10f;
+    private float grappleMaxDistance = 20f;
     private Vector2 aimDirection;
     private Vector2 playerPosition;
     private Vector2 prevPosition;
@@ -66,8 +66,8 @@ public class Grapple : MonoBehaviour
             lineRenderer.enabled = true;
 
             var hit = Physics2D.Raycast(playerPosition, aimDirection, grappleMaxDistance, layerMask);
-
-            if (hit.collider != null)
+            //
+            if (hit.collider != null && Vector2.Distance(hit.point, playerPosition) > .6f)
             {
                 ToggleGrapple(true);
 
@@ -115,6 +115,13 @@ public class Grapple : MonoBehaviour
     {
         if (!grappleAttached) return;
 
+        //
+        if(joint.distance < 0.4f)
+        {
+            ToggleGrapple(false);
+            return;
+        }
+        //
         lineRenderer.SetPosition(1, transform.position);
 
         //I have no idea why this line needs to be here, but when I move it everything breaks
