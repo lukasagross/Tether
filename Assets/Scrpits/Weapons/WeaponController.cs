@@ -13,7 +13,7 @@ public class WeaponController : MonoBehaviour {
     private PlayerControls player;
 
     //To be set in unity
-    public string weapon;
+    public Weapon.WeaponType type;
 	
 	void Awake()
     {
@@ -25,6 +25,7 @@ public class WeaponController : MonoBehaviour {
 	
 	void Update () {
         HandleInput();
+        //if (Input.GetKeyDown(KeyCode))
 	}
 
     private void HandleInput()
@@ -34,15 +35,15 @@ public class WeaponController : MonoBehaviour {
         
         if(attackInput == 1f)
         {
-            if (weapon == "WallBouncer")
+            if (type == Weapon.WeaponType.Wallbouncer)
             {
                 wallBouncerTr.GetComponent<WallBouncer>().Attack(aimDirection);
             }
-            if(weapon == "Lance")
+            if(type == Weapon.WeaponType.Lance)
             {
                 lanceTr.GetComponent<Lance>().Attack(aimDirection);
             }
-            if(weapon == "Scythe")
+            if(type == Weapon.WeaponType.Scythe)
             {
                 scytheTr.GetComponent<Scythe>().Attack(aimDirection);
             }
