@@ -11,8 +11,8 @@ public class WallBouncer : MonoBehaviour {
     private Vector2 reboundDir;
     private int playerNumber;
     private Aim aim;
+    private Score score;
 
-    public Score score;
     public float hitboxDuration = 0.2f;
     public float coolDown = 0.6f;
     public float bounceMultiplier = 7;

@@ -12,8 +12,8 @@ public class Scythe : MonoBehaviour
     private Vector2 reboundDir;
     private int playerNumber;
     private Aim aim;
+    private Score score;
 
-    public Score score;
     public float hitboxDuration = .25f;
     public float coolDown = .75f;
     public float bounceMultiplier = 5;

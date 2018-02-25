@@ -11,6 +11,7 @@ public class WeaponController : MonoBehaviour {
     private Transform lanceTr;
     private Transform scytheTr;
     private PlayerControls player;
+    private Transform daggerTr;
 
     //To be set in unity
     public Weapon.WeaponType type;
@@ -20,6 +21,7 @@ public class WeaponController : MonoBehaviour {
         wallBouncerTr = transform.GetChild(0);
         lanceTr = transform.GetChild(1);
         scytheTr = transform.GetChild(2);
+        daggerTr = transform.GetChild(3);
         player = GetComponentInParent<PlayerControls>();
     }
 	
@@ -46,6 +48,10 @@ public class WeaponController : MonoBehaviour {
             if(type == Weapon.WeaponType.Scythe)
             {
                 scytheTr.GetComponent<Scythe>().Attack(aimDirection);
+            }
+            if(type == Weapon.WeaponType.Dagger)
+            {
+                StartCoroutine(daggerTr.GetComponent<Dagger>().Attack(aimDirection));
             }
         }
     }
