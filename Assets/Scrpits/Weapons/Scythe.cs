@@ -36,7 +36,6 @@ public class Scythe : MonoBehaviour
         {
             sr.color = new Color(0, 0, 0, 0);
             col.enabled = false;
-            pTransform.rotation = Quaternion.Euler(0, 0, 0);
         }
         timeElapsed += Time.deltaTime;
     }
@@ -87,13 +86,13 @@ public class Scythe : MonoBehaviour
         }
         else if (collidedObject.GetComponent<PlayerMovement>() != null)
         {
-            //Add code for victory condition
-
             collidedObject.GetComponent<PlayerMovement>().SetVelocity(-reboundDir);
 
-            Debug.Log("Player " + collidedObject.GetComponent<PlayerControls>().playerNum + " was hit!");
+            if (collidedObject.GetComponent<PlayerHealth>().canDamage()) { 
+            collidedObject.GetComponent<PlayerHealth>().takeDamage();
             score.AddScore(playerNumber, 1);
             col.enabled = false;
+            }
         }
         
     }

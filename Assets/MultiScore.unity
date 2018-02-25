@@ -1577,6 +1577,7 @@ GameObject:
   - component: {fileID: 594725773}
   - component: {fileID: 594725772}
   - component: {fileID: 594725771}
+  - component: {fileID: 594725780}
   m_Layer: 8
   m_Name: Player3
   m_TagString: Untagged
@@ -1844,6 +1845,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &594725780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 594725770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fba452b74411504d871fb4eea9b9098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iFrameDuration: 0.07
 --- !u!1 &601435391
 GameObject:
   m_ObjectHideFlags: 0
@@ -1972,7 +1985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81a7581412ebdda46bc87eeaf77dcedd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: Scythe
+  type: 1
 --- !u!1 &718496753
 GameObject:
   m_ObjectHideFlags: 0
@@ -2137,8 +2150,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 100, y: 20}
-  m_SizeDelta: {x: 200, y: 45}
+  m_AnchoredPosition: {x: 100, y: 15}
+  m_SizeDelta: {x: 200, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &735079280
 MonoBehaviour:
@@ -2433,6 +2446,7 @@ GameObject:
   - component: {fileID: 809701279}
   - component: {fileID: 809701278}
   - component: {fileID: 809701277}
+  - component: {fileID: 809701286}
   m_Layer: 8
   m_Name: Player4
   m_TagString: Untagged
@@ -2675,7 +2689,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 1697e55d889a5c941bd945f4727583c0, type: 3}
-  m_Color: {r: 0.8845398, g: 0.875, b: 0.8943015, a: 1}
+  m_Color: {r: 0.903, g: 0.88235295, b: 0.49307957, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2700,6 +2714,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &809701286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 809701276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fba452b74411504d871fb4eea9b9098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iFrameDuration: 0.07
 --- !u!1 &825616618
 GameObject:
   m_ObjectHideFlags: 0
@@ -3809,7 +3835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81a7581412ebdda46bc87eeaf77dcedd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: Scythe
+  type: 1
 --- !u!1 &1351129052
 GameObject:
   m_ObjectHideFlags: 0
@@ -3826,6 +3852,7 @@ GameObject:
   - component: {fileID: 1351129054}
   - component: {fileID: 1351129053}
   - component: {fileID: 1351129061}
+  - component: {fileID: 1351129062}
   m_Layer: 8
   m_Name: Player2
   m_TagString: Untagged
@@ -4093,6 +4120,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 2
+--- !u!114 &1351129062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1351129052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fba452b74411504d871fb4eea9b9098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iFrameDuration: 0.07
 --- !u!1 &1426476242
 GameObject:
   m_ObjectHideFlags: 0
@@ -4344,7 +4383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81a7581412ebdda46bc87eeaf77dcedd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: Scythe
+  type: 1
 --- !u!1 &1511537924
 GameObject:
   m_ObjectHideFlags: 0
@@ -4377,8 +4416,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -100, y: 20}
-  m_SizeDelta: {x: 200, y: 45}
+  m_AnchoredPosition: {x: -100, y: 15}
+  m_SizeDelta: {x: 200, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1511537926
 MonoBehaviour:
@@ -4392,7 +4431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.43509948, g: 0.43701342, b: 0.43382353, a: 1}
+  m_Color: {r: 0.9019608, g: 0.88235295, b: 0.49411765, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4462,7 +4501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81a7581412ebdda46bc87eeaf77dcedd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: Scythe
+  type: 1
 --- !u!1 &1571932341
 GameObject:
   m_ObjectHideFlags: 0
@@ -4479,6 +4518,7 @@ GameObject:
   - component: {fileID: 1571932345}
   - component: {fileID: 1571932344}
   - component: {fileID: 1571932350}
+  - component: {fileID: 1571932351}
   m_Layer: 8
   m_Name: Player1
   m_TagString: Untagged
@@ -4746,6 +4786,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 1
+--- !u!114 &1571932351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1571932341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fba452b74411504d871fb4eea9b9098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iFrameDuration: 0.07
 --- !u!1 &1615742602
 GameObject:
   m_ObjectHideFlags: 0

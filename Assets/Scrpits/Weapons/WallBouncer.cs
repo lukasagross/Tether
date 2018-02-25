@@ -79,9 +79,12 @@ public class WallBouncer : MonoBehaviour {
 
             collidedObject.GetComponent<PlayerMovement>().SetVelocity(-reboundDir);
 
-            Debug.Log("Player " + collidedObject.GetComponent<PlayerControls>().playerNum + " was hit!");
-            score.AddScore(playerNumber, 1);
-            col.enabled = false;
+            if (collidedObject.GetComponent<PlayerHealth>().canDamage())
+            {
+                collidedObject.GetComponent<PlayerHealth>().takeDamage();
+                score.AddScore(playerNumber, 1);
+                col.enabled = false;
+            }
         }else if (collidedObject.GetComponent<Obstacle>())
         {
             GetComponentInParent<PlayerMovement>().SetVelocity(reboundDir);
