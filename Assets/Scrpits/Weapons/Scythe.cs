@@ -16,7 +16,7 @@ public class Scythe : MonoBehaviour
 
     public float hitboxDuration = .25f;
     public float coolDown = .75f;
-    public float bounceMultiplier = 5;
+    public float dashMultiplier = 4;
 
     void Awake()
     {
@@ -52,8 +52,7 @@ public class Scythe : MonoBehaviour
             timeElapsed = 0;
             col.enabled = true;
             sr.color = new Color(0.8f, 0.7f, 0.85f, 1); //lavender bois!!
-            reboundDir = aimDirection.normalized * -(bounceMultiplier); //The player rebounds opposite the direction they are aiming
-            GetComponentInParent<PlayerMovement>().AddVelocity(Vector2.up * bounceMultiplier);
+            reboundDir = aimDirection.normalized * -(dashMultiplier); //The player rebounds opposite the direction they are aiming
 
             //Controls rotating the weapon
             rotation = Vector2.Angle(aimDirection, Vector2.up);
@@ -63,13 +62,21 @@ public class Scythe : MonoBehaviour
                 rotation = 360 - rotation;
             }
 
-            if(rotation > 180)
+            if(rotation > 270)
             {
-                StartCoroutine(cutRight());
+                StartCoroutine(cutUpRight());
+            }
+            else if(rotation > 180)
+            {
+                StartCoroutine(cutDownRight());
+            }
+            else if(rotation > 90)
+            {
+                StartCoroutine(cutDownLeft());
             }
             else
             {
-                StartCoroutine(cutLeft());
+                StartCoroutine(cutUpLeft());
             }
         }
     }
@@ -104,28 +111,78 @@ public class Scythe : MonoBehaviour
     }
 
    //The values in these coroutines are magic, found through experimentation.
-    private IEnumerator cutRight()
+    private IEnumerator cutUpRight()
     {
+        //Gain velocity in slash direction
+        GetComponentInParent<PlayerMovement>().AddVelocity(new Vector2(1, 1) * dashMultiplier);
+
         //Point up and right
         pTransform.localScale = new Vector3(-1, 1, 1);
         pTransform.rotation = Quaternion.Euler(0, 0, 0);
 
-        for (int i = 0; i < 200; i++)
+        float temp = 0f;
+        float rate = 1 / hitboxDuration;
+        while (temp < 1.0)
         {
-            pTransform.rotation = Quaternion.Slerp(pTransform.rotation, Quaternion.Euler(0, 0, 180), .075f);
+            temp += Time.deltaTime * rate;
+            pTransform.rotation = Quaternion.Slerp(pTransform.rotation, Quaternion.Euler(0, 0, 240), temp);
             yield return null;
         }
     }
 
-    private IEnumerator cutLeft()
+    private IEnumerator cutDownRight()
     {
+        //Gain velocity in slash direction
+        GetComponentInParent<PlayerMovement>().AddVelocity(new Vector2(1, .5f) * dashMultiplier);
+
+        //Point right
+        pTransform.localScale = new Vector3(-1, 1, 1);
+        pTransform.rotation = Quaternion.Euler(0, 0, 270);
+
+        float temp = 0f;
+        float rate = 1 / hitboxDuration;
+        while (temp < 1.0)
+        {
+            temp += Time.deltaTime * rate;
+            pTransform.rotation = Quaternion.Slerp(pTransform.rotation, Quaternion.Euler(0, 0, 150), temp);
+            yield return null;
+        }
+    }
+
+    private IEnumerator cutUpLeft()
+    {
+        //Gain velocity in slash direction
+        GetComponentInParent<PlayerMovement>().AddVelocity(new Vector2(-1, 1) * dashMultiplier);
+
         //Point up and left
         pTransform.localScale = new Vector3(1, 1, 1);
         pTransform.rotation = Quaternion.Euler(0, 0, 0);
 
-        for (int i = 0; i < 200; i++)
+        float temp = 0f;
+        float rate = 1 / hitboxDuration;
+        while (temp < 1.0)
         {
-            pTransform.rotation = Quaternion.Slerp(pTransform.rotation, Quaternion.Euler(0, 0, -180), .075f);
+            temp += Time.deltaTime * rate;
+            pTransform.rotation = Quaternion.Slerp(pTransform.rotation, Quaternion.Euler(0, 0, -240), temp);
+            yield return null;
+        }
+    }
+
+    private IEnumerator cutDownLeft()
+    {
+        //Gain velocity in slash direction
+        GetComponentInParent<PlayerMovement>().AddVelocity(new Vector2(-1, .5f) * dashMultiplier);
+
+        //Point up and left
+        pTransform.localScale = new Vector3(1, 1, 1);
+        pTransform.rotation = Quaternion.Euler(0, 0, -270);
+
+        float temp = 0f;
+        float rate = 1 / hitboxDuration;
+        while (temp < 1.0)
+        {
+            temp += Time.deltaTime * rate;
+            pTransform.rotation = Quaternion.Slerp(pTransform.rotation, Quaternion.Euler(0, 0, -150), temp);
             yield return null;
         }
     }
