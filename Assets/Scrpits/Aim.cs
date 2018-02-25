@@ -9,7 +9,7 @@ public class Aim : MonoBehaviour {
     private SpriteRenderer sr;
 
 	void Awake () {
-        player = transform.parent.parent.GetComponent<PlayerControls>();
+        player = GetComponentInParent<PlayerControls>();
         aimDirection = Vector2.up;
         sr = GetComponent<SpriteRenderer>();
 	}

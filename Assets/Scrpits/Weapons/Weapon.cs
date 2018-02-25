@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Weapon {
-	 public enum WeaponType { Wallbouncer, Scythe, Lance };
+	 public enum WeaponType { Wallbouncer, Scythe, Lance, Dagger };
 
     public WeaponType NextType(WeaponType type)
     {
@@ -14,6 +14,8 @@ public class Weapon {
             case WeaponType.Scythe:
                 return WeaponType.Lance;
             case WeaponType.Lance:
+                return WeaponType.Dagger;
+            case WeaponType.Dagger:
                 return WeaponType.Wallbouncer;
             default: return WeaponType.Wallbouncer;
         }
