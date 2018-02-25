@@ -25,7 +25,7 @@ public class WallBouncer : MonoBehaviour {
         col = GetComponent<Collider2D>();
         reboundDir = Vector2.zero;
         score = FindObjectOfType<Score>();
-        playerNumber = pTransform.parent.GetComponent<PlayerControls>().playerNum;
+        playerNumber = GetComponentInParent<PlayerControls>().playerNum;
         aim = GetComponentInParent<PlayerControls>().GetComponentInChildren<Aim>();
     }
 	

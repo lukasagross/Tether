@@ -26,7 +26,7 @@ public class Lance : MonoBehaviour
         pTransform = transform.parent;
         col = GetComponent<Collider2D>();
         score = FindObjectOfType<Score>();
-        playerNumber = pTransform.parent.GetComponent<PlayerControls>().playerNum;
+        playerNumber = GetComponentInParent<PlayerControls>().playerNum;
         aim = GetComponentInParent<PlayerControls>().GetComponentInChildren<Aim>();
     }
 
