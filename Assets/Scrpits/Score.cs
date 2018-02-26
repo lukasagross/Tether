@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine;
 
 public class Score : MonoBehaviour {
-    private int playerOneScore = 0;
+    public int playerOneScore = 0;
     private int playerTwoScore = 0;
     private int playerThreeScore = 0;
     private int playerFourScore = 0;
@@ -28,39 +29,59 @@ public class Score : MonoBehaviour {
     {
         StartCoroutine(changeRes());
     }
+
+    private void Win(string playernum)
+    {
+        PlayerPrefs.SetString("Winner", playernum);
+        PlayerPrefs.Save();
+        Time.timeScale = 0;
+        System.Threading.Thread.Sleep(1000);
+        SceneManager.LoadScene("GameOver");
+    }
 	
     public void AddScore(int playernum, int score)
     {
-        if (playernum == 1)
+        switch (playernum)
         {
-            playerOneScore += score;
-            var text = playerOneScore.ToString();
-            if (playerOneScore < 10) text = "0" + text;
-            playerOneText.text = text;
-        }
+            case 1:
+                {
+                    playerOneScore += score;
+                    var text = playerOneScore.ToString();
+                    if (playerOneScore < 10) text = "0" + text;
+                    playerOneText.text = text;
+                    if (playerOneScore >= 15) Win("Player One");
+                    break;
+                }
 
-        else if (playernum == 2)
-        {
-            playerTwoScore += score;
-            var text = playerTwoScore.ToString();
-            if (playerTwoScore < 10) text = "0" + text;
-            playerTwoText.text = text;
-        }
+            case 2:
+                {
+                    playerTwoScore += score;
+                    var text = playerTwoScore.ToString();
+                    if (playerTwoScore < 10) text = "0" + text;
+                    playerTwoText.text = text;
+                    if (playerTwoScore >= 15) Win("Player Two");
+                    break;
+                }
 
-        else if (playernum == 3)
-        {
-            playerThreeScore += score;
-            var text = playerThreeScore.ToString();
-            if (playerTwoScore < 10) text = "0" + text;
-            playerThreeText.text = text;
-        }
+            case 3:
+                {
+                    playerThreeScore += score;
+                    var text = playerThreeScore.ToString();
+                    if (playerTwoScore < 10) text = "0" + text;
+                    playerThreeText.text = text;
+                    if (playerThreeScore >= 15) Win("Player Three");
+                    break;
+                }
 
-        else if (playernum == 4)
-        {
-            playerFourScore += score;
-            var text = playerFourScore.ToString();
-            if (playerTwoScore < 10) text = "0" + text;
-            playerFourText.text = text;
+            case 4:
+                {
+                    playerFourScore += score;
+                    var text = playerFourScore.ToString();
+                    if (playerTwoScore < 10) text = "0" + text;
+                    playerFourText.text = text;
+                    if (playerFourScore >= 15) Win("Player Four");
+                    break;
+                }
         }
     }
 
