@@ -54,7 +54,7 @@ public class Dagger : MonoBehaviour
             //Resets variables
             timeElapsed = 0;
             col.enabled = true;
-            sr.color = new Color(0, 0, 0, 1); //black!!
+            sr.color = Color.white;
             reboundDir = aimDirection.normalized * -(dashMultiplier); //The player rebounds opposite the direction they are aiming
             dashDir = aimDirection.normalized * dashMultiplier; //Dashing occurs every attack
             GetComponentInParent<PlayerMovement>().AddVelocity(dashDir);
@@ -72,13 +72,13 @@ public class Dagger : MonoBehaviour
 
             //******************swing again with new aimDirection*************************
             yield return new WaitForSeconds(0.15f);
-            sr.color = new Color(1, 1, 1, 0);
+            sr.color = Color.white;
             col.enabled = false;
             yield return new WaitForSeconds(0.05f);
             col.enabled = true;
 
             aimDirection = new Vector2(Input.GetAxis(player.getHorizontalAxis()), Input.GetAxis(player.getVerticalAxis()));
-            sr.color = new Color(0, 0, 0, 1); //blacc!!
+            sr.color = Color.white;
             reboundDir = aimDirection.normalized * -(dashMultiplier);
             dashDir = aimDirection.normalized * dashMultiplier; //Dashing occurs every attack
             GetComponentInParent<PlayerMovement>().AddVelocity(dashDir);
@@ -100,7 +100,7 @@ public class Dagger : MonoBehaviour
             col.enabled = true;
 
             aimDirection = new Vector2(Input.GetAxis(player.getHorizontalAxis()), Input.GetAxis(player.getVerticalAxis()));
-            sr.color = new Color(0, 0, 0, 1); //black!!
+            sr.color = Color.white;
             reboundDir = aimDirection.normalized * -(dashMultiplier);
             dashDir = aimDirection.normalized * dashMultiplier; //Dashing occurs every attack
             GetComponentInParent<PlayerMovement>().AddVelocity(dashDir);
