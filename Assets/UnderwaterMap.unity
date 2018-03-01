@@ -1762,7 +1762,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6fc4dcfbb981e4214a6fe5a2efaf6481, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.734}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1874,7 +1874,7 @@ SpriteRenderer:
   m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: cbb5acb5e6a8d4ad195e8d4ab37a8741, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.497}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2016,8 +2016,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 679732957
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300004, guid: 339ae30d784fb4471baf2f068096b394, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4126,7 +4126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81a7581412ebdda46bc87eeaf77dcedd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
+  type: 3
 --- !u!1001 &663628028
 Prefab:
   m_ObjectHideFlags: 0
@@ -4334,7 +4334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81a7581412ebdda46bc87eeaf77dcedd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
+  type: 2
 --- !u!1 &704631960
 GameObject:
   m_ObjectHideFlags: 0
@@ -6074,7 +6074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81a7581412ebdda46bc87eeaf77dcedd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
+  type: 3
 --- !u!1 &1105774955
 GameObject:
   m_ObjectHideFlags: 0
@@ -8260,7 +8260,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.805, y: 3.7}
+  m_AnchoredPosition: {x: -65, y: 0.0000030994}
   m_SizeDelta: {x: 1440, y: 729}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1615742604
@@ -10002,7 +10002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81a7581412ebdda46bc87eeaf77dcedd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
+  type: 2
 --- !u!1 &2080242139
 GameObject:
   m_ObjectHideFlags: 0
