@@ -15,7 +15,7 @@ public class WallBouncer : MonoBehaviour {
 
     public float hitboxDuration = 0.2f;
     public float coolDown = 0.6f;
-    public float bounceMultiplier = 7;
+    public float bounceMultiplier = 8;
 
     void Awake()
     {
@@ -49,7 +49,7 @@ public class WallBouncer : MonoBehaviour {
             //Resets variables
             timeElapsed = 0;
             col.enabled = true;
-            sr.color = new Color(1, 0.92f, 0.016f, 1); //yellow!!
+            sr.color = Color.white;
             reboundDir = aimDirection.normalized*-(bounceMultiplier); //The player rebounds opposite the direction they are aiming
             
             //Controls rotating the weapon

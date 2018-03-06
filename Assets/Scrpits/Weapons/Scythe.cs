@@ -51,7 +51,7 @@ public class Scythe : MonoBehaviour
             //Resets variables
             timeElapsed = 0;
             col.enabled = true;
-            sr.color = new Color(0.8f, 0.7f, 0.85f, 1); //lavender bois!!
+            sr.color = Color.white; //lavender bois!!
             reboundDir = aimDirection.normalized * -(dashMultiplier); //The player rebounds opposite the direction they are aiming
 
             //Controls rotating the weapon

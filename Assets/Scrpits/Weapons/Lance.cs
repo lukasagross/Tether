@@ -50,7 +50,7 @@ public class Lance : MonoBehaviour
 
             timeElapsed = 0;
             col.enabled = true;
-            sr.color = new Color(0, 1, 1, 1); //cyan!!
+            sr.color = Color.white;
             reboundDir = aimDirection.normalized * -1.5f*(dashMultiplier); //Rebounding only occurs on a block
 
             dashDir = aimDirection.normalized * dashMultiplier; //Dashing occurs every attack
