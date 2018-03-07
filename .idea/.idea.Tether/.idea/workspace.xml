@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b3005c8d-2c27-44fb-af92-00752602539f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.Tether/.idea/contentModel.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.Tether/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.Tether/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.Tether/riderModule.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Art.unity" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Art.unity.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/FourWeapons2.0.unity" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/FourWeapons2.0.unity.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/GameOver.unity" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/GameOver.unity.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Scrpits.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Scrpits/Aim.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Scrpits/Aim.cs.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Scrpits/Grapple.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Scrpits/Grapple.cs.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Scrpits/Obstacle.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Scrpits/Obstacle.cs.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Scrpits/PlayerControls.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Scrpits/PlayerControls.cs.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Scrpits/PlayerHealth.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Scrpits/PlayerHealth.cs.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Scrpits/PlayerMovement.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Scrpits/PlayerMovement.cs.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Scrpits/Score.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Scrpits/Score.cs.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Scrpits/Weapons.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Scrpits/Weapons/Dagger.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Scrpits/Weapons/Dagger.cs.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Scrpits/Weapons/Lance.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Scrpits/Weapons/Lance.cs.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Scrpits/Weapons/Scythe.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Scrpits/Weapons/Scythe.cs.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Scrpits/Weapons/WallBouncer.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Scrpits/Weapons/WallBouncer.cs.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Scrpits/Weapons/Weapon.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Scrpits/Weapons/Weapon.cs.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Scrpits/Weapons/WeaponController.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Scrpits/Weapons/WeaponController.cs.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Environment.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Environment/background.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Environment/background.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Environment/environment-preview.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Environment/environment-preview.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Environment/middleground.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Environment/middleground.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Environment/props.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Environment/props/house.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Environment/props/house.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Environment/props/mushroom-brown.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Environment/props/mushroom-brown.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Environment/props/mushroom-red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Environment/props/mushroom-red.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Environment/props/plant.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Environment/props/plant.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Environment/props/rock.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Environment/props/rock.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Environment/props/tree.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Environment/props/tree.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Environment/props/vine.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Environment/props/vine.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Environment/tileset.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Environment/tileset.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Environment/tileset_preview.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Environment/tileset_preview.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/bee.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/bee/bee-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/bee/bee-1.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/bee/bee-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/bee/bee-2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/bee/bee-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/bee/bee-3.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/bee/bee-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/bee/bee-4.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/bee/bee-5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/bee/bee-5.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/bee/bee-6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/bee/bee-6.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/bee/bee-7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/bee/bee-7.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/bee/bee-8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/bee/bee-8.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/piranha-plant-attack.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/piranha-plant-attack/piranha-plant-attack-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/piranha-plant-attack/piranha-plant-attack-1.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/piranha-plant-attack/piranha-plant-attack-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/piranha-plant-attack/piranha-plant-attack-2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/piranha-plant-attack/piranha-plant-attack-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/piranha-plant-attack/piranha-plant-attack-3.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/piranha-plant-attack/piranha-plant-attack-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/piranha-plant-attack/piranha-plant-attack-4.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/piranha-plant.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/piranha-plant/piranha-plant-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/piranha-plant/piranha-plant-1.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/piranha-plant/piranha-plant-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/piranha-plant/piranha-plant-2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/piranha-plant/piranha-plant-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/piranha-plant/piranha-plant-3.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/piranha-plant/piranha-plant-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/piranha-plant/piranha-plant-4.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/piranha-plant/piranha-plant-5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/piranha-plant/piranha-plant-5.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/slug.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/slug/slug-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/slug/slug-1.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/slug/slug-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/slug/slug-2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/slug/slug-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/slug/slug-3.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/slug/slug-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/enemies/slug/slug-4.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/carrot.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/carrot/carrot-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/carrot/carrot-1.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/carrot/carrot-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/carrot/carrot-2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/carrot/carrot-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/carrot/carrot-3.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/carrot/carrot-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/carrot/carrot-4.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/chest.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/chest/chest-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/chest/chest-1.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/chest/chest-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/chest/chest-2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/enemy-death.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/enemy-death/enemy-death-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/enemy-death/enemy-death-1.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/enemy-death/enemy-death-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/enemy-death/enemy-death-2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/enemy-death/enemy-death-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/enemy-death/enemy-death-3.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/enemy-death/enemy-death-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/enemy-death/enemy-death-4.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/enemy-death/enemy-death-5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/enemy-death/enemy-death-5.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/enemy-death/enemy-death-6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/enemy-death/enemy-death-6.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/hud.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/hud/hud-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/hud/hud-1.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/hud/hud-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/hud/hud-2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/hud/hud-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/hud/hud-3.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/hud/hud-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/hud/hud-4.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/star.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/star/star-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/star/star-1.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/star/star-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/star/star-2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/star/star-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/star/star-3.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/star/star-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/star/star-4.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/star/star-5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/star/star-5.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/star/star-6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/misc/star/star-6.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-climb.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-climb/player-climb-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-climb/player-climb-1.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-climb/player-climb-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-climb/player-climb-2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-climb/player-climb-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-climb/player-climb-3.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-climb/player-climb-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-climb/player-climb-4.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-duck.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-duck/player-duck-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-duck/player-duck-1.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-duck/player-duck-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-duck/player-duck-2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-duck/player-duck-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-duck/player-duck-3.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-duck/player-duck-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-duck/player-duck-4.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-fall.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-fall/player-fall-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-fall/player-fall-1.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-fall/player-fall-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-fall/player-fall-2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-fall/player-fall-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-fall/player-fall-3.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-fall/player-fall-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-fall/player-fall-4.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-hurt.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-hurt/player-hurt-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-hurt/player-hurt-1.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-hurt/player-hurt-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-hurt/player-hurt-2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-idle.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-idle/player-idle-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-idle/player-idle-1.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-idle/player-idle-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-idle/player-idle-2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-idle/player-idle-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-idle/player-idle-3.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-idle/player-idle-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-idle/player-idle-4.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-idle/player-idle-5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-idle/player-idle-5.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-idle/player-idle-6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-idle/player-idle-6.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-idle/player-idle-7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-idle/player-idle-7.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-idle/player-idle-8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-idle/player-idle-8.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-idle/player-idle-9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-idle/player-idle-9.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-jump.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-jump/player-jump-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-jump/player-jump-1.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-jump/player-jump-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-jump/player-jump-2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-jump/player-jump-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-jump/player-jump-3.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-jump/player-jump-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-jump/player-jump-4.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-skip.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-skip/player-skip-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-skip/player-skip-1.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-skip/player-skip-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-skip/player-skip-2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-skip/player-skip-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-skip/player-skip-3.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-skip/player-skip-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-skip/player-skip-4.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-skip/player-skip-5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-skip/player-skip-5.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-skip/player-skip-6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-skip/player-skip-6.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-skip/player-skip-7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-skip/player-skip-7.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-skip/player-skip-8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Artwork/Sprites/player/player-skip/player-skip-8.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Scenes.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Scenes/demo.unity" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Sunny Land Forest Assets/Scenes/demo.unity.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Art.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Art/Sprites.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Art/Sprites/FX.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Art/Sprites/FX/bubbles.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Art/Sprites/FX/bubbles.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Art/Sprites/FX/enemy-death.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Art/Sprites/FX/enemy-death.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Art/Sprites/FX/explosion-big.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Art/Sprites/FX/explosion-big.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Art/Sprites/FX/explosion-small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Art/Sprites/FX/explosion-small.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Art/Sprites/FX/explosion.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Art/Sprites/FX/explosion.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Art/environment.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Art/environment/background.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Art/environment/background.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Art/environment/midground.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Art/environment/midground.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Art/environment/props.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Art/environment/props.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Art/environment/tiles.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Art/environment/tiles.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Prefabs.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Prefabs/Environment.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Prefabs/Environment/FloatingPlatform.prefab" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Prefabs/Environment/FloatingPlatform.prefab.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Prefabs/Environment/Parallax Background.prefab" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Prefabs/Environment/Parallax Background.prefab.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Prefabs/Environment/Static Background.prefab" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Prefabs/Environment/Static Background.prefab.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Prefabs/Environment/bottom-3.prefab" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Prefabs/Environment/bottom-3.prefab.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Prefabs/Environment/top-2.prefab" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Prefabs/Environment/top-2.prefab.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Prefabs/Environment/top-4.prefab" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Prefabs/Environment/top-4.prefab.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Scenes.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Scenes/scene-1.unity" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Underwater Diving/Scenes/scene-1.unity.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/UnderwaterMap.unity" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/UnderwaterMap.unity.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/Props.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/Props/gate-01.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/Props/gate-01.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/Props/gate-02.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/Props/gate-02.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/Props/gate-03.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/Props/gate-03.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/Props/plant-big.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/Props/plant-big.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/Props/plant-small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/Props/plant-small.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/Props/stalactite.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/Props/stalactite.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/Props/stone-head.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/Props/stone-head.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/Props/stone.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/Props/stone.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/background.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/background.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/middleground-no-fungus.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/middleground-no-fungus.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/middleground.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/middleground.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/tileset-sliced.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/tileset-sliced.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/tilesets.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/tilesets.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/walls-tileset-sliced.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/walls-tileset-sliced.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/walls-tileset.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Environment/walls-tileset.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/enemy-death.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/enemy-death/enemy-death-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/enemy-death/enemy-death-1.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/enemy-death/enemy-death-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/enemy-death/enemy-death-2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/enemy-death/enemy-death-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/enemy-death/enemy-death-3.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/enemy-death/enemy-death-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/enemy-death/enemy-death-4.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/enemy-death/enemy-death-5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/enemy-death/enemy-death-5.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/impact.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/impact/impact-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/impact/impact-1.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/impact/impact-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/impact/impact-2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/impact/impact-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/impact/impact-3.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/impact/impact-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/impact/impact-4.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/power-up.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/power-up/power-up-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/power-up/power-up-1.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/power-up/power-up-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/power-up/power-up-2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/power-up/power-up-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/power-up/power-up-3.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/power-up/power-up-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/power-up/power-up-4.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/power-up/power-up-5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/power-up/power-up-5.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/power-up/power-up-6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/power-up/power-up-6.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/power-up/power-up-7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/power-up/power-up-7.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/shot.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/shot/shot-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/shot/shot-1.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/shot/shot-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/Fx/shot/shot-2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/crab-idle.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/crab-idle/crab-idle-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/crab-idle/crab-idle-1.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/crab-idle/crab-idle-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/crab-idle/crab-idle-2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/crab-idle/crab-idle-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/crab-idle/crab-idle-3.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/crab-idle/crab-idle-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/crab-idle/crab-idle-4.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/crab-walk.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/crab-walk/crab-walk-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/crab-walk/crab-walk-1.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/crab-walk/crab-walk-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/crab-walk/crab-walk-2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/crab-walk/crab-walk-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/crab-walk/crab-walk-3.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/crab-walk/crab-walk-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/crab-walk/crab-walk-4.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/jumper-idle.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/jumper-idle/jumper-idle-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/jumper-idle/jumper-idle-1.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/jumper-idle/jumper-idle-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/jumper-idle/jumper-idle-2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/jumper-idle/jumper-idle-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/jumper-idle/jumper-idle-3.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/jumper-idle/jumper-idle-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/jumper-idle/jumper-idle-4.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/jumper-jump.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/jumper-jump/jumper-jump.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/jumper-jump/jumper-jump.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/octopus.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/octopus/octopus-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/octopus/octopus-1.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/octopus/octopus-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/octopus/octopus-2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/octopus/octopus-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/octopus/octopus-3.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/octopus/octopus-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/enemies/octopus/octopus-4.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-cling.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-cling/player-cling.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-cling/player-cling.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-duck.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-duck/player-duck.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-duck/player-duck.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-hurt.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-hurt/player-hurt-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-hurt/player-hurt-1.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-hurt/player-hurt-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-hurt/player-hurt-2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-idle.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-idle/player-idle-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-idle/player-idle-1.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-idle/player-idle-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-idle/player-idle-2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-idle/player-idle-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-idle/player-idle-3.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-idle/player-idle-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-idle/player-idle-4.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-jump.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-jump/player-jump-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-jump/player-jump-1.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-jump/player-jump-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-jump/player-jump-2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-jump/player-jump-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-jump/player-jump-3.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-jump/player-jump-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-jump/player-jump-4.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-jump/player-jump-5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-jump/player-jump-5.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-jump/player-jump-6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-jump/player-jump-6.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run-shot.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run-shot/player-run-shot-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run-shot/player-run-shot-1.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run-shot/player-run-shot-10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run-shot/player-run-shot-10.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run-shot/player-run-shot-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run-shot/player-run-shot-2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run-shot/player-run-shot-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run-shot/player-run-shot-3.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run-shot/player-run-shot-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run-shot/player-run-shot-4.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run-shot/player-run-shot-5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run-shot/player-run-shot-5.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run-shot/player-run-shot-6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run-shot/player-run-shot-6.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run-shot/player-run-shot-7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run-shot/player-run-shot-7.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run-shot/player-run-shot-8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run-shot/player-run-shot-8.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run-shot/player-run-shot-9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run-shot/player-run-shot-9.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run/player-run-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run/player-run-1.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run/player-run-10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run/player-run-10.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run/player-run-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run/player-run-2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run/player-run-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run/player-run-3.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run/player-run-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run/player-run-4.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run/player-run-5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run/player-run-5.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run/player-run-6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run/player-run-6.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run/player-run-7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run/player-run-7.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run/player-run-8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run/player-run-8.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run/player-run-9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-run/player-run-9.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-shoot-up.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-shoot-up/player-shoot-up.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-shoot-up/player-shoot-up.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-stand.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-stand/player-stand-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-stand/player-stand-1.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-stand/player-stand-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-stand/player-stand-2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-stand/player-stand-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Artwork/Sprites/player/player-stand/player-stand-3.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Scenes.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Scenes/demo.unity" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Warped Caves/Scenes/demo.unity.meta" afterPath="" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Grapple.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Grapple.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="5" />
+              <folding>
+                <marker date="1520294848000" expanded="false" signature="6:78" ph="..." />
+                <marker date="1520294848000" expanded="true" signature="116:4682" ph="{...}" />
+                <marker date="1520294848000" expanded="true" signature="831:1153" ph="{...}" />
+                <marker date="1520294848000" expanded="true" signature="1172:1803" ph="{...}" />
+                <marker date="1520294848000" expanded="true" signature="1519:1652" ph="{...}" />
+                <marker date="1520294848000" expanded="true" signature="1665:1737" ph="{...}" />
+                <marker date="1520294848000" expanded="true" signature="1855:3201" ph="{...}" />
+                <marker date="1520294848000" expanded="true" signature="1893:2584" ph="{...}" />
+                <marker date="1520294848000" expanded="true" signature="2194:2490" ph="{...}" />
+                <marker date="1520294848000" expanded="true" signature="2508:2574" ph="{...}" />
+                <marker date="1520294848000" expanded="true" signature="2636:3195" ph="{...}" />
+                <marker date="1520294848000" expanded="true" signature="2659:2766" ph="/* Canceling the grapple early will give you a speed boost ... */" />
+                <marker date="1520294848000" expanded="true" signature="3246:3583" ph="{...}" />
+                <marker date="1520294848000" expanded="true" signature="3435:3577" ph="{...}" />
+                <marker date="1520294848000" expanded="true" signature="3617:4144" ph="{...}" />
+                <marker date="1520294848000" expanded="true" signature="3707:3781" ph="{...}" />
+                <marker date="1520294848000" expanded="true" signature="4194:4680" ph="{...}" />
+                <marker date="1520294848000" expanded="true" signature="4620:4674" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainMenu.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/MainMenu.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+              <folding>
+                <marker date="1520390787000" expanded="true" signature="6:113" ph="..." />
+                <marker date="1520390787000" expanded="true" signature="153:319" ph="{...}" />
+                <marker date="1520390787000" expanded="true" signature="179:231" ph="{...}" />
+                <marker date="1520390787000" expanded="true" signature="256:317" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Grapple.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/MainMenu.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="736" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tether (2 projects)" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Unity Debug.Attach to Unity Editor">
+    <configuration default="true" type="DotNetProject" factoryName=".NET Project">
+      <option name="PROJECT_PATH" value="" />
+      <option name="PROJECT_KIND" value="None" />
+      <option name="PROJECT_TFM" value="" />
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="USE_MONO" value="0" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug">
+      <method />
+    </configuration>
+    <configuration default="false" name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug">
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Unity Debug.Attach to Unity Editor" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b3005c8d-2c27-44fb-af92-00752602539f" name="Default" comment="" />
+      <created>1520294956401</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1520294956401</updated>
+      <workItem from="1520294960350" duration="162000" />
+      <workItem from="1520390701060" duration="89000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="251000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1280" height="736" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Grapple.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1520294848000" expanded="false" signature="6:78" ph="..." />
+            <marker date="1520294848000" expanded="true" signature="116:4682" ph="{...}" />
+            <marker date="1520294848000" expanded="true" signature="831:1153" ph="{...}" />
+            <marker date="1520294848000" expanded="true" signature="1172:1803" ph="{...}" />
+            <marker date="1520294848000" expanded="true" signature="1519:1652" ph="{...}" />
+            <marker date="1520294848000" expanded="true" signature="1665:1737" ph="{...}" />
+            <marker date="1520294848000" expanded="true" signature="1855:3201" ph="{...}" />
+            <marker date="1520294848000" expanded="true" signature="1893:2584" ph="{...}" />
+            <marker date="1520294848000" expanded="true" signature="2194:2490" ph="{...}" />
+            <marker date="1520294848000" expanded="true" signature="2508:2574" ph="{...}" />
+            <marker date="1520294848000" expanded="true" signature="2636:3195" ph="{...}" />
+            <marker date="1520294848000" expanded="true" signature="2659:2766" ph="/* Canceling the grapple early will give you a speed boost ... */" />
+            <marker date="1520294848000" expanded="true" signature="3246:3583" ph="{...}" />
+            <marker date="1520294848000" expanded="true" signature="3435:3577" ph="{...}" />
+            <marker date="1520294848000" expanded="true" signature="3617:4144" ph="{...}" />
+            <marker date="1520294848000" expanded="true" signature="3707:3781" ph="{...}" />
+            <marker date="1520294848000" expanded="true" signature="4194:4680" ph="{...}" />
+            <marker date="1520294848000" expanded="true" signature="4620:4674" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scrpits/Aim.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Grapple.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="5" />
+          <folding>
+            <marker date="1520294848000" expanded="false" signature="6:78" ph="..." />
+            <marker date="1520294848000" expanded="true" signature="116:4682" ph="{...}" />
+            <marker date="1520294848000" expanded="true" signature="831:1153" ph="{...}" />
+            <marker date="1520294848000" expanded="true" signature="1172:1803" ph="{...}" />
+            <marker date="1520294848000" expanded="true" signature="1519:1652" ph="{...}" />
+            <marker date="1520294848000" expanded="true" signature="1665:1737" ph="{...}" />
+            <marker date="1520294848000" expanded="true" signature="1855:3201" ph="{...}" />
+            <marker date="1520294848000" expanded="true" signature="1893:2584" ph="{...}" />
+            <marker date="1520294848000" expanded="true" signature="2194:2490" ph="{...}" />
+            <marker date="1520294848000" expanded="true" signature="2508:2574" ph="{...}" />
+            <marker date="1520294848000" expanded="true" signature="2636:3195" ph="{...}" />
+            <marker date="1520294848000" expanded="true" signature="2659:2766" ph="/* Canceling the grapple early will give you a speed boost ... */" />
+            <marker date="1520294848000" expanded="true" signature="3246:3583" ph="{...}" />
+            <marker date="1520294848000" expanded="true" signature="3435:3577" ph="{...}" />
+            <marker date="1520294848000" expanded="true" signature="3617:4144" ph="{...}" />
+            <marker date="1520294848000" expanded="true" signature="3707:3781" ph="{...}" />
+            <marker date="1520294848000" expanded="true" signature="4194:4680" ph="{...}" />
+            <marker date="1520294848000" expanded="true" signature="4620:4674" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/MainMenu.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+          <folding>
+            <marker date="1520390787000" expanded="true" signature="6:113" ph="..." />
+            <marker date="1520390787000" expanded="true" signature="153:319" ph="{...}" />
+            <marker date="1520390787000" expanded="true" signature="179:231" ph="{...}" />
+            <marker date="1520390787000" expanded="true" signature="256:317" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
