@@ -1,16 +1,17 @@
 fileFormatVersion: 2
-guid: 9b4bd070b482c4b31ab0a28c698baa9f
-timeCreated: 1508865101
-licenseType: Store
+guid: c476205eec25274469f4b38e7b4fefc2
+timeCreated: 1520387338
+licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: tilesets_0
-    21300002: tilesets_1
-    21300004: tilesets_2
-    21300006: tilesets_3
-    21300008: tilesets_4
-    21300010: tilesets_5
-    21300012: tilesets_6
+    21300000: tileset_0
+    21300002: tileset_1
+    21300004: tileset_2
+    21300006: tileset_3
+    21300008: tileset_4
+    21300010: tileset_5
+    21300012: tileset_6
+    21300014: tileset_7
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -38,7 +39,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -64,30 +65,20 @@ TextureImporter:
   textureFormatSet: 0
   platformSettings:
   - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: Standalone
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - buildTarget: WebGL
-    maxTextureSize: 1024
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,13 +88,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tilesets_0
+      name: tileset_0
       rect:
         serializedVersion: 2
-        x: 161
-        y: 58
-        width: 35
-        height: 31
+        x: 192
+        y: 102
+        width: 81
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,12 +102,12 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tilesets_1
+      name: tileset_1
       rect:
         serializedVersion: 2
-        x: 88
-        y: 60
-        width: 32
+        x: 233
+        y: 144
+        width: 44
         height: 37
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -125,13 +116,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tilesets_2
+      name: tileset_2
       rect:
         serializedVersion: 2
-        x: 125
-        y: 57
-        width: 23
-        height: 36
+        x: 184
+        y: 144
+        width: 49
+        height: 41
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,13 +130,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tilesets_3
+      name: tileset_3
       rect:
         serializedVersion: 2
-        x: 45
-        y: 60
-        width: 39
-        height: 36
+        x: 47
+        y: 45
+        width: 162
+        height: 37
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,13 +144,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tilesets_4
+      name: tileset_4
       rect:
         serializedVersion: 2
-        x: 10
-        y: 44
-        width: 25
-        height: 51
+        x: 92
+        y: 92
+        width: 43
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,13 +158,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tilesets_5
+      name: tileset_5
       rect:
         serializedVersion: 2
-        x: 205
-        y: 62
-        width: 70
-        height: 25
+        x: 87
+        y: 131
+        width: 60
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,13 +172,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tilesets_6
+      name: tileset_6
       rect:
         serializedVersion: 2
-        x: 258
-        y: 7
-        width: 24
-        height: 88
+        x: 209
+        y: 11
+        width: 27
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileset_7
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 9
+        width: 19
+        height: 81
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -97,7 +97,7 @@ public class Grapple : MonoBehaviour
         }
     }
 
-    private void ToggleGrapple(bool toggle)
+    public void ToggleGrapple(bool toggle)
     {
         joint.enabled = toggle;
         grappleAttached = toggle;
