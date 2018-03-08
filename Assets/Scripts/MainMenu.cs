@@ -5,10 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
 
-	public void goToGame()
+	public void goToSelection()
 	{
-		SceneManager.LoadScene("UnderwaterMap");
-		
+		SceneManager.LoadScene("Select");
 	}
 
 	public void quitGame()
