@@ -6,14 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/FourWeapons2.0.unity
+    path: Assets/FourWeapons2.0.unity
     guid: 9c8e72dc694cd0842843b70d840b79d0
   - enabled: 1
-    path: Assets/Scenes/GameOver.unity
+    path: Assets/GameOver.unity
     guid: 28f176b6b61523040a99193d43fe7686
   - enabled: 1
     path: Assets/Select.unity
     guid: ce23164e263dea34a84d05794db6f43a
   - enabled: 1
-    path: Assets/Scenes/UnderwaterMap.unity
+    path: Assets/UnderwaterMap.unity
     guid: 502fede985b77344eb2b83724f53b182
