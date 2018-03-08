@@ -9,7 +9,7 @@ public class ColorTimer : MonoBehaviour {
     private Text text;
     private AudioSource countdown;
     private AudioSource start;
-    private int time = 5;
+    private int time = 20;
     private int fontsize = 250;
     private float delta = -0.2f;
 
