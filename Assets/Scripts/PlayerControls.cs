@@ -9,6 +9,7 @@ public class PlayerControls : MonoBehaviour {
     private string attackAxis;
     private string grappleAxis;
     private string jumpAxis;
+    private string bAxis;
     public int playerNum;
 
     void Start()
@@ -18,6 +19,7 @@ public class PlayerControls : MonoBehaviour {
         attackAxis = "Controller-Attack" + playerNum;
         grappleAxis = "Controller-Grapple" + playerNum;
         jumpAxis = "Controller-Jump" + playerNum;
+        bAxis = "Controller-B" + playerNum;
     }
 
     public string getHorizontalAxis()
@@ -43,5 +45,9 @@ public class PlayerControls : MonoBehaviour {
     public string getJumpAxis()
     {
         return jumpAxis;
+    }
+    public string getBAxis()
+    {
+        return bAxis;
     }
 }
