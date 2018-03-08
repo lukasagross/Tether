@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine;
+using XInputDotNetPure;
 
 public class Score : MonoBehaviour {
     public int playerOneScore = 0;
@@ -36,6 +37,10 @@ public class Score : MonoBehaviour {
         PlayerPrefs.Save();
         Time.timeScale = 0;
         System.Threading.Thread.Sleep(1000);
+        GamePad.SetVibration(PlayerIndex.One, 0f, 0f);
+        GamePad.SetVibration(PlayerIndex.Two, 0f, 0f);
+        GamePad.SetVibration(PlayerIndex.Three, 0f, 0f);
+        GamePad.SetVibration(PlayerIndex.Four, 0f, 0f);
         SceneManager.LoadScene("GameOver");
     }
 	

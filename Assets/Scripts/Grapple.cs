@@ -38,9 +38,9 @@ public class Grapple : MonoBehaviour
 
     void Update()
     {
-        grappleInput = Input.GetAxis(player.getGrappleAxis());
-        horizontalInput = Input.GetAxis(player.getHorizontalAxis());
-        verticalInput = Input.GetAxis(player.getVerticalAxis());
+        grappleInput = player.getGrappleAxis();
+        horizontalInput = player.getHorizontalAxis();
+        verticalInput = player.getVerticalAxis();
 
         aimDirection = new Vector2(horizontalInput, verticalInput);
         playerPosition = transform.position;
