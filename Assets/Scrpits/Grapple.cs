@@ -135,7 +135,7 @@ public class Grapple : MonoBehaviour
     {
         //If you reach the achor point of the grapple, cancel the grapple
         ContactPoint2D[] contacts = new ContactPoint2D[100];
-        var numcontacts = coll.GetContacts(contacts);
+        //var numcontacts = coll.GetContacts(contacts);
         var collPos = contacts[0].point;
         var dist = Vector2.Distance(collPos, anchorPosition);
 
