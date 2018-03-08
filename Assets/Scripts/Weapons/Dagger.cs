@@ -77,7 +77,7 @@ public class Dagger : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
             col.enabled = true;
 
-            aimDirection = new Vector2(Input.GetAxis(player.getHorizontalAxis()), Input.GetAxis(player.getVerticalAxis()));
+            aimDirection = new Vector2(player.getHorizontalAxis(), player.getVerticalAxis());
             sr.color = Color.white;
             reboundDir = aimDirection.normalized * -(dashMultiplier);
             dashDir = aimDirection.normalized * dashMultiplier; //Dashing occurs every attack
@@ -99,7 +99,7 @@ public class Dagger : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
             col.enabled = true;
 
-            aimDirection = new Vector2(Input.GetAxis(player.getHorizontalAxis()), Input.GetAxis(player.getVerticalAxis()));
+            aimDirection = new Vector2(player.getHorizontalAxis(), player.getVerticalAxis());
             sr.color = Color.white;
             reboundDir = aimDirection.normalized * -(dashMultiplier);
             dashDir = aimDirection.normalized * dashMultiplier; //Dashing occurs every attack

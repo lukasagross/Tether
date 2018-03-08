@@ -1,53 +1,44 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using XboxCtrlrInput;
 
-public class PlayerControls : MonoBehaviour {
-
-    private string horizontalAxis;
-    private string verticalAxis;
-    private string attackAxis;
-    private string grappleAxis;
-    private string jumpAxis;
-    private string bAxis;
+public class PlayerControls : MonoBehaviour
+{
     public int playerNum;
+    public XboxController controller;
 
-    void Start()
+    void Awake()
     {
-        horizontalAxis = "Controller-Horizontal" + playerNum;
-        verticalAxis = "Controller-Vertical" + playerNum;
-        attackAxis = "Controller-Attack" + playerNum;
-        grappleAxis = "Controller-Grapple" + playerNum;
-        jumpAxis = "Controller-Jump" + playerNum;
-        bAxis = "Controller-B" + playerNum;
+       
     }
 
-    public string getHorizontalAxis()
+    public float getHorizontalAxis()
     {
-        return horizontalAxis;
+        return XCI.GetAxis(XboxAxis.LeftStickX, controller);
     }
 
-    public string getVerticalAxis()
+    public float getVerticalAxis()
     {
-        return verticalAxis;
+        return XCI.GetAxis(XboxAxis.LeftStickY, controller);
     }
 
-    public string getAttackAxis()
+    public float getAttackAxis()
     {
-        return attackAxis;
+        return XCI.GetAxis(XboxAxis.RightTrigger, controller);
     }
 
-    public string getGrappleAxis()
+    public float getGrappleAxis()
     {
-        return grappleAxis;
+        return XCI.GetAxis(XboxAxis.LeftTrigger, controller);
     }
 
-    public string getJumpAxis()
+    public bool getJumpAxis()
     {
-        return jumpAxis;
+        return XCI.GetButton(XboxButton.A, controller);
     }
-    public string getBAxis()
+    public bool getBAxis()
     {
-        return bAxis;
+        return XCI.GetButton(XboxButton.B, controller);
     }
 }

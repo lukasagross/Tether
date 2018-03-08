@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rigidBody;
     private bool isJumping;
     private bool canJump;
-    private float jumpInput;
+    private bool jumpInput;
     private float horizontalInput;
     private PlayerControls player;
 
@@ -28,8 +28,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        jumpInput = Input.GetAxis(player.getJumpAxis());
-        horizontalInput = Input.GetAxis(player.getHorizontalAxis());
+        jumpInput = player.getJumpAxis();
+        horizontalInput = player.getHorizontalAxis();
 
         //0.351 and 0.04 are magic numbers, they need to be tweaked if the collider is changed
         isGrounded = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - 0.351f), Vector2.down, 0.04f);
@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (!grappleAttached)
         {
-            isJumping = jumpInput > 0.01f;
+            isJumping = jumpInput;
 
             if (!isJumping || !canJump) return;
 

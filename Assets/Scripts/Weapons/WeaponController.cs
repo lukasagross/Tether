@@ -32,8 +32,8 @@ public class WeaponController : MonoBehaviour {
 
     private void HandleInput()
     {
-        aimDirection = new Vector2(Input.GetAxis(player.getHorizontalAxis()), Input.GetAxis(player.getVerticalAxis()));
-        attackInput = Input.GetAxis(player.getAttackAxis());
+        aimDirection = new Vector2(player.getHorizontalAxis(), player.getVerticalAxis());
+        attackInput = player.getAttackAxis();
         
         if(attackInput == 1f)
         {

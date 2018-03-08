@@ -51,8 +51,8 @@ public class ColorManager : MonoBehaviour {
 
     private void HandleInput()
     {
-        float x = Input.GetAxis(player.getHorizontalAxis());
-        float y = Input.GetAxis(player.getVerticalAxis());
+        float x = player.getHorizontalAxis();
+        float y = player.getVerticalAxis();
         if (!isSelected && (x != 0.0f || y != 0.0f))
         {
             float angle = Mathf.Atan2(y, x) * Mathf.Rad2Deg;
@@ -72,13 +72,13 @@ public class ColorManager : MonoBehaviour {
             next.localScale = new Vector3(3f, 3f, 1f);
         }
 
-        if(Input.GetAxis(player.getJumpAxis()) == 1 && currentHex != 0)
+        if(player.getJumpAxis() && currentHex != 0)
         {
             isSelected = true;
             HandleSelect();
         }
 
-        if (isSelected && (Input.GetAxis(player.getBAxis()) == 1)){
+        if (isSelected && (player.getBAxis())){
             isSelected = false;
             for (int i = 0; i < 7; i++)
             {

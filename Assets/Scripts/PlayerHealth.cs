@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using XInputDotNetPure;
 
 public class PlayerHealth : MonoBehaviour {
 
@@ -8,6 +9,7 @@ public class PlayerHealth : MonoBehaviour {
     private Color c;
     private bool hittable;
     private Animator animator;
+    private int  playerNum;
 
     //Should be set in unity editor
     public float iFrameDuration;
@@ -18,6 +20,7 @@ public class PlayerHealth : MonoBehaviour {
         c = sr.color;
         hittable = true;
         animator = GetComponentInChildren<Animator>();
+        playerNum = GetComponent<PlayerControls>().playerNum;
 
         if(iFrameDuration == 0)
         {
@@ -32,6 +35,31 @@ public class PlayerHealth : MonoBehaviour {
 
     private IEnumerator flash()
     {
+        switch (playerNum)
+        {
+            case 1:
+                {
+                    GamePad.SetVibration(PlayerIndex.One, .5f, .5f);
+                    break;
+                }
+            case 2:
+                {
+                    GamePad.SetVibration(PlayerIndex.Two, .5f, .5f);
+                    break;
+                }
+            case 3:
+                {
+                    GamePad.SetVibration(PlayerIndex.Three, .5f, .5f);
+                    break;
+                }
+            case 4:
+                {
+                    GamePad.SetVibration(PlayerIndex.Four, .5f, .5f);
+                    break;
+                }
+        }
+
+
         animator.SetTrigger("PlayerHit");
         hittable = false;
         for (int i = 0; i < 5; i++) {
@@ -42,6 +70,31 @@ public class PlayerHealth : MonoBehaviour {
         }
 
         hittable = true;
+
+
+        switch (playerNum)
+        {
+            case 1:
+                {
+                    GamePad.SetVibration(PlayerIndex.One, 0f, 0f);
+                    break;
+                }
+            case 2:
+                {
+                    GamePad.SetVibration(PlayerIndex.Two, 0f, 0f);
+                    break;
+                }
+            case 3:
+                {
+                    GamePad.SetVibration(PlayerIndex.Three, 0f, 0f);
+                    break;
+                }
+            case 4:
+                {
+                    GamePad.SetVibration(PlayerIndex.Four, 0f, 0f);
+                    break;
+                }
+        }
     }
 
     public bool canDamage()

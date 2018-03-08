@@ -781,8 +781,8 @@ GameObject:
   - component: {fileID: 255537349}
   - component: {fileID: 255537348}
   - component: {fileID: 255537347}
-  - component: {fileID: 255537346}
   - component: {fileID: 255537345}
+  - component: {fileID: 255537346}
   m_Layer: 8
   m_Name: Player3
   m_TagString: Untagged
@@ -810,10 +810,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 255537344}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4abb3c31e1c8fdb45b1d3cd03305ecdf, type: 3}
+  m_Script: {fileID: 11500000, guid: 0615577249667ec4987ab38f7a188cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 3
+  controller: 3
 --- !u!120 &255537347
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -3076,8 +3077,8 @@ GameObject:
   - component: {fileID: 685581096}
   - component: {fileID: 685581095}
   - component: {fileID: 685581094}
-  - component: {fileID: 685581093}
   - component: {fileID: 685581092}
+  - component: {fileID: 685581093}
   m_Layer: 8
   m_Name: Player1
   m_TagString: Untagged
@@ -3105,10 +3106,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 685581091}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4abb3c31e1c8fdb45b1d3cd03305ecdf, type: 3}
+  m_Script: {fileID: 11500000, guid: 0615577249667ec4987ab38f7a188cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 1
+  controller: 1
 --- !u!120 &685581094
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -6920,8 +6922,8 @@ GameObject:
   - component: {fileID: 1617749420}
   - component: {fileID: 1617749419}
   - component: {fileID: 1617749418}
-  - component: {fileID: 1617749417}
   - component: {fileID: 1617749416}
+  - component: {fileID: 1617749417}
   m_Layer: 8
   m_Name: Player2
   m_TagString: Untagged
@@ -6949,10 +6951,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1617749415}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4abb3c31e1c8fdb45b1d3cd03305ecdf, type: 3}
+  m_Script: {fileID: 11500000, guid: 0615577249667ec4987ab38f7a188cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 2
+  controller: 2
 --- !u!120 &1617749418
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -8803,8 +8806,8 @@ GameObject:
   - component: {fileID: 2007567661}
   - component: {fileID: 2007567660}
   - component: {fileID: 2007567659}
-  - component: {fileID: 2007567658}
   - component: {fileID: 2007567657}
+  - component: {fileID: 2007567658}
   m_Layer: 8
   m_Name: Player4
   m_TagString: Untagged
@@ -8832,10 +8835,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2007567656}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4abb3c31e1c8fdb45b1d3cd03305ecdf, type: 3}
+  m_Script: {fileID: 11500000, guid: 0615577249667ec4987ab38f7a188cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 4
+  controller: 4
 --- !u!120 &2007567659
 LineRenderer:
   m_ObjectHideFlags: 0

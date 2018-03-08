@@ -15,7 +15,7 @@ public class Aim : MonoBehaviour {
 	}
 	
 	void Update () {
-        aimDirection = new Vector2(Input.GetAxis(player.getHorizontalAxis()), Input.GetAxis(player.getVerticalAxis()));
+        aimDirection = new Vector2(player.getHorizontalAxis(), player.getVerticalAxis());
         rotation = Vector2.Angle(aimDirection, Vector2.up);
         Vector3 tempCross = Vector3.Cross(aimDirection, Vector2.up);
         if (tempCross.z > 0)
