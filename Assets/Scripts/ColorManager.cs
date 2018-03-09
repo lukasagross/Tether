@@ -12,8 +12,8 @@ public class ColorManager : MonoBehaviour {
     private Text text;
     private float spinspeed = 1f;
     private float fadetime = 0.5f;
-    private int currentHex = 0;
-    private bool isSelected = false;
+    public int currentHex = 0;
+    public bool isSelected = false;
 
     void Start () {
         source = GetComponent<AudioSource>();
@@ -53,6 +53,7 @@ public class ColorManager : MonoBehaviour {
     {
         float x = player.getHorizontalAxis();
         float y = player.getVerticalAxis();
+
         if (!isSelected && (x != 0.0f || y != 0.0f))
         {
             float angle = Mathf.Atan2(y, x) * Mathf.Rad2Deg;
@@ -78,7 +79,7 @@ public class ColorManager : MonoBehaviour {
             HandleSelect();
         }
 
-        if (isSelected && (player.getBAxis())){
+        if (isSelected && player.getBAxis()){
             isSelected = false;
             for (int i = 0; i < 7; i++)
             {

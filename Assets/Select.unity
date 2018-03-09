@@ -760,7 +760,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 40}
+  m_AnchoredPosition: {x: 0, y: 100}
   m_SizeDelta: {x: 600, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &526681656
@@ -784,7 +784,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 250
+    m_FontSize: 200
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -813,6 +813,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcec526cd965cdd49920e554cfcf9428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  color1: {fileID: 1186305982}
+  color2: {fileID: 754702011}
+  color3: {fileID: 1715974502}
+  color4: {fileID: 1583889741}
 --- !u!1 &527706289
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,7 +1031,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 30}
+  m_AnchoredPosition: {x: 0, y: 10}
   m_SizeDelta: {x: 350, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &566768403
@@ -1282,8 +1286,8 @@ GameObject:
   m_Component:
   - component: {fileID: 754702008}
   - component: {fileID: 754702011}
-  - component: {fileID: 754702010}
   - component: {fileID: 754702009}
+  - component: {fileID: 754702010}
   m_Layer: 0
   m_Name: Hexagons2
   m_TagString: Untagged
@@ -1314,7 +1318,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -500, y: -250}
+  m_AnchoredPosition: {x: -250, y: -200}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &754702009
@@ -1405,10 +1409,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 754702007}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4abb3c31e1c8fdb45b1d3cd03305ecdf, type: 3}
+  m_Script: {fileID: 11500000, guid: 0615577249667ec4987ab38f7a188cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 2
+  controller: 2
 --- !u!114 &754702011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1420,6 +1425,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383999949d7d47542a2e41aadb865cb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHex: 0
+  isSelected: 0
 --- !u!1 &805539815
 GameObject:
   m_ObjectHideFlags: 0
@@ -2124,7 +2131,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 60}
+  m_AnchoredPosition: {x: 0, y: 10}
   m_SizeDelta: {x: 350, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1177078265
@@ -2175,8 +2182,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1186305981}
   - component: {fileID: 1186305982}
-  - component: {fileID: 1186305983}
   - component: {fileID: 1186305984}
+  - component: {fileID: 1186305983}
   m_Layer: 0
   m_Name: Hexagons1
   m_TagString: Untagged
@@ -2207,7 +2214,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 500, y: -250}
+  m_AnchoredPosition: {x: 250, y: -200}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1186305982
@@ -2221,6 +2228,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383999949d7d47542a2e41aadb865cb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHex: 0
+  isSelected: 0
 --- !u!114 &1186305983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2229,10 +2238,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1186305980}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4abb3c31e1c8fdb45b1d3cd03305ecdf, type: 3}
+  m_Script: {fileID: 11500000, guid: 0615577249667ec4987ab38f7a188cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 1
+  controller: 1
 --- !u!82 &1186305984
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2413,7 +2423,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 30}
+  m_AnchoredPosition: {x: 0, y: 10}
   m_SizeDelta: {x: 350, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1279627389
@@ -2850,8 +2860,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1583889738}
   - component: {fileID: 1583889741}
-  - component: {fileID: 1583889740}
   - component: {fileID: 1583889739}
+  - component: {fileID: 1583889740}
   m_Layer: 0
   m_Name: Hexagons4
   m_TagString: Untagged
@@ -2882,7 +2892,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -500, y: 250}
+  m_AnchoredPosition: {x: -250, y: 150}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &1583889739
@@ -2973,10 +2983,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1583889737}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4abb3c31e1c8fdb45b1d3cd03305ecdf, type: 3}
+  m_Script: {fileID: 11500000, guid: 0615577249667ec4987ab38f7a188cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 4
+  controller: 4
 --- !u!114 &1583889741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2988,6 +2999,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383999949d7d47542a2e41aadb865cb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHex: 0
+  isSelected: 0
 --- !u!1 &1600665375
 GameObject:
   m_ObjectHideFlags: 0
@@ -3269,8 +3282,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1715974499}
   - component: {fileID: 1715974502}
-  - component: {fileID: 1715974501}
   - component: {fileID: 1715974500}
+  - component: {fileID: 1715974501}
   m_Layer: 0
   m_Name: Hexagons3
   m_TagString: Untagged
@@ -3301,7 +3314,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 500, y: 250}
+  m_AnchoredPosition: {x: 250, y: 150}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &1715974500
@@ -3392,10 +3405,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1715974498}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4abb3c31e1c8fdb45b1d3cd03305ecdf, type: 3}
+  m_Script: {fileID: 11500000, guid: 0615577249667ec4987ab38f7a188cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 3
+  controller: 3
 --- !u!114 &1715974502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3407,6 +3421,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383999949d7d47542a2e41aadb865cb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHex: 0
+  isSelected: 0
 --- !u!1 &2005143678
 GameObject:
   m_ObjectHideFlags: 0
@@ -3439,7 +3455,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 60}
+  m_AnchoredPosition: {x: 0, y: 10}
   m_SizeDelta: {x: 350, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2005143680
