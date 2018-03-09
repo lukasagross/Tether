@@ -5,12 +5,16 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class ColorTimer : MonoBehaviour {
+    public ColorManager color1;
+    public ColorManager color2;
+    public ColorManager color3;
+    public ColorManager color4;
 
     private Text text;
     private AudioSource countdown;
     private AudioSource start;
     private int time = 20;
-    private int fontsize = 250;
+    private int fontsize = 200;
     private float delta = -0.2f;
 
 	void Start () {
@@ -39,22 +43,28 @@ public class ColorTimer : MonoBehaviour {
             }
             if (time < 10 && time > 0)
             {
-                StartCoroutine("Bounce");
+                StartCoroutine("TextBounce");
                 countdown.Play();
             }
 
-            if (time <= 0)
-            {
-                SceneManager.LoadScene("UnderwaterMap");
-            }
         }
         if (time == 2 && delta >= 0.1f)
         {
             start.Play();
         }
+
+        if (time == 1 && delta > 0.8f)
+        {
+            PlayerPrefs.SetInt("color1", color1.isSelected ? color1.currentHex : 0);
+            PlayerPrefs.SetInt("color2", color2.isSelected ? color2.currentHex : 0);
+            PlayerPrefs.SetInt("color3", color3.isSelected ? color3.currentHex : 0);
+            PlayerPrefs.SetInt("color4", color4.isSelected ? color4.currentHex : 0);
+
+            SceneManager.LoadScene("UnderwaterMap");
+        }
     }
 
-    IEnumerator Bounce()
+    IEnumerator TextBounce()
     {
         for (int i =1; i < 10; i++)
         {
