@@ -14,12 +14,12 @@ public class MovingPlatform : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.x != Waypoints[CurrentPoint].transform.position.x)
+        if ((transform.position.x != Waypoints[CurrentPoint].transform.position.x) || (transform.position.y != Waypoints[CurrentPoint].transform.position.y))
         {
             transform.position = Vector3.MoveTowards(transform.position, Waypoints[CurrentPoint].transform.position, speed * Time.deltaTime);
         }
 
-        if (transform.position.x == Waypoints[CurrentPoint].transform.position.x)
+        if ((transform.position.x == Waypoints[CurrentPoint].transform.position.x) && (transform.position.y == Waypoints[CurrentPoint].transform.position.y))
         {
             CurrentPoint += 1;
         }
