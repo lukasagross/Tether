@@ -27,7 +27,6 @@ public class SettingsText : MonoBehaviour {
 
     IEnumerator AddLetters(string newtext, int newselected)
     {
-        bool skip = false;
         foreach (char c in newtext)
         {
             if (newselected != selected)

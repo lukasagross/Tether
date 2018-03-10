@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class MapSelector : MonoBehaviour {
 
     private AudioSource click;
-    private RectTransform BackgroundsRT;
     private RectTransform IconsRT;
     private RectTransform RT;
     private GameObject Background;
@@ -25,8 +24,11 @@ public class MapSelector : MonoBehaviour {
 
     private int selected = 0;
     private int numLevels = 3;
-    private int currplayer = 1;
+    private int currplayer;
+    private int currmap;
+    private float moveDistance = 4000f;
 
+    public WeaponSelector weaponselector;
     public float scrollTime;
 
 	void Start () {
@@ -36,7 +38,6 @@ public class MapSelector : MonoBehaviour {
         Background = transform.GetChild(0).gameObject;
         Icon = transform.GetChild(1).gameObject;
         MapText = transform.GetChild(2).gameObject;
-        BackgroundsRT = Background.GetComponent<RectTransform>();
         IconsRT = Icon.GetComponent<RectTransform>();
         MapTextRT = MapText.GetComponent<RectTransform>();
 
@@ -72,13 +73,14 @@ public class MapSelector : MonoBehaviour {
         Numbers[3] = "Three";
         Numbers[4] = "Four";
 
-        InfoText = transform.GetChild(3).GetComponent<Text>();
-        int currplayer = PlayerPrefs.GetInt("CurrentPlayer");
+        InfoText = GameObject.FindGameObjectWithTag("InfoText").GetComponent<Text>();
+        currplayer = PlayerPrefs.GetInt("CurrentPlayer");
+        currmap = PlayerPrefs.GetInt("CurrentMap");
         InfoText.text = "Player " + Numbers[currplayer];
         InfoText.color = colors[PlayerPrefs.GetInt("color" + currplayer)];
 
-        MapTextRT.position = new Vector2(2000f, MapTextRT.position.y);
-        IconsRT.position = new Vector2(2000f, IconsRT.position.y);
+        MapTextRT.position = new Vector2(moveDistance, MapTextRT.position.y);
+        IconsRT.position = new Vector2(moveDistance, IconsRT.position.y);
 
         IEnumerator moveIcons = MoveRectTo(IconsRT, IconsRT.position.x, RT.position.x, scrollTime);
         IEnumerator moveText = MoveRectTo(MapTextRT, MapTextRT.position.x, RT.position.x, scrollTime);
@@ -105,7 +107,6 @@ public class MapSelector : MonoBehaviour {
             click.Play();
             MapText.GetComponent<SettingsText>().UpdateText(MapNames[selected], selected);
         }
-
     }
 
     private void HandleInput()
@@ -119,6 +120,24 @@ public class MapSelector : MonoBehaviour {
         {
             selected = Mathf.Max(selected - 1, 0);
         }
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            HandleSelect();
+        }
+    }
+
+    private void HandleSelect()
+    {
+        IEnumerator moveIcons = MoveRectTo(IconsRT, IconsRT.position.x, IconsRT.position.x - moveDistance, scrollTime);
+        IEnumerator moveText = MoveRectTo(MapTextRT, MapTextRT.position.x , MapTextRT.position.x - moveDistance, scrollTime);
+        StartCoroutine(moveIcons);
+        StartCoroutine(moveText);
+
+        PlayerPrefs.SetInt("map" + currmap, selected);
+
+        weaponselector.gameObject.SetActive(true);
+        weaponselector.Activate();
     }
 
     IEnumerator MoveRectTo(RectTransform rect, float oldx, float newx, float time)
