@@ -56,11 +56,14 @@ public class ColorTimer : MonoBehaviour {
         if (time == 1 && delta > 0.8f)
         {
             PlayerPrefs.SetInt("color1", color1.isSelected ? color1.currentHex : 0);
+            Debug.Log(PlayerPrefs.GetInt("color1"));
             PlayerPrefs.SetInt("color2", color2.isSelected ? color2.currentHex : 0);
             PlayerPrefs.SetInt("color3", color3.isSelected ? color3.currentHex : 0);
             PlayerPrefs.SetInt("color4", color4.isSelected ? color4.currentHex : 0);
 
-            SceneManager.LoadScene("UnderwaterMap");
+            PlayerPrefs.SetInt("CurrentPlayer", 1);
+
+            SceneManager.LoadScene("Settings");
         }
     }
 

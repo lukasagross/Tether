@@ -42,7 +42,8 @@ public class ColorManager : MonoBehaviour {
     {
         RectTransform curr = hexes[currentHex].GetComponent<RectTransform>();
         curr.localScale = new Vector3(3.6f, 3.6f, 1f);
-        currentHex = 0;
+        if (!isSelected)
+            currentHex = 0;
 
         HandleInput();
         if (isSelected)
