@@ -484,7 +484,7 @@ Transform:
   m_GameObject: {fileID: 142724063}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -0.533, y: 0.06100001, z: 0}
-  m_LocalScale: {x: 0.13333346, y: 0.20000023, z: 1}
+  m_LocalScale: {x: 0.9, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 718496755}
   m_RootOrder: 3
@@ -523,12 +523,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 17a63e8d20eaa9b47bfddcbddcaf7db8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0049772a1acaf4a49b69bb504ffe2669, type: 3}
   m_Color: {r: 0.791, g: 0.616, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 1
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.15, y: 0.1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1217,7 +1217,7 @@ Transform:
   m_GameObject: {fileID: 251570758}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -0.533, y: 0.3163334, z: 0}
-  m_LocalScale: {x: 0.13333346, y: 0.20000023, z: 1}
+  m_LocalScale: {x: 0.9, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 718496755}
   m_RootOrder: 5
@@ -1256,12 +1256,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 17a63e8d20eaa9b47bfddcbddcaf7db8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0049772a1acaf4a49b69bb504ffe2669, type: 3}
   m_Color: {r: 0.791, g: 0.616, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 1
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.15, y: 0.1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -3205,7 +3205,7 @@ Transform:
   m_GameObject: {fileID: 534056690}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -0.533, y: -0.315, z: 0}
-  m_LocalScale: {x: 0.13333346, y: 0.20000023, z: 1}
+  m_LocalScale: {x: 0.9, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 718496755}
   m_RootOrder: 0
@@ -3244,12 +3244,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 17a63e8d20eaa9b47bfddcbddcaf7db8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0049772a1acaf4a49b69bb504ffe2669, type: 3}
   m_Color: {r: 0.791, g: 0.616, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 1
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.15, y: 0.1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4581,7 +4581,7 @@ GameObject:
   - component: {fileID: 750464739}
   - component: {fileID: 750464740}
   m_Layer: 0
-  m_Name: Ice Spikes (4)
+  m_Name: Spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4594,8 +4594,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 750464738}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.5440001, y: 0.18700004, z: 0}
-  m_LocalScale: {x: 0.1333334, y: 0.2000001, z: 1}
+  m_LocalPosition: {x: 0.54, y: 0.18700004, z: 0}
+  m_LocalScale: {x: 0.9, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 505188707}
   m_RootOrder: 4
@@ -4634,12 +4634,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 17a63e8d20eaa9b47bfddcbddcaf7db8, type: 3}
-  m_Color: {r: 0.791, g: 0.616, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 0049772a1acaf4a49b69bb504ffe2669, type: 3}
+  m_Color: {r: 0.7921569, g: 0.6156863, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.15, y: 0.1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -5754,7 +5754,7 @@ Transform:
   m_GameObject: {fileID: 984226256}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -0.533, y: -0.18566668, z: 0}
-  m_LocalScale: {x: 0.13333346, y: 0.20000023, z: 1}
+  m_LocalScale: {x: 0.9, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 718496755}
   m_RootOrder: 1
@@ -5793,12 +5793,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 17a63e8d20eaa9b47bfddcbddcaf7db8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0049772a1acaf4a49b69bb504ffe2669, type: 3}
   m_Color: {r: 0.791, g: 0.616, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 1
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.15, y: 0.1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -6061,7 +6061,7 @@ GameObject:
   - component: {fileID: 1012727796}
   - component: {fileID: 1012727797}
   m_Layer: 0
-  m_Name: Ice Spikes (2)
+  m_Name: Spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6074,8 +6074,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1012727795}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.5440001, y: -0.06833331, z: 0}
-  m_LocalScale: {x: 0.1333334, y: 0.2000001, z: 1}
+  m_LocalPosition: {x: 0.54, y: -0.06833331, z: 0}
+  m_LocalScale: {x: 0.9, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 505188707}
   m_RootOrder: 2
@@ -6114,12 +6114,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 17a63e8d20eaa9b47bfddcbddcaf7db8, type: 3}
-  m_Color: {r: 0.791, g: 0.616, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 0049772a1acaf4a49b69bb504ffe2669, type: 3}
+  m_Color: {r: 0.7921569, g: 0.6156863, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.15, y: 0.1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -6298,7 +6298,7 @@ Transform:
   m_GameObject: {fileID: 1098721059}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -0.533, y: -0.06833332, z: 0}
-  m_LocalScale: {x: 0.13333346, y: 0.20000023, z: 1}
+  m_LocalScale: {x: 0.9, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 718496755}
   m_RootOrder: 2
@@ -6337,12 +6337,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 17a63e8d20eaa9b47bfddcbddcaf7db8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0049772a1acaf4a49b69bb504ffe2669, type: 3}
   m_Color: {r: 0.791, g: 0.616, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 1
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.15, y: 0.1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -6917,7 +6917,7 @@ GameObject:
   - component: {fileID: 1286999987}
   - component: {fileID: 1286999986}
   m_Layer: 0
-  m_Name: Ice Spikes
+  m_Name: Spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6957,12 +6957,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 17a63e8d20eaa9b47bfddcbddcaf7db8, type: 3}
-  m_Color: {r: 0.791, g: 0.616, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 0049772a1acaf4a49b69bb504ffe2669, type: 3}
+  m_Color: {r: 0.7921569, g: 0.6156863, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.15, y: 0.1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -6974,8 +6974,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1286999985}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.544, y: -0.315, z: 0}
-  m_LocalScale: {x: 0.1333334, y: 0.2000001, z: 1}
+  m_LocalPosition: {x: 0.54, y: -0.315, z: 0}
+  m_LocalScale: {x: 0.9, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 505188707}
   m_RootOrder: 0
@@ -8209,7 +8209,7 @@ GameObject:
   - component: {fileID: 1588609408}
   - component: {fileID: 1588609409}
   m_Layer: 0
-  m_Name: Ice Spikes (5)
+  m_Name: Spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8222,8 +8222,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1588609407}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.5440001, y: 0.31633335, z: 0}
-  m_LocalScale: {x: 0.1333334, y: 0.2000001, z: 1}
+  m_LocalPosition: {x: 0.54, y: 0.31633335, z: 0}
+  m_LocalScale: {x: 0.9, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 505188707}
   m_RootOrder: 5
@@ -8262,12 +8262,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 17a63e8d20eaa9b47bfddcbddcaf7db8, type: 3}
-  m_Color: {r: 0.791, g: 0.616, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 0049772a1acaf4a49b69bb504ffe2669, type: 3}
+  m_Color: {r: 0.7921569, g: 0.6156863, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.15, y: 0.1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -8449,7 +8449,7 @@ GameObject:
   - component: {fileID: 1614543551}
   - component: {fileID: 1614543552}
   m_Layer: 0
-  m_Name: Ice Spikes (1)
+  m_Name: Spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8462,8 +8462,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1614543550}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.5440001, y: -0.18566665, z: 0}
-  m_LocalScale: {x: 0.1333334, y: 0.2000001, z: 1}
+  m_LocalPosition: {x: 0.54, y: -0.18566665, z: 0}
+  m_LocalScale: {x: 0.9, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 505188707}
   m_RootOrder: 1
@@ -8502,12 +8502,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 17a63e8d20eaa9b47bfddcbddcaf7db8, type: 3}
-  m_Color: {r: 0.791, g: 0.616, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 0049772a1acaf4a49b69bb504ffe2669, type: 3}
+  m_Color: {r: 0.7921569, g: 0.6156863, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.15, y: 0.1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -9628,7 +9628,7 @@ GameObject:
   - component: {fileID: 1891671179}
   - component: {fileID: 1891671180}
   m_Layer: 0
-  m_Name: Ice Spikes (3)
+  m_Name: Spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9641,8 +9641,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1891671178}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.5440001, y: 0.06100001, z: 0}
-  m_LocalScale: {x: 0.1333334, y: 0.2000001, z: 1}
+  m_LocalPosition: {x: 0.54, y: 0.06100001, z: 0}
+  m_LocalScale: {x: 0.9, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 505188707}
   m_RootOrder: 3
@@ -9681,12 +9681,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 17a63e8d20eaa9b47bfddcbddcaf7db8, type: 3}
-  m_Color: {r: 0.791, g: 0.616, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 0049772a1acaf4a49b69bb504ffe2669, type: 3}
+  m_Color: {r: 0.7921569, g: 0.6156863, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.15, y: 0.1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -9946,7 +9946,7 @@ Transform:
   m_GameObject: {fileID: 2018222653}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -0.533, y: 0.18700007, z: 0}
-  m_LocalScale: {x: 0.13333346, y: 0.20000023, z: 1}
+  m_LocalScale: {x: 0.9, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 718496755}
   m_RootOrder: 4
@@ -9985,12 +9985,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 17a63e8d20eaa9b47bfddcbddcaf7db8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0049772a1acaf4a49b69bb504ffe2669, type: 3}
   m_Color: {r: 0.791, g: 0.616, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 1
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.15, y: 0.1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
