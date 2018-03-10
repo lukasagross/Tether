@@ -31,35 +31,11 @@ public class PlayerHealth : MonoBehaviour {
     public void takeDamage()
     {
         StartCoroutine(flash());
+        StartCoroutine(rumble());
     }
 
     private IEnumerator flash()
     {
-        switch (playerNum)
-        {
-            case 1:
-                {
-                    GamePad.SetVibration(PlayerIndex.One, .5f, .5f);
-                    break;
-                }
-            case 2:
-                {
-                    GamePad.SetVibration(PlayerIndex.Two, .5f, .5f);
-                    break;
-                }
-            case 3:
-                {
-                    GamePad.SetVibration(PlayerIndex.Three, .5f, .5f);
-                    break;
-                }
-            case 4:
-                {
-                    GamePad.SetVibration(PlayerIndex.Four, .5f, .5f);
-                    break;
-                }
-        }
-
-
         animator.SetTrigger("PlayerHit");
         hittable = false;
         for (int i = 0; i < 5; i++) {
@@ -70,35 +46,64 @@ public class PlayerHealth : MonoBehaviour {
         }
 
         hittable = true;
-
-
-        switch (playerNum)
-        {
-            case 1:
-                {
-                    GamePad.SetVibration(PlayerIndex.One, 0f, 0f);
-                    break;
-                }
-            case 2:
-                {
-                    GamePad.SetVibration(PlayerIndex.Two, 0f, 0f);
-                    break;
-                }
-            case 3:
-                {
-                    GamePad.SetVibration(PlayerIndex.Three, 0f, 0f);
-                    break;
-                }
-            case 4:
-                {
-                    GamePad.SetVibration(PlayerIndex.Four, 0f, 0f);
-                    break;
-                }
-        }
     }
 
     public bool canDamage()
     {
         return hittable;
+    }
+
+    private IEnumerator rumble()
+    {
+        switch (playerNum)
+        {
+            case 1:
+                {
+                    GamePad.SetVibration(PlayerIndex.One, 0.5f, 0.5f);
+                    break;
+                }
+            case 2:
+                {
+                    GamePad.SetVibration(PlayerIndex.Two, 0.5f, 0.5f);
+                    break;
+                }
+            case 3:
+                {
+                    GamePad.SetVibration(PlayerIndex.Three, 0.5f, 0.5f);
+                    break;
+                }
+            case 4:
+                {
+                    GamePad.SetVibration(PlayerIndex.Four, 0.5f, 0.5f);
+                    break;
+                }
+        }
+
+                yield return new WaitForSeconds(0.5f);
+
+                switch (playerNum)
+                {
+                    case 1:
+                        {
+                            GamePad.SetVibration(PlayerIndex.One, 0f, 0f);
+                            break;
+                        }
+                    case 2:
+                        {
+                            GamePad.SetVibration(PlayerIndex.Two, 0f, 0f);
+                            break;
+                        }
+                    case 3:
+                        {
+                            GamePad.SetVibration(PlayerIndex.Three, 0f, 0f);
+                            break;
+                        }
+                    case 4:
+                        {
+                            GamePad.SetVibration(PlayerIndex.Four, 0f, 0f);
+                            break;
+                        }
+                }
+        
     }
 }
