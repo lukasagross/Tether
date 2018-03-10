@@ -72,7 +72,7 @@ public class Score : MonoBehaviour {
                 {
                     playerThreeScore += score;
                     var text = playerThreeScore.ToString();
-                    if (playerTwoScore < 10) text = "0" + text;
+                    if (playerThreeScore < 10) text = "0" + text;
                     playerThreeText.text = text;
                     if (playerThreeScore >= 15) Win("Player Three");
                     break;
@@ -82,7 +82,7 @@ public class Score : MonoBehaviour {
                 {
                     playerFourScore += score;
                     var text = playerFourScore.ToString();
-                    if (playerTwoScore < 10) text = "0" + text;
+                    if (playerFourScore < 10) text = "0" + text;
                     playerFourText.text = text;
                     if (playerFourScore >= 15) Win("Player Four");
                     break;

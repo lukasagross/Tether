@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spikes : MonoBehaviour {
 
     private Score sc;
-    public enum Direction{up, down}
+    public enum Direction{up, down, left, right}
     public Direction d;
 	
 	void Awake()
@@ -29,9 +29,17 @@ public class Spikes : MonoBehaviour {
             {
                 plm.SetVelocity(new Vector2(col.gameObject.GetComponent<Rigidbody2D>().velocity.x, 8));
             }
-            else
+            else if(d == Direction.down)
             {
                 plm.SetVelocity(new Vector2(col.gameObject.GetComponent<Rigidbody2D>().velocity.x, -8));
+            }
+            else if(d == Direction.left)
+            {
+                plm.SetVelocity(new Vector2(8, col.gameObject.GetComponent<Rigidbody2D>().velocity.y));
+            }
+            else
+            {
+                plm.SetVelocity(new Vector2(-8, col.gameObject.GetComponent<Rigidbody2D>().velocity.y));
             }
             
         }
