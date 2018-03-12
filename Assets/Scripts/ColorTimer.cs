@@ -61,6 +61,7 @@ public class ColorTimer : MonoBehaviour {
             PlayerPrefs.SetInt("color4", color4.isSelected ? color4.currentHex : 0);
 
             PlayerPrefs.SetInt("CurrentMap", 1);
+            PlayerPrefs.SetInt("NumMaps", 1);
 
             if (color1.isSelected)
                 PlayerPrefs.SetInt("CurrentPlayer", 1);

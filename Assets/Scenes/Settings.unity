@@ -478,7 +478,7 @@ GameObject:
   - component: {fileID: 453854083}
   - component: {fileID: 453854082}
   m_Layer: 5
-  m_Name: Subtext
+  m_Name: SubText
   m_TagString: SubText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1231,6 +1231,7 @@ GameObject:
   - component: {fileID: 962086618}
   - component: {fileID: 962086620}
   - component: {fileID: 962086619}
+  - component: {fileID: 962086621}
   m_Layer: 5
   m_Name: ModeSelector
   m_TagString: Untagged
@@ -1269,6 +1270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f89491d8b5d29d143adf2acda7b48d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 962086621}
   scrollTime: 0.75
 --- !u!82 &962086620
 AudioSource:
@@ -1350,6 +1352,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &962086621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 962086617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0615577249667ec4987ab38f7a188cec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerNum: 0
+  controller: 0
 --- !u!1 &1106198549
 GameObject:
   m_ObjectHideFlags: 0
@@ -1360,6 +1375,7 @@ GameObject:
   - component: {fileID: 1106198550}
   - component: {fileID: 1106198551}
   - component: {fileID: 1106198552}
+  - component: {fileID: 1106198553}
   m_Layer: 5
   m_Name: MapSelector
   m_TagString: Untagged
@@ -1399,6 +1415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ec283496f9cf41931e1b8aa694df8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1106198553}
   weaponselector: {fileID: 1202436422}
   scrollTime: 0.75
 --- !u!82 &1106198552
@@ -1481,6 +1498,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1106198553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1106198549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0615577249667ec4987ab38f7a188cec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerNum: 0
+  controller: 0
 --- !u!1 &1202436420
 GameObject:
   m_ObjectHideFlags: 0
@@ -1491,6 +1521,7 @@ GameObject:
   - component: {fileID: 1202436421}
   - component: {fileID: 1202436422}
   - component: {fileID: 1202436423}
+  - component: {fileID: 1202436424}
   m_Layer: 5
   m_Name: WeaponSelector
   m_TagString: Untagged
@@ -1529,6 +1560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d426749b2167fce4793ab5a6c2e1f4f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1202436424}
   modeselector: {fileID: 962086619}
   scrollTime: 0.75
 --- !u!82 &1202436423
@@ -1611,6 +1643,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1202436424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1202436420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0615577249667ec4987ab38f7a188cec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerNum: 0
+  controller: 0
 --- !u!1 &1211537831
 GameObject:
   m_ObjectHideFlags: 0

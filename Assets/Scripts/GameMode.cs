@@ -8,6 +8,9 @@ public class GameMode : MonoBehaviour {
     private CarrotController cc;
     private PlayerControls[] playersAlive;
 
+    private int currentMap;
+    private int numMaps;
+
     public enum Mode {hits, health, carrots}
     public Mode currentMode;
 
@@ -25,6 +28,11 @@ public class GameMode : MonoBehaviour {
     {
         sc = FindObjectOfType<Score>();
         cc = FindObjectOfType<CarrotController>();
+
+        currentMap = PlayerPrefs.GetInt("CurrentMap");
+        numMaps = PlayerPrefs.GetInt("NumMaps");
+        currentMode = (Mode)PlayerPrefs.GetInt("mode" + currentMap);
+
         StartCoroutine(StartUp());
     }
 

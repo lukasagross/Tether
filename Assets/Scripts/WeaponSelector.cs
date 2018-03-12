@@ -16,7 +16,9 @@ public class WeaponSelector : MonoBehaviour {
     private int selected = 0;
     private int numWeapons = 4;
     private float moveDistance = 4000f;
+    private float delay = 0f;
 
+    public PlayerControls player;
     public ModeSelector modeselector;
     public float scrollTime;
 
@@ -44,6 +46,9 @@ public class WeaponSelector : MonoBehaviour {
 
         WeaponRT.position = new Vector2(moveDistance, WeaponRT.position.y);
         WeaponTextRT.position = new Vector2(moveDistance, WeaponTextRT.position.y);
+
+        player.playerNum = PlayerPrefs.GetInt("CurrentPlayer");
+        player.controller = (XboxCtrlrInput.XboxController) player.playerNum;
     }
 	
 	void Update () {
@@ -66,19 +71,27 @@ public class WeaponSelector : MonoBehaviour {
 
     private void HandleInput()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (player.getJumpAxis() || Input.GetKeyDown(KeyCode.Return))
+        {
+            HandleSelect();
+        }
+
+        delay += Time.deltaTime;
+
+        if (delay < 0.2f)
+        {
+            return;
+        }
+        delay = 0f;
+
+        if (player.getHorizontalAxis() > 0 || Input.GetKeyDown(KeyCode.RightArrow))
         {
             selected = Mathf.Min(selected + 1, numWeapons - 1);
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (player.getHorizontalAxis() < 0 || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             selected = Mathf.Max(selected - 1, 0);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            HandleSelect();
         }
     }
 
@@ -100,6 +113,8 @@ public class WeaponSelector : MonoBehaviour {
         IEnumerator moveWeaponText = MoveRectTo(WeaponTextRT, WeaponTextRT.position.x, RT.position.x, scrollTime);
         StartCoroutine(moveWeapon);
         StartCoroutine(moveWeaponText);
+
+        GameObject.FindGameObjectWithTag("SubText").GetComponent<UnityEngine.UI.Text>().text = "Choose A Weapon";
     }
 
     IEnumerator MoveRectTo(RectTransform rect, float oldx, float newx, float time)

@@ -6,7 +6,7 @@ using UnityEngine;
 using XInputDotNetPure;
 
 public class Score : MonoBehaviour {
-    public int playerOneScore = 0;
+    private int playerOneScore = 0;
     private int playerTwoScore = 0;
     private int playerThreeScore = 0;
     private int playerFourScore = 0;
@@ -18,31 +18,52 @@ public class Score : MonoBehaviour {
     private int scoreToWin;
     private GameMode gm;
 
-	void Start () {
+    public bool IsTutorial;
+
+    void Start()
+    {
         playerOneText = transform.GetChild(0).GetComponent<Text>();
         playerTwoText = transform.GetChild(1).GetComponent<Text>();
         playerThreeText = transform.GetChild(2).GetComponent<Text>();
         playerFourText = transform.GetChild(3).GetComponent<Text>();
         rt = GetComponent<RectTransform>();
 
+        GameObject handle;
+
         gm = FindObjectOfType<GameMode>();
-        if(gm.currentMode == GameMode.Mode.carrots)
+        if (gm.currentMode == GameMode.Mode.carrots)
         {
             transform.GetChild(4).gameObject.SetActive(true);
             transform.GetChild(5).gameObject.SetActive(false);
             transform.GetChild(6).gameObject.SetActive(false);
+            handle = transform.GetChild(4).gameObject;
         }
-        if (gm.currentMode == GameMode.Mode.hits)
+        else if (gm.currentMode == GameMode.Mode.hits)
         {
             transform.GetChild(4).gameObject.SetActive(false);
             transform.GetChild(5).gameObject.SetActive(true);
             transform.GetChild(6).gameObject.SetActive(false);
+            handle = transform.GetChild(5).gameObject;
         }
-        if (gm.currentMode == GameMode.Mode.health)
+        else if (gm.currentMode == GameMode.Mode.health)
         {
             transform.GetChild(4).gameObject.SetActive(false);
             transform.GetChild(5).gameObject.SetActive(false);
             transform.GetChild(6).gameObject.SetActive(true);
+            handle = transform.GetChild(6).gameObject;
+        }
+        else
+        {
+            handle = null;
+            Debug.Log("Gamemode Not Set");
+            Debug.Log(gm.currentMode);
+        }
+        if (!IsTutorial)
+        {
+            HandlePlayer(handle, 1);
+            HandlePlayer(handle, 2);
+            HandlePlayer(handle, 3);
+            HandlePlayer(handle, 4);
         }
     }
 
@@ -164,5 +185,28 @@ public class Score : MonoBehaviour {
     {
         yield return new WaitForSeconds(0.1f);
         rt.sizeDelta = new Vector2(Screen.width, Screen.height);
+    }
+
+    private void HandlePlayer(GameObject handle, int playernum)
+    {
+        Color[] colors = new Color[7];
+        colors[0] = Color.white;
+        colors[1] = new Color(0.859f, 0.839f, 0.114f);
+        colors[2] = new Color(0.008f, 0.503f, 0.012f);
+        colors[3] = new Color(0.027f, 0.576f, 0.906f);
+        colors[4] = new Color(0.667f, 0.129f, 0.765f);
+        colors[5] = new Color(0.809f, 0.101f, 0.101f);
+        colors[6] = new Color(0.923f, 0.509f, 0.011f);
+
+        int colorindex = PlayerPrefs.GetInt("color" + playernum);
+        if (colorindex <= 0)
+        {
+            handle.transform.GetChild(playernum - 1).gameObject.SetActive(false);
+            transform.GetChild(playernum - 1).gameObject.SetActive(false);
+        }
+        else
+        {
+            transform.GetChild(playernum - 1).gameObject.GetComponent<Text>().color = colors[colorindex];
+        }
     }
 }

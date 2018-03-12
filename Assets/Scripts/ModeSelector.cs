@@ -19,7 +19,9 @@ public class ModeSelector : MonoBehaviour
     private int selected = 0;
     private int numModes = 3;
     private float moveDistance = 4000f;
+    private float delay = 0f;
 
+    public PlayerControls player;
     public float scrollTime;
 
     void Start()
@@ -45,6 +47,9 @@ public class ModeSelector : MonoBehaviour
 
         ModeRT.position = new Vector2(moveDistance, ModeRT.position.y);
         ModeTextRT.position = new Vector2(moveDistance, ModeTextRT.position.y);
+
+        player.playerNum = PlayerPrefs.GetInt("CurrentPlayer");
+        player.controller = (XboxCtrlrInput.XboxController)player.playerNum;
     }
 
     void Update()
@@ -71,19 +76,27 @@ public class ModeSelector : MonoBehaviour
 
     private void HandleInput()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (player.getJumpAxis() || Input.GetKeyDown(KeyCode.Return))
+        {
+            HandleSelect();
+        }
+
+        delay += Time.deltaTime;
+
+        if (delay < 0.2f)
+        {
+            return;
+        }
+        delay = 0f;
+
+        if (player.getHorizontalAxis() > 0 || Input.GetKeyDown(KeyCode.RightArrow))
         {
             selected = Mathf.Min(selected + 1, numModes - 1);
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (player.getHorizontalAxis() < 0 || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             selected = Mathf.Max(selected - 1, 0);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            HandleSelect();
         }
     }
 
@@ -97,11 +110,12 @@ public class ModeSelector : MonoBehaviour
         PlayerPrefs.SetInt("mode" + currentmap, selected);
         int currentplayer = PlayerPrefs.GetInt("CurrentPlayer");
 
-        for (int i = currentplayer; i < 4; i++) {
-            if (PlayerPrefs.GetInt("color" + (currentplayer + i)) > 0)
+        for (int i = currentplayer + 1; i < 4; i++) {
+            if (PlayerPrefs.GetInt("color" + i) > 0)
             {
-                PlayerPrefs.SetInt("CurrentPlayer", currentplayer + i);
+                PlayerPrefs.SetInt("CurrentPlayer", i);
                 PlayerPrefs.SetInt("CurrentMap", currentmap + 1);
+                PlayerPrefs.SetInt("NumMaps", PlayerPrefs.GetInt("NumMaps") + 1);
                 SceneManager.LoadScene("Settings");
                 return;
             }
@@ -111,8 +125,8 @@ public class ModeSelector : MonoBehaviour
         mapnames[1] = "FleshCaves";
         mapnames[2] = "WarpedMap";
         mapnames[3] = "ForestCave";
-        int map = PlayerPrefs.GetInt("CurrentMap");
-        SceneManager.LoadScene(mapnames[PlayerPrefs.GetInt("map" + map)]);
+        PlayerPrefs.SetInt("CurrentMap", 1);
+        SceneManager.LoadScene(mapnames[PlayerPrefs.GetInt("map1")]);
     }
 
     public void Activate()
@@ -121,6 +135,8 @@ public class ModeSelector : MonoBehaviour
         IEnumerator moveModeText = MoveRectTo(ModeTextRT, ModeTextRT.position.x, RT.position.x, scrollTime);
         StartCoroutine(moveMode);
         StartCoroutine(moveModeText);
+
+        GameObject.FindGameObjectWithTag("SubText").GetComponent<Text>().text = "Choose A Mode";
     }
 
     IEnumerator MoveRectTo(RectTransform rect, float oldx, float newx, float time)
