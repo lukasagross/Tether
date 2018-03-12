@@ -14,14 +14,38 @@ public class GameMode : MonoBehaviour {
     public enum Mode {hits, health, carrots}
     public Mode currentMode;
 
+    [HideInInspector]
     public int startHealth;
+    [HideInInspector]
     public int startCarrots;
+    [HideInInspector]
     public int scoreToWin;
+    [HideInInspector]
+    public bool ready = false;
 
     // Use this for initialization
     void Start()
     {
         playersAlive = FindObjectsOfType<PlayerControls>();
+
+        switch (currentMode)
+        {
+            case Mode.carrots:
+                startHealth = 0;
+                scoreToWin = 15;
+                startCarrots = 3;
+                break;
+            case Mode.health:
+                startHealth = 10;
+                scoreToWin = 15;
+                startCarrots = 0;
+                break;
+            case Mode.hits:
+                startHealth = 0;
+                scoreToWin = 20;
+                startCarrots = 0;
+                break;
+        }
     }
 
     void Awake()
@@ -82,6 +106,7 @@ public class GameMode : MonoBehaviour {
                 sc.AddScore(4, startCarrots);
                 break;
         }
+        ready = true;
     }
     
     public void killPlayer(int playerNumber)

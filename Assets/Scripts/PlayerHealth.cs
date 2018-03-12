@@ -12,7 +12,6 @@ public class PlayerHealth : MonoBehaviour {
     private int  playerNum;
     private GameMode gm;
     private Score sc;
-    private float startTime;
     private AudioSource hurt;
 
     //Should be set in unity editor
@@ -33,20 +32,13 @@ public class PlayerHealth : MonoBehaviour {
         {
             iFrameDuration = 0.07f;
         }
-
-        startTime = 0;
     }
 
     void Update()
     {
-        if (startTime > .5f && gm.currentMode == GameMode.Mode.health && sc.GetScore(playerNum) == 0)
+        if (gm.ready && gm.currentMode == GameMode.Mode.health && sc.GetScore(playerNum) == 0)
         {
             StartCoroutine(Die());
-        }
-        startTime += Time.deltaTime;
-        if(startTime > 100)
-        {
-            startTime = 5;
         }
     }
     public void takeDamage()
