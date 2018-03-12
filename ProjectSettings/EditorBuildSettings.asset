@@ -15,17 +15,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Settings.unity
     guid: 69f9101b326133a47b0bfe1bc2f1b410
   - enabled: 1
-    path: Assets/Scenes/SunkenGrotto.unity
+    path: Assets/Scenes/UnderwaterMap.unity
     guid: 502fede985b77344eb2b83724f53b182
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 92142e00d8087ff4ea73c715d3b941c5
   - enabled: 1
-    path: Assets/Scenes/WarpedCaverns.unity
+    path: Assets/Scenes/WarpedMap.unity
     guid: 3eb56638f716be641afe19e11377243a
   - enabled: 1
-    path: Assets/Scenes/SubterraneanForest.unity
+    path: Assets/Scenes/ForestCave.unity
     guid: 230dee81453a5b148adf4d0b548ac12b
   - enabled: 1
-    path: Assets/Scenes/HellCave.unity
+    path: Assets/Scenes/FleshCaves.unity
     guid: a59b839d590f3824284aafe73a34b6de

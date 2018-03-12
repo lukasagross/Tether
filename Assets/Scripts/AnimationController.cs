@@ -13,13 +13,32 @@ public class AnimationController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         animator = GetComponent<Animator>();
+        player = GetComponentInParent<PlayerControls>();
+        string[] animators = new string[7];
+        int index = PlayerPrefs.GetInt("color" + player.playerNum);
+        if (index == 0)
+        {
+            transform.parent.gameObject.SetActive(false);
+            return;
+        }
+        animators[1] = "Yellow";
+        animators[2] = "Green";
+        animators[3] = "Blue";
+        animators[4] = "Purple";
+        animators[5] = "Red";
+        animators[6] = "Orange";
+
+        animator.runtimeAnimatorController = Resources.Load(animators[index]) as RuntimeAnimatorController;
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponentInParent<Rigidbody2D>();
-        player = GetComponentInParent<PlayerControls>();
     }
 	
 	// Update is called once per frame
 	void Update () {
+        if (!gameObject.activeSelf)
+        {
+            return;
+        }
        
         aimDirection = new Vector2(player.getHorizontalAxis(), player.getVerticalAxis());
         rotation = Vector2.Angle(aimDirection, Vector2.up);
