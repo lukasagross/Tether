@@ -112,7 +112,7 @@ public class GameOver : MonoBehaviour {
     {
         winner3 = PlayerPrefs.GetInt("winner3");
         Round3.SetActive(true);
-        Text Text3 = Round2.GetComponent<Text>();
+        Text Text3 = Round3.GetComponent<Text>();
         Text3.text = winners[winner3];
         Text3.color = colors[winner3];
     }
@@ -121,7 +121,7 @@ public class GameOver : MonoBehaviour {
     {
         winner4 = PlayerPrefs.GetInt("winner4");
         Round4.SetActive(true);
-        Text Text4 = Round2.GetComponent<Text>();
+        Text Text4 = Round4.GetComponent<Text>();
         Text4.text = winners[winner4];
         Text4.color = colors[winner4];
     }
