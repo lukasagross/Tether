@@ -33,22 +33,22 @@ public class Score : MonoBehaviour {
         gm = FindObjectOfType<GameMode>();
         if (gm.currentMode == GameMode.Mode.carrots)
         {
-            transform.GetChild(4).gameObject.SetActive(true);
-            transform.GetChild(5).gameObject.SetActive(false);
-            transform.GetChild(6).gameObject.SetActive(false);
-            handle = transform.GetChild(4).gameObject;
-        }
-        else if (gm.currentMode == GameMode.Mode.hits)
-        {
-            transform.GetChild(4).gameObject.SetActive(false);
             transform.GetChild(5).gameObject.SetActive(true);
+            transform.GetChild(4).gameObject.SetActive(false);
             transform.GetChild(6).gameObject.SetActive(false);
             handle = transform.GetChild(5).gameObject;
         }
+        else if (gm.currentMode == GameMode.Mode.hits)
+        {
+            transform.GetChild(5).gameObject.SetActive(false);
+            transform.GetChild(4).gameObject.SetActive(true);
+            transform.GetChild(6).gameObject.SetActive(false);
+            handle = transform.GetChild(4).gameObject;
+        }
         else if (gm.currentMode == GameMode.Mode.health)
         {
-            transform.GetChild(4).gameObject.SetActive(false);
             transform.GetChild(5).gameObject.SetActive(false);
+            transform.GetChild(4).gameObject.SetActive(false);
             transform.GetChild(6).gameObject.SetActive(true);
             handle = transform.GetChild(6).gameObject;
         }
