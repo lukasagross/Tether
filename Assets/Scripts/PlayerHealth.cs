@@ -39,7 +39,7 @@ public class PlayerHealth : MonoBehaviour {
 
     void Update()
     {
-        if (startTime > .02f && gm.currentMode == GameMode.Mode.health && sc.GetScore(playerNum) == 0)
+        if (startTime > .5f && gm.currentMode == GameMode.Mode.health && sc.GetScore(playerNum) == 0)
         {
             StartCoroutine(Die());
         }
