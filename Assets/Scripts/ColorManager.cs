@@ -97,6 +97,20 @@ public class ColorManager : MonoBehaviour {
             HandleSelect();
         }
 
+        if(player.playerNum == 1 && Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            isSelected = true;
+            currentHex = 5;
+            HandleSelect();
+        }
+
+        if (player.playerNum == 2 && Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            isSelected = true;
+            currentHex = 6;
+            HandleSelect();
+        }
+
         if (isSelected && player.getBAxis()){
             isSelected = false;
             for (int i = 0; i < 7; i++)

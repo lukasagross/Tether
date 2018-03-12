@@ -478,7 +478,7 @@ GameObject:
   - component: {fileID: 453854083}
   - component: {fileID: 453854082}
   m_Layer: 5
-  m_Name: Subtext
+  m_Name: SubText
   m_TagString: SubText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

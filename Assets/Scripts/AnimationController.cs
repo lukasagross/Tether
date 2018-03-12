@@ -10,13 +10,15 @@ public class AnimationController : MonoBehaviour {
     private PlayerControls player;
     private float rotation;
 
+    public bool IsTutorial;
+
     // Use this for initialization
     void Start () {
         animator = GetComponent<Animator>();
         player = GetComponentInParent<PlayerControls>();
         string[] animators = new string[7];
         int index = PlayerPrefs.GetInt("color" + player.playerNum);
-        if (index == 0)
+        if (index == 0 && !IsTutorial)
         {
             transform.parent.gameObject.SetActive(false);
             return;
