@@ -97,10 +97,11 @@ public class ModeSelector : MonoBehaviour
         PlayerPrefs.SetInt("mode" + currentmap, selected);
         int currentplayer = PlayerPrefs.GetInt("CurrentPlayer");
 
-        for (int i = currentplayer; i < 5; i++) {
-            if (PlayerPrefs.GetInt("color" + (currentplayer + 1)) > 0)
+        for (int i = currentplayer; i < 4; i++) {
+            if (PlayerPrefs.GetInt("color" + (currentplayer + i)) > 0)
             {
-                PlayerPrefs.SetInt("CurrentPlayer", currentplayer + 1);
+                PlayerPrefs.SetInt("CurrentPlayer", currentplayer + i);
+                PlayerPrefs.SetInt("CurrentMap", currentmap + 1);
                 SceneManager.LoadScene("Settings");
                 return;
             }

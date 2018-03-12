@@ -8,12 +8,20 @@ public class ColorManager : MonoBehaviour {
     private PlayerControls player;
     private GameObject[] hexes;
     private Color[] colors;
+    private List<int> taken;
     private AudioSource source;
     private Text text;
     private float spinspeed = 1f;
     private float fadetime = 0.5f;
+
+
     public int currentHex = 0;
     public bool isSelected = false;
+
+    public ColorManager Manager1;
+    public ColorManager Manager2;
+    public ColorManager Manager3;
+
 
     void Start () {
         source = GetComponent<AudioSource>();
@@ -36,6 +44,8 @@ public class ColorManager : MonoBehaviour {
         colors[4] = new Color(0.667f, 0.129f, 0.765f);
         colors[5] = new Color(0.809f, 0.101f, 0.101f);
         colors[6] = new Color(0.923f, 0.509f, 0.011f);
+
+        taken = new List<int>();
     }
 
     void Update()
@@ -70,8 +80,15 @@ public class ColorManager : MonoBehaviour {
                 currentHex = 5;
             if (angle <= 180 && angle >= 135f)
                 currentHex = 6;
-            RectTransform next = hexes[currentHex].GetComponent<RectTransform>();
-            next.localScale = new Vector3(3f, 3f, 1f);
+            if (!taken.Contains(currentHex))
+            {
+                RectTransform next = hexes[currentHex].GetComponent<RectTransform>();
+                next.localScale = new Vector3(3f, 3f, 1f);
+            }
+            else
+            {
+                currentHex = 0;
+            }
         }
 
         if(player.getJumpAxis() && currentHex != 0)
@@ -91,6 +108,10 @@ public class ColorManager : MonoBehaviour {
             hexes[0].GetComponent<Image>().fillAmount = 1;
             image.fillClockwise = false;
             text.color = Color.white;
+
+            Manager1.UnrestrictColor(currentHex);
+            Manager2.UnrestrictColor(currentHex);
+            Manager3.UnrestrictColor(currentHex);
         }
 
     }
@@ -117,6 +138,10 @@ public class ColorManager : MonoBehaviour {
 
     private void HandleSelect()
     {
+        Manager1.RestrictColor(currentHex);
+        Manager2.RestrictColor(currentHex);
+        Manager3.RestrictColor(currentHex);
+
         source.Play();
         Color selected = hexes[currentHex].GetComponent<Image>().color;
         for (int i = 1; i <= hexes.Length; i++)
@@ -148,5 +173,17 @@ public class ColorManager : MonoBehaviour {
 
             yield return null;
         }
+    }
+
+    public void RestrictColor(int color)
+    {
+        taken.Add(color);
+        hexes[color].GetComponent<Image>().color = Color.white;
+    }
+
+    public void UnrestrictColor(int color)
+    {
+        taken.Remove(color);
+        hexes[color].GetComponent<Image>().color = colors[color];
     }
 }

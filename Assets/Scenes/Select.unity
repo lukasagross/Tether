@@ -1457,6 +1457,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHex: 0
   isSelected: 0
+  Manager1: {fileID: 1186305982}
+  Manager2: {fileID: 1715974502}
+  Manager3: {fileID: 1583889741}
 --- !u!1 &805539815
 GameObject:
   m_ObjectHideFlags: 0
@@ -2344,6 +2347,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHex: 0
   isSelected: 0
+  Manager1: {fileID: 754702011}
+  Manager2: {fileID: 1715974502}
+  Manager3: {fileID: 1583889741}
 --- !u!114 &1186305983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3130,6 +3136,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHex: 0
   isSelected: 0
+  Manager1: {fileID: 1186305982}
+  Manager2: {fileID: 754702011}
+  Manager3: {fileID: 1715974502}
 --- !u!1 &1600665375
 GameObject:
   m_ObjectHideFlags: 0
@@ -3552,6 +3561,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHex: 0
   isSelected: 0
+  Manager1: {fileID: 1186305982}
+  Manager2: {fileID: 754702011}
+  Manager3: {fileID: 1583889741}
 --- !u!1 &2005143678
 GameObject:
   m_ObjectHideFlags: 0

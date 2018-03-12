@@ -21,7 +21,6 @@ public class AnimationController : MonoBehaviour {
             transform.parent.gameObject.SetActive(false);
             return;
         }
-        Debug.Log("Player Alive");
         animators[1] = "Yellow";
         animators[2] = "Green";
         animators[3] = "Blue";
