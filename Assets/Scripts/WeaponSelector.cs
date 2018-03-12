@@ -17,6 +17,7 @@ public class WeaponSelector : MonoBehaviour {
     private int numWeapons = 4;
     private float moveDistance = 4000f;
 
+    public ModeSelector modeselector;
     public float scrollTime;
 
 	void Start () {
@@ -52,9 +53,9 @@ public class WeaponSelector : MonoBehaviour {
         int oldselected = selected;
         HandleInput();
 
-        Weapons[oldselected].GetComponent<RectTransform>().localScale = new Vector2(0.2f, 0.2f);
+        Weapons[oldselected].GetComponent<RectTransform>().localScale = new Vector2(0.14f, 0.14f);
 
-        Weapons[selected].GetComponent<RectTransform>().localScale = new Vector2(0.14f, 0.14f);
+        Weapons[selected].GetComponent<RectTransform>().localScale = new Vector2(0.2f, 0.2f);
 
         if (oldselected != selected)
         {
@@ -87,13 +88,16 @@ public class WeaponSelector : MonoBehaviour {
         IEnumerator moveWeaponText = MoveRectTo(WeaponTextRT, WeaponTextRT.position.x, WeaponTextRT.position.x - moveDistance, scrollTime);
         StartCoroutine(moveWeapon);
         StartCoroutine(moveWeaponText);
+
+        PlayerPrefs.SetInt("weapon" + currentmap, selected);
+
+        modeselector.Activate();
     }
 
     public void Activate()
     {
         IEnumerator moveWeapon = MoveRectTo(WeaponRT, WeaponRT.position.x, RT.position.x, scrollTime);
         IEnumerator moveWeaponText = MoveRectTo(WeaponTextRT, WeaponTextRT.position.x, RT.position.x, scrollTime);
-
         StartCoroutine(moveWeapon);
         StartCoroutine(moveWeaponText);
     }

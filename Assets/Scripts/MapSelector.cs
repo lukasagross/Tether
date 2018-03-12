@@ -23,7 +23,7 @@ public class MapSelector : MonoBehaviour {
     private Text InfoText;
 
     private int selected = 0;
-    private int numLevels = 3;
+    private int numLevels = 4;
     private int currplayer;
     private int currmap;
     private float moveDistance = 4000f;
@@ -50,14 +50,17 @@ public class MapSelector : MonoBehaviour {
         Backgrounds[0] = Background.transform.GetChild(0).gameObject;       
         Backgrounds[1] = Background.transform.GetChild(1).gameObject;
         Backgrounds[2] = Background.transform.GetChild(2).gameObject;
+        Backgrounds[3] = Background.transform.GetChild(3).gameObject;
 
         Icons[0] = Icon.transform.GetChild(0).gameObject;
         Icons[1] = Icon.transform.GetChild(1).gameObject;
         Icons[2] = Icon.transform.GetChild(2).gameObject;
+        Icons[3] = Icon.transform.GetChild(3).gameObject;
 
         MapNames[0] = "Sunken Grotto";
         MapNames[1] = "Hell Cave";
         MapNames[2] = "Warped Caverns";
+        MapNames[3] = "Subterranean Forest";
 
         colors[0] = Color.white;
         colors[1] = new Color(0.859f, 0.839f, 0.114f);
@@ -96,10 +99,10 @@ public class MapSelector : MonoBehaviour {
         int oldselected = selected;
         HandleInput();
 
-        Icons[oldselected].GetComponent<RectTransform>().localScale = new Vector2(0.2f, 0.2f);
+        Icons[oldselected].GetComponent<RectTransform>().localScale = new Vector2(0.18f, 0.18f);
         Backgrounds[oldselected].SetActive(false);
 
-        Icons[selected].GetComponent<RectTransform>().localScale = new Vector2(0.18f, 0.18f);
+        Icons[selected].GetComponent<RectTransform>().localScale = new Vector2(0.2f, 0.2f);
         Backgrounds[selected].SetActive(true);
 
         if (oldselected != selected)
@@ -136,7 +139,6 @@ public class MapSelector : MonoBehaviour {
 
         PlayerPrefs.SetInt("map" + currmap, selected);
 
-        weaponselector.gameObject.SetActive(true);
         weaponselector.Activate();
     }
 
