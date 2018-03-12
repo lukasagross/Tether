@@ -105,10 +105,10 @@ public class ModeSelector : MonoBehaviour
         else
         {
             string[] mapnames = new string[4];
-            mapnames[0] = "SunkenGrotto";
-            mapnames[1] = "HellCave";
-            mapnames[2] = "WarpedCaverns";
-            mapnames[3] = "SubterraneanForest";
+            mapnames[0] = "UnderwaterMap";
+            mapnames[1] = "FleshCaves";
+            mapnames[2] = "WarpedMap";
+            mapnames[3] = "ForestCave";
             PlayerPrefs.SetInt("CurrentMap", 1);
             SceneManager.LoadScene(mapnames[PlayerPrefs.GetInt("map1")]);
         }
