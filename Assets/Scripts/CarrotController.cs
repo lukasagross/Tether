@@ -7,15 +7,16 @@ public class CarrotController : MonoBehaviour {
     private Transform[] carrotSpawns;
     private Transform nextSpawn;
     private int spawnerCount;
-
-    //Set in editor
-    public bool active;
+    private GameMode gm;
+    
     
 
 
     void Awake()
     {
-        if (active) {
+        gm = FindObjectOfType<GameMode>();
+
+        if (gm.currentMode == GameMode.Mode.carrots) {
             spawnerCount = transform.childCount;
         carrotSpawns = new Transform[spawnerCount];
         for (int i = 0; i < spawnerCount; i++)
@@ -35,7 +36,7 @@ public class CarrotController : MonoBehaviour {
         Object c = Resources.Load("Prefabs/Carrot");
         Instantiate(c, nextSpawn.position, Quaternion.Euler(new Vector3(0, 0, 0)), nextSpawn);
 
-        if (active)
+        if (gm.currentMode == GameMode.Mode.carrots)
         {
             StartCoroutine(SpawnCarrots(5));
         }

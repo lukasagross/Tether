@@ -6,17 +6,49 @@ public class GameMode : MonoBehaviour {
 
     private Score sc;
     private CarrotController cc;
+    private PlayerControls[] playersAlive;
 
     public enum Mode {hits, health, carrots}
     public Mode currentMode;
-    
+
+    public int startHealth;
+    public int startCarrots;
+    public int scoreToWin;
 
     // Use this for initialization
+    void Start()
+    {
+        playersAlive = FindObjectsOfType<PlayerControls>();
+    }
+
     void Awake()
     {
         sc = FindObjectOfType<Score>();
         cc = FindObjectOfType<CarrotController>();
         StartCoroutine(StartUp());
+    }
+
+    void Update()
+    {
+        int count = 0;
+        foreach(var player in playersAlive)
+        {
+            if(player.playerNum != -1)
+            {
+                count++;
+            }
+        }
+
+        if (currentMode == Mode.health && count == 1)
+        {
+            foreach (var player in playersAlive)
+            {
+                if (player.playerNum != -1)
+                {
+                    sc.Win("Player " + player.playerNum);
+                }
+            }
+        }
     }
 
     private IEnumerator StartUp()
@@ -26,27 +58,33 @@ public class GameMode : MonoBehaviour {
 
             switch (currentMode)
         {
-            case (Mode.hits):
-                cc.active = false;
-
-                break;
             case (Mode.health):
-                cc.active = false;
-
-                sc.AddScore(1, 10);
-                sc.AddScore(2, 10);
-                sc.AddScore(3, 10);
-                sc.AddScore(4, 10);
+                
+                sc.AddScore(1, startHealth);
+                sc.AddScore(2, startHealth);
+                sc.AddScore(3, startHealth);
+                sc.AddScore(4, startHealth);
                 break;
             case (Mode.carrots):
-                cc.active = true;
+                
 
-                sc.AddScore(1, 3);
-                sc.AddScore(2, 3);
-                sc.AddScore(3, 3);
-                sc.AddScore(4, 3);
+                sc.AddScore(1, startCarrots);
+                sc.AddScore(2, startCarrots);
+                sc.AddScore(3, startCarrots);
+                sc.AddScore(4, startCarrots);
                 break;
         }
     }
     
+    public void killPlayer(int playerNumber)
+    {
+        foreach(var player in playersAlive)
+        {
+            if(player.playerNum == playerNumber)
+            {
+                player.playerNum = -1;
+            }
+        }
+    }
+
 }

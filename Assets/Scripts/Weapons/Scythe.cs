@@ -13,6 +13,7 @@ public class Scythe : MonoBehaviour
     private int playerNumber;
     private Aim aim;
     private Score score;
+    private GameMode gm;
 
     public float hitboxDuration = .25f;
     public float coolDown = .75f;
@@ -28,6 +29,7 @@ public class Scythe : MonoBehaviour
         score = FindObjectOfType<Score>();
         playerNumber = GetComponentInParent<PlayerControls>().playerNum;
         aim = GetComponentInParent<PlayerControls>().GetComponentInChildren<Aim>();
+        gm = FindObjectOfType<GameMode>();
     }
 
     void Update()
@@ -97,8 +99,11 @@ public class Scythe : MonoBehaviour
 
             if (collidedObject.GetComponent<PlayerHealth>().canDamage()) { 
             collidedObject.GetComponent<PlayerHealth>().takeDamage();
-            score.AddScore(playerNumber, 1);
-            col.enabled = false;
+                if (gm.currentMode == GameMode.Mode.hits)
+                {
+                    score.AddScore(playerNumber, 1);
+                }
+                col.enabled = false;
             }
         }
         

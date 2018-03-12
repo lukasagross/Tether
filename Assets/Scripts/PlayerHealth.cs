@@ -12,6 +12,7 @@ public class PlayerHealth : MonoBehaviour {
     private int  playerNum;
     private GameMode gm;
     private Score sc;
+    private float startTime;
 
     //Should be set in unity editor
     public float iFrameDuration;
@@ -30,8 +31,22 @@ public class PlayerHealth : MonoBehaviour {
         {
             iFrameDuration = 0.07f;
         }
+
+        startTime = 0;
     }
 
+    void Update()
+    {
+        if (startTime > .02f && gm.currentMode == GameMode.Mode.health && sc.GetScore(playerNum) == 0)
+        {
+            StartCoroutine(Die());
+        }
+        startTime += Time.deltaTime;
+        if(startTime > 100)
+        {
+            startTime = 5;
+        }
+    }
     public void takeDamage()
     {
         StartCoroutine(flash());
@@ -40,6 +55,11 @@ public class PlayerHealth : MonoBehaviour {
         if(gm.currentMode == GameMode.Mode.carrots)
         {
             DropCarrots(sc.GetScore(playerNum));
+        }
+
+        if (gm.currentMode == GameMode.Mode.health)
+        {
+            sc.AddScore(playerNum, -1);
         }
     }
 
@@ -178,5 +198,17 @@ public class PlayerHealth : MonoBehaviour {
         StartCoroutine(spawn.GetComponent<Carrot>().IgnoreCollisions(GetComponent<PlayerControls>().playerNum));
         spawn.GetComponent<Carrot>().SetVelocity(new Vector2(0, 3));
 
+    }
+
+    private IEnumerator Die()
+    {
+        gm.killPlayer(playerNum);
+        GetComponent<BoxCollider2D>().enabled = false;
+        GetComponent<Grapple>().enabled = false;
+        GetComponentInChildren<WeaponController>().enabled = false;
+        yield return new WaitForSeconds(0.5f);
+        StartCoroutine(flash());
+        yield return new WaitForSeconds(0.5f);
+        Destroy(gameObject);
     }
 }

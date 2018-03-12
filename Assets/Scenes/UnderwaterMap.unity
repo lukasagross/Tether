@@ -10466,6 +10466,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentMode: 0
+  startHealth: 0
+  startCarrots: 0
+  scoreToWin: 15
 --- !u!4 &1956484788
 Transform:
   m_ObjectHideFlags: 0
@@ -11426,4 +11429,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbfe9dc6dcadb8945bb77246ebb57b5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 1

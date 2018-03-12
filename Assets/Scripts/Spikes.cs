@@ -5,12 +5,14 @@ using UnityEngine;
 public class Spikes : MonoBehaviour {
 
     private Score sc;
+    private GameMode gm;
     public enum Direction{up, down, left, right}
     public Direction d;
 	
 	void Awake()
     {
         sc = FindObjectOfType<Score>();
+        gm = FindObjectOfType<GameMode>();
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -24,7 +26,16 @@ public class Spikes : MonoBehaviour {
             {
                 plh.takeDamage();
             }
-            sc.AddScore(plc.playerNum, -1);
+
+            if (gm.currentMode == GameMode.Mode.health && plh.canDamage())
+            {
+                sc.AddScore(plc.playerNum, -1);
+            }
+            if (gm.currentMode == GameMode.Mode.carrots || gm.currentMode == GameMode.Mode.hits)
+            {
+                sc.AddScore(plc.playerNum, -1);
+            }
+            
             if (d == Direction.up)
             {
                 plm.SetVelocity(new Vector2(col.gameObject.GetComponent<Rigidbody2D>().velocity.x, 8));
@@ -78,7 +89,16 @@ public class Spikes : MonoBehaviour {
             {
                 plh.takeDamage();
             }
-            sc.AddScore(plc.playerNum, -1);
+
+            if (gm.currentMode == GameMode.Mode.health && plh.canDamage())
+            {
+                sc.AddScore(plc.playerNum, -1);
+            }
+            if (gm.currentMode == GameMode.Mode.carrots || gm.currentMode == GameMode.Mode.hits)
+            {
+                sc.AddScore(plc.playerNum, -1);
+            }
+
             if (d == Direction.up)
             {
                 plm.SetVelocity(new Vector2(col.gameObject.GetComponent<Rigidbody2D>().velocity.x, 8));
