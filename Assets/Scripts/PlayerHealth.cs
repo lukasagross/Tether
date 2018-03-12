@@ -10,12 +10,16 @@ public class PlayerHealth : MonoBehaviour {
     private bool hittable;
     private Animator animator;
     private int  playerNum;
+    private GameMode gm;
+    private Score sc;
 
     //Should be set in unity editor
     public float iFrameDuration;
 
     void Awake()
     {
+        sc = FindObjectOfType<Score>();
+        gm = FindObjectOfType<GameMode>();
         sr = transform.GetChild(3).GetComponent<SpriteRenderer>();
         c = sr.color;
         hittable = true;
@@ -32,6 +36,11 @@ public class PlayerHealth : MonoBehaviour {
     {
         StartCoroutine(flash());
         StartCoroutine(rumble());
+
+        if(gm.currentMode == GameMode.Mode.carrots)
+        {
+            DropCarrots(sc.GetScore(playerNum));
+        }
     }
 
     private IEnumerator flash()
@@ -105,5 +114,69 @@ public class PlayerHealth : MonoBehaviour {
                         }
                 }
         
+    }
+
+    private void DropCarrots(int num)
+    {
+        if (num >= 3)
+        {
+            sc.AddScore(GetComponent<PlayerControls>().playerNum, -3);
+            spawn3();
+        }
+        else if(num == 2)
+        {
+            sc.AddScore(GetComponent<PlayerControls>().playerNum, -2);
+            spawn2();
+        }else if(num == 1)
+        {
+            sc.AddScore(GetComponent<PlayerControls>().playerNum, -1);
+            spawn1();
+        }
+        else
+        {
+            return;
+        }
+
+        
+    }
+
+    private void spawn3()
+    {
+        Object c = Resources.Load("Prefabs/Carrot");
+
+        GameObject spawn = (GameObject)Instantiate(c, transform.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+        StartCoroutine(spawn.GetComponent<Carrot>().IgnoreCollisions(GetComponent<PlayerControls>().playerNum));
+        spawn.GetComponent<Carrot>().SetVelocity(new Vector2(-3, 3));
+
+        spawn = (GameObject)Instantiate(c, transform.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+        StartCoroutine(spawn.GetComponent<Carrot>().IgnoreCollisions(GetComponent<PlayerControls>().playerNum));
+        spawn.GetComponent<Carrot>().SetVelocity(new Vector2(0, 3));
+
+        spawn = (GameObject)Instantiate(c, transform.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+        StartCoroutine(spawn.GetComponent<Carrot>().IgnoreCollisions(GetComponent<PlayerControls>().playerNum));
+        spawn.GetComponent<Carrot>().SetVelocity(new Vector2(3, 3));
+    }
+
+    private void spawn2()
+    {
+        Object c = Resources.Load("Prefabs/Carrot");
+
+        GameObject spawn = (GameObject)Instantiate(c, transform.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+        StartCoroutine(spawn.GetComponent<Carrot>().IgnoreCollisions(GetComponent<PlayerControls>().playerNum));
+        spawn.GetComponent<Carrot>().SetVelocity(new Vector2(-3, 3));
+
+        spawn = (GameObject)Instantiate(c, transform.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+        StartCoroutine(spawn.GetComponent<Carrot>().IgnoreCollisions(GetComponent<PlayerControls>().playerNum));
+        spawn.GetComponent<Carrot>().SetVelocity(new Vector2(3, 3));
+    }
+
+    private void spawn1()
+    {
+        Object c = Resources.Load("Prefabs/Carrot");
+
+        GameObject spawn = (GameObject)Instantiate(c, transform.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+        StartCoroutine(spawn.GetComponent<Carrot>().IgnoreCollisions(GetComponent<PlayerControls>().playerNum));
+        spawn.GetComponent<Carrot>().SetVelocity(new Vector2(0, 3));
+
     }
 }

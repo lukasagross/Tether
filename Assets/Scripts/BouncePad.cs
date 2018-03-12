@@ -5,6 +5,7 @@ using UnityEngine;
 public class BouncePad : MonoBehaviour {
 
     private PlayerMovement plm;
+    private Carrot c;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +23,12 @@ public class BouncePad : MonoBehaviour {
         if (plm != null)
         {
             plm.SetVelocity(new Vector2(col.gameObject.GetComponent<Rigidbody2D>().velocity.x, 11));
+        }
+
+        c = col.gameObject.GetComponent<Carrot>();
+        if (c != null)
+        {
+            c.SetVelocity(new Vector2(col.gameObject.GetComponent<Rigidbody2D>().velocity.x, 6));
         }
     }
 }

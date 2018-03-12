@@ -51,6 +51,7 @@ public class Score : MonoBehaviour {
             case 1:
                 {
                     playerOneScore += score;
+                    playerOneScore = (playerOneScore < 0 ? 0 : playerOneScore);
                     var text = playerOneScore.ToString();
                     if (playerOneScore < 10) text = "0" + text;
                     playerOneText.text = text;
@@ -61,6 +62,7 @@ public class Score : MonoBehaviour {
             case 2:
                 {
                     playerTwoScore += score;
+                    playerTwoScore = (playerTwoScore < 0 ? 0 : playerTwoScore);
                     var text = playerTwoScore.ToString();
                     if (playerTwoScore < 10) text = "0" + text;
                     playerTwoText.text = text;
@@ -71,6 +73,7 @@ public class Score : MonoBehaviour {
             case 3:
                 {
                     playerThreeScore += score;
+                    playerThreeScore = (playerThreeScore < 0 ? 0 : playerThreeScore);
                     var text = playerThreeScore.ToString();
                     if (playerThreeScore < 10) text = "0" + text;
                     playerThreeText.text = text;
@@ -81,6 +84,7 @@ public class Score : MonoBehaviour {
             case 4:
                 {
                     playerFourScore += score;
+                    playerFourScore = (playerFourScore < 0 ? 0 : playerFourScore);
                     var text = playerFourScore.ToString();
                     if (playerFourScore < 10) text = "0" + text;
                     playerFourText.text = text;
@@ -88,6 +92,22 @@ public class Score : MonoBehaviour {
                     break;
                 }
         }
+    }
+
+    public int GetScore(int playerNum)
+    {
+        switch (playerNum)
+        {
+            case 1:
+                return playerOneScore;
+            case 2:
+                return playerTwoScore;
+            case 3:
+                return playerThreeScore;
+            case 4:
+                return playerFourScore;
+        }
+        return -1;
     }
 
     private IEnumerator changeRes()
