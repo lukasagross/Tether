@@ -111,9 +111,8 @@ public class ModeSelector : MonoBehaviour
         mapnames[1] = "FleshCaves";
         mapnames[2] = "WarpedMap";
         mapnames[3] = "ForestCave";
-        PlayerPrefs.SetInt("CurrentMap", 1);
-        PlayerPrefs.SetInt("color1", 4);
-        SceneManager.LoadScene(mapnames[PlayerPrefs.GetInt("map1")]);
+        int map = PlayerPrefs.GetInt("CurrentMap");
+        SceneManager.LoadScene(mapnames[PlayerPrefs.GetInt("map" + map)]);
     }
 
     public void Activate()

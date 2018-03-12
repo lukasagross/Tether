@@ -22,7 +22,7 @@ public class WeaponController : MonoBehaviour {
         daggerTr = transform.GetChild(3);
         player = GetComponentInParent<PlayerControls>();
 
-        type = (Weapon.WeaponType)PlayerPrefs.GetInt("weapon" + player.playerNum);
+        type = (Weapon.WeaponType)PlayerPrefs.GetInt("weapon" + PlayerPrefs.GetInt("CurrentMap"));
     }
 	
 	void Update () {
