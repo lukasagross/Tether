@@ -17,6 +17,7 @@ public class Score : MonoBehaviour {
     private RectTransform rt;
     private int scoreToWin;
     private GameMode gm;
+    private PlayerControls plc;
 
     public bool IsTutorial;
 
@@ -27,6 +28,7 @@ public class Score : MonoBehaviour {
         playerThreeText = transform.GetChild(2).GetComponent<Text>();
         playerFourText = transform.GetChild(3).GetComponent<Text>();
         rt = GetComponent<RectTransform>();
+        plc = GetComponent<PlayerControls>();
 
         GameObject handle;
 
@@ -71,6 +73,14 @@ public class Score : MonoBehaviour {
     {
         scoreToWin = FindObjectOfType<GameMode>().scoreToWin;
         StartCoroutine(changeRes());
+    }
+
+    void Update()
+    {
+        if (plc.getReset())
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 
     public void Win(int playernum)

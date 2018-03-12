@@ -8,10 +8,6 @@ public class PlayerControls : MonoBehaviour
     public int playerNum;
     public XboxController controller;
 
-    void Awake()
-    {
-       
-    }
 
     public float getHorizontalAxis()
     {
@@ -40,5 +36,10 @@ public class PlayerControls : MonoBehaviour
     public bool getBAxis()
     {
         return XCI.GetButton(XboxButton.B, controller);
+    }
+
+    public bool getReset()
+    {
+        return XCI.GetButton(XboxButton.Start) && XCI.GetButton(XboxButton.Back);
     }
 }
