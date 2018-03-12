@@ -12,9 +12,7 @@ public class WeaponController : MonoBehaviour {
     private Transform scytheTr;
     private PlayerControls player;
     private Transform daggerTr;
-
-    //To be set in unity
-    public Weapon.WeaponType type;
+    private Weapon.WeaponType type;
 	
 	void Awake()
     {
@@ -23,6 +21,8 @@ public class WeaponController : MonoBehaviour {
         scytheTr = transform.GetChild(2);
         daggerTr = transform.GetChild(3);
         player = GetComponentInParent<PlayerControls>();
+
+        type = (Weapon.WeaponType)PlayerPrefs.GetInt("weapon" + player.playerNum);
     }
 	
 	void Update () {

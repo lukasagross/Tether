@@ -97,21 +97,22 @@ public class ModeSelector : MonoBehaviour
         PlayerPrefs.SetInt("mode" + currentmap, selected);
         int currentplayer = PlayerPrefs.GetInt("CurrentPlayer");
 
-        if (PlayerPrefs.GetInt("color" + (currentplayer + 1)) > 0)
-        {
-            PlayerPrefs.SetInt("CurrentPlayer", currentplayer + 1);
-            SceneManager.LoadScene("Settings");
+        for (int i = currentplayer; i < 5; i++) {
+            if (PlayerPrefs.GetInt("color" + (currentplayer + 1)) > 0)
+            {
+                PlayerPrefs.SetInt("CurrentPlayer", currentplayer + 1);
+                SceneManager.LoadScene("Settings");
+                return;
+            }
         }
-        else
-        {
-            string[] mapnames = new string[4];
-            mapnames[0] = "UnderwaterMap";
-            mapnames[1] = "FleshCaves";
-            mapnames[2] = "WarpedMap";
-            mapnames[3] = "ForestCave";
-            PlayerPrefs.SetInt("CurrentMap", 1);
-            SceneManager.LoadScene(mapnames[PlayerPrefs.GetInt("map1")]);
-        }
+        string[] mapnames = new string[4];
+        mapnames[0] = "UnderwaterMap";
+        mapnames[1] = "FleshCaves";
+        mapnames[2] = "WarpedMap";
+        mapnames[3] = "ForestCave";
+        PlayerPrefs.SetInt("CurrentMap", 1);
+        PlayerPrefs.SetInt("color1", 4);
+        SceneManager.LoadScene(mapnames[PlayerPrefs.GetInt("map1")]);
     }
 
     public void Activate()

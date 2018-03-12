@@ -458,7 +458,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81a7581412ebdda46bc87eeaf77dcedd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 2
 --- !u!1 &52439847
 GameObject:
   m_ObjectHideFlags: 0
@@ -3291,7 +3290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acf2595a02131a1468b33670970d4fbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentMode: 1
+  currentMode: 0
   startHealth: 10
   startCarrots: 0
   scoreToWin: 100
@@ -6974,7 +6973,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81a7581412ebdda46bc87eeaf77dcedd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 2
 --- !u!1 &1390772416
 GameObject:
   m_ObjectHideFlags: 0
@@ -8648,7 +8646,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81a7581412ebdda46bc87eeaf77dcedd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 2
 --- !u!1 &1818385299
 GameObject:
   m_ObjectHideFlags: 0
@@ -9700,4 +9697,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81a7581412ebdda46bc87eeaf77dcedd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 2

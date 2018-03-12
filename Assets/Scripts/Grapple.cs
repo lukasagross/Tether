@@ -25,6 +25,8 @@ public class Grapple : MonoBehaviour
     private SpriteRenderer grappleAnchorSprite;
     private PlayerControls player;
 
+    private bool attachedToMoving = false;
+    private MovingPlatform movingPlatform;
 
     void Awake()
     {
@@ -69,6 +71,11 @@ public class Grapple : MonoBehaviour
             //
             if (hit.collider != null && Vector2.Distance(hit.point, playerPosition) > .6f)
             {
+                attachedToMoving = (hit.collider.transform.gameObject.GetComponent<MovingPlatform>() != null);
+                if (attachedToMoving)
+                {
+                    movingPlatform = hit.collider.transform.gameObject.GetComponent<MovingPlatform>();
+                }
                 ToggleGrapple(true);
 
                 anchorPosition = hit.point;
@@ -129,6 +136,13 @@ public class Grapple : MonoBehaviour
 
         //Shrink the grapple by the climbing speed modulated by player input
         joint.distance -= Time.deltaTime * climbSpeed;
+
+        if (attachedToMoving)
+        {
+            float temp = joint.distance;
+            anchorPosition += movingPlatform.GetMoveDistance();
+            lineRenderer.SetPosition(0, anchorPosition);
+        }
     }
     
     void OnCollisionStay2D(Collision2D coll)
