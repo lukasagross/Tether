@@ -29,3 +29,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FleshCaves.unity
     guid: a59b839d590f3824284aafe73a34b6de
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 6c18cdba7c13ab84c83ca5afd98a2cfa

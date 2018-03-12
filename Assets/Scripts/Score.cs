@@ -17,6 +17,7 @@ public class Score : MonoBehaviour {
     private RectTransform rt;
     private int scoreToWin;
     private GameMode gm;
+    private PlayerControls plc;
 
     public bool IsTutorial;
 
@@ -27,28 +28,29 @@ public class Score : MonoBehaviour {
         playerThreeText = transform.GetChild(2).GetComponent<Text>();
         playerFourText = transform.GetChild(3).GetComponent<Text>();
         rt = GetComponent<RectTransform>();
+        plc = GetComponent<PlayerControls>();
 
         GameObject handle;
 
         gm = FindObjectOfType<GameMode>();
         if (gm.currentMode == GameMode.Mode.carrots)
         {
-            transform.GetChild(4).gameObject.SetActive(true);
-            transform.GetChild(5).gameObject.SetActive(false);
-            transform.GetChild(6).gameObject.SetActive(false);
-            handle = transform.GetChild(4).gameObject;
-        }
-        else if (gm.currentMode == GameMode.Mode.hits)
-        {
-            transform.GetChild(4).gameObject.SetActive(false);
             transform.GetChild(5).gameObject.SetActive(true);
+            transform.GetChild(4).gameObject.SetActive(false);
             transform.GetChild(6).gameObject.SetActive(false);
             handle = transform.GetChild(5).gameObject;
         }
+        else if (gm.currentMode == GameMode.Mode.hits)
+        {
+            transform.GetChild(5).gameObject.SetActive(false);
+            transform.GetChild(4).gameObject.SetActive(true);
+            transform.GetChild(6).gameObject.SetActive(false);
+            handle = transform.GetChild(4).gameObject;
+        }
         else if (gm.currentMode == GameMode.Mode.health)
         {
-            transform.GetChild(4).gameObject.SetActive(false);
             transform.GetChild(5).gameObject.SetActive(false);
+            transform.GetChild(4).gameObject.SetActive(false);
             transform.GetChild(6).gameObject.SetActive(true);
             handle = transform.GetChild(6).gameObject;
         }
@@ -71,6 +73,14 @@ public class Score : MonoBehaviour {
     {
         scoreToWin = FindObjectOfType<GameMode>().scoreToWin;
         StartCoroutine(changeRes());
+    }
+
+    void Update()
+    {
+        if (plc.getReset())
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 
     public void Win(int playernum)
