@@ -12,7 +12,7 @@ public class CarrotController : MonoBehaviour {
     
 
 
-    void Awake()
+    void Start()
     {
         gm = FindObjectOfType<GameMode>();
 
@@ -25,6 +25,10 @@ public class CarrotController : MonoBehaviour {
         }
 
         StartCoroutine(SpawnCarrots(5));
+        }
+        else
+        {
+            Debug.Log(gm.currentMode);
         }
 	}
 	

@@ -12721,7 +12721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acf2595a02131a1468b33670970d4fbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentMode: 0
+  currentMode: 1
   startHealth: 0
   startCarrots: 0
   scoreToWin: 15
