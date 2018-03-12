@@ -15,6 +15,7 @@ public class Lance : MonoBehaviour
     private int playerNumber;
     private Aim aim;
     private GameMode gm;
+    private AudioSource clash;
 
     public float hitboxDuration = 0.4f;
     public float coolDown = 1f;
@@ -30,6 +31,7 @@ public class Lance : MonoBehaviour
         playerNumber = GetComponentInParent<PlayerControls>().playerNum;
         aim = GetComponentInParent<PlayerControls>().GetComponentInChildren<Aim>();
         gm = FindObjectOfType<GameMode>();
+        clash = GetComponentInParent<AudioSource>();
     }
 
     void Update()
@@ -77,6 +79,7 @@ public class Lance : MonoBehaviour
         {
             GetComponentInParent<PlayerMovement>().AddVelocity(reboundDir);
             col.enabled = false;
+            clash.Play();
         }
         else if (collidedObject.GetComponent<PlayerMovement>() != null)
         {

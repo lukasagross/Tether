@@ -6,10 +6,12 @@ public class Carrot : MonoBehaviour {
 
     private Score sc;
     private int ignore;
+    private AudioSource collect;
 
     void Start()
     {
         sc = FindObjectOfType<Score>();
+        collect = GetComponent<AudioSource>();
     }
 	
     void OnCollisionEnter2D(Collision2D col)
@@ -17,7 +19,9 @@ public class Carrot : MonoBehaviour {
         if(col.gameObject.GetComponent<PlayerControls>() != null && col.gameObject.GetComponent<PlayerControls>().playerNum != ignore)
         {
             sc.AddScore(col.gameObject.GetComponent<PlayerControls>().playerNum, 1);
-            Destroy(gameObject);
+            GetComponent<Collider2D>().enabled = false;
+            GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
+            StartCoroutine(PlayThenDie());
         }
     }
 
@@ -34,5 +38,12 @@ public class Carrot : MonoBehaviour {
         GetComponent<Collider2D>().enabled = true;
         yield return new WaitForSeconds(1f);
         ignore = 0;
+    }
+
+    private IEnumerator PlayThenDie()
+    {
+        collect.Play();
+        yield return new WaitForSeconds(0.5f);
+        Destroy(gameObject);
     }
 }

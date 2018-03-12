@@ -8,12 +8,14 @@ public class Portal : MonoBehaviour {
     private PlayerControls plc;
     private Portal[] portals;
     private List<PlayerControls> playersToIgnore = new List<PlayerControls>();
+    private AudioSource audio;
 
 
 
 	// Use this for initialization
 	void Start () {
         portals = FindObjectsOfType<Portal>();
+        audio = GetComponent<AudioSource>();
 
         if(portals[0].gameObject == gameObject)
         {
@@ -23,11 +25,6 @@ public class Portal : MonoBehaviour {
         {
             otherPortal = portals[0];
         }
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 
     void OnTriggerEnter2D(Collider2D col)
@@ -41,6 +38,7 @@ public class Portal : MonoBehaviour {
             col.gameObject.transform.position = otherPortal.GetComponent<Transform>().position;
             StartCoroutine(otherPortal.ReEnable(plc));
             grp.ToggleGrapple(false);
+            audio.Play();
         }
     }
 

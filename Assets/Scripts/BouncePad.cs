@@ -6,10 +6,11 @@ public class BouncePad : MonoBehaviour {
 
     private PlayerMovement plm;
     private Carrot c;
+    private AudioSource bounce;
 
 	// Use this for initialization
 	void Start () {
-		
+        bounce = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -23,6 +24,7 @@ public class BouncePad : MonoBehaviour {
         if (plm != null)
         {
             plm.SetVelocity(new Vector2(col.gameObject.GetComponent<Rigidbody2D>().velocity.x, 11));
+            bounce.Play();
         }
 
         c = col.gameObject.GetComponent<Carrot>();

@@ -13,6 +13,7 @@ public class PlayerHealth : MonoBehaviour {
     private GameMode gm;
     private Score sc;
     private float startTime;
+    private AudioSource hurt;
 
     //Should be set in unity editor
     public float iFrameDuration;
@@ -26,6 +27,7 @@ public class PlayerHealth : MonoBehaviour {
         hittable = true;
         animator = GetComponentInChildren<Animator>();
         playerNum = GetComponent<PlayerControls>().playerNum;
+        hurt = GetComponent<AudioSource>();
 
         if(iFrameDuration == 0)
         {
@@ -49,6 +51,7 @@ public class PlayerHealth : MonoBehaviour {
     }
     public void takeDamage()
     {
+        hurt.Play();
         StartCoroutine(flash());
         StartCoroutine(rumble());
 

@@ -13,6 +13,7 @@ public class WallBouncer : MonoBehaviour {
     private Aim aim;
     private Score score;
     private GameMode gm;
+    private AudioSource clash;
 
     public float hitboxDuration = 0.2f;
     public float coolDown = 0.6f;
@@ -29,6 +30,7 @@ public class WallBouncer : MonoBehaviour {
         playerNumber = GetComponentInParent<PlayerControls>().playerNum;
         aim = GetComponentInParent<PlayerControls>().GetComponentInChildren<Aim>();
         gm = FindObjectOfType<GameMode>();
+        clash = GetComponentInParent<AudioSource>();
     }
 	
 	void Update () {
@@ -74,6 +76,7 @@ public class WallBouncer : MonoBehaviour {
         {
             GetComponentInParent<PlayerMovement>().SetVelocity(reboundDir);
             col.enabled = false;
+            clash.Play();
         }
         else if(collidedObject.GetComponent<PlayerMovement>() != null)
         {
