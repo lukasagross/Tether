@@ -16,6 +16,7 @@ public class Score : MonoBehaviour {
     private Text playerFourText;
     private RectTransform rt;
     private int scoreToWin;
+    private GameMode gm;
 
 	void Start () {
         playerOneText = transform.GetChild(0).GetComponent<Text>();
@@ -23,8 +24,26 @@ public class Score : MonoBehaviour {
         playerThreeText = transform.GetChild(2).GetComponent<Text>();
         playerFourText = transform.GetChild(3).GetComponent<Text>();
         rt = GetComponent<RectTransform>();
-        playerOneText.text = "00";
-        playerTwoText.text = "00";
+
+        gm = FindObjectOfType<GameMode>();
+        if(gm.currentMode == GameMode.Mode.carrots)
+        {
+            transform.GetChild(4).gameObject.SetActive(true);
+            transform.GetChild(5).gameObject.SetActive(false);
+            transform.GetChild(6).gameObject.SetActive(false);
+        }
+        if (gm.currentMode == GameMode.Mode.hits)
+        {
+            transform.GetChild(4).gameObject.SetActive(false);
+            transform.GetChild(5).gameObject.SetActive(true);
+            transform.GetChild(6).gameObject.SetActive(false);
+        }
+        if (gm.currentMode == GameMode.Mode.health)
+        {
+            transform.GetChild(4).gameObject.SetActive(false);
+            transform.GetChild(5).gameObject.SetActive(false);
+            transform.GetChild(6).gameObject.SetActive(true);
+        }
     }
 
     void Awake()
@@ -55,7 +74,7 @@ public class Score : MonoBehaviour {
                     playerOneScore += score;
                     playerOneScore = (playerOneScore < 0 ? 0 : playerOneScore);
                     var text = playerOneScore.ToString();
-                    if (playerOneScore < 10) text = "0" + text;
+                    if (playerOneScore < 10) text = ":0" + text;
                     playerOneText.text = text;
                     if (playerOneScore >= scoreToWin) Win("Player One");
                     break;
@@ -66,7 +85,7 @@ public class Score : MonoBehaviour {
                     playerTwoScore += score;
                     playerTwoScore = (playerTwoScore < 0 ? 0 : playerTwoScore);
                     var text = playerTwoScore.ToString();
-                    if (playerTwoScore < 10) text = "0" + text;
+                    if (playerTwoScore < 10) text = ":0" + text;
                     playerTwoText.text = text;
                     if (playerTwoScore >= scoreToWin) Win("Player Two");
                     break;
@@ -77,7 +96,7 @@ public class Score : MonoBehaviour {
                     playerThreeScore += score;
                     playerThreeScore = (playerThreeScore < 0 ? 0 : playerThreeScore);
                     var text = playerThreeScore.ToString();
-                    if (playerThreeScore < 10) text = "0" + text;
+                    if (playerThreeScore < 10) text = ":0" + text;
                     playerThreeText.text = text;
                     if (playerThreeScore >= scoreToWin) Win("Player Three");
                     break;
@@ -88,7 +107,7 @@ public class Score : MonoBehaviour {
                     playerFourScore += score;
                     playerFourScore = (playerFourScore < 0 ? 0 : playerFourScore);
                     var text = playerFourScore.ToString();
-                    if (playerFourScore < 10) text = "0" + text;
+                    if (playerFourScore < 10) text = ":0" + text;
                     playerFourText.text = text;
                     if (playerFourScore >= scoreToWin) Win("Player Four");
                     break;
