@@ -53,7 +53,7 @@ public class GameMode : MonoBehaviour {
             {
                 if (player.playerNum != -1)
                 {
-                    sc.Win("Player " + player.playerNum);
+                    sc.Win(player.playerNum);
                 }
             }
         }

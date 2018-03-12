@@ -73,9 +73,11 @@ public class Score : MonoBehaviour {
         StartCoroutine(changeRes());
     }
 
-    public void Win(string playernum)
+    public void Win(int playernum)
     {
-        PlayerPrefs.SetString("Winner", playernum);
+        int currentmap = PlayerPrefs.GetInt("CurrentMap");
+        int nummaps = PlayerPrefs.GetInt("NumMaps");
+        PlayerPrefs.SetInt("winner" + currentmap, playernum);
         PlayerPrefs.Save();
         Time.timeScale = 0;
         System.Threading.Thread.Sleep(1000);
@@ -83,6 +85,19 @@ public class Score : MonoBehaviour {
         GamePad.SetVibration(PlayerIndex.Two, 0f, 0f);
         GamePad.SetVibration(PlayerIndex.Three, 0f, 0f);
         GamePad.SetVibration(PlayerIndex.Four, 0f, 0f);
+
+        if (nummaps > currentmap)
+        {
+            string[] mapnames = new string[4];
+            mapnames[0] = "UnderwaterMap";
+            mapnames[1] = "FleshCaves";
+            mapnames[2] = "WarpedMap";
+            mapnames[3] = "ForestCave";
+
+            PlayerPrefs.SetInt("CurrentMap", currentmap + 1);
+            SceneManager.LoadScene(mapnames[PlayerPrefs.GetInt("map" + (currentmap + 1))]);
+            return;
+        }
         SceneManager.LoadScene("GameOver");
     }
 	
@@ -105,7 +120,7 @@ public class Score : MonoBehaviour {
                     }
 
                     playerOneText.text = text;
-                    if (playerOneScore >= scoreToWin) Win("Player One");
+                    if (playerOneScore >= scoreToWin) Win(1);
                     break;
                 }
 
@@ -123,7 +138,7 @@ public class Score : MonoBehaviour {
                         text = ":" + text;
                     }
                     playerTwoText.text = text;
-                    if (playerTwoScore >= scoreToWin) Win("Player Two");
+                    if (playerTwoScore >= scoreToWin) Win(2);
                     break;
                 }
 
@@ -141,7 +156,7 @@ public class Score : MonoBehaviour {
                         text = ":" + text;
                     }
                     playerThreeText.text = text;
-                    if (playerThreeScore >= scoreToWin) Win("Player Three");
+                    if (playerThreeScore >= scoreToWin) Win(3);
                     break;
                 }
 
@@ -159,7 +174,7 @@ public class Score : MonoBehaviour {
                         text = ":" + text;
                     }
                     playerFourText.text = text;
-                    if (playerFourScore >= scoreToWin) Win("Player Four");
+                    if (playerFourScore >= scoreToWin) Win(4);
                     break;
                 }
         }

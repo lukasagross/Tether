@@ -24,6 +24,8 @@ public class ColorTimer : MonoBehaviour {
     }
 	
 	void Update () {
+        HandleEarlyFinish();
+
         delta += Time.deltaTime;
         if (delta >= 1f)
         {
@@ -55,29 +57,7 @@ public class ColorTimer : MonoBehaviour {
 
         if (time == 1 && delta > 0.8f)
         {
-            PlayerPrefs.SetInt("color1", color1.isSelected ? color1.currentHex : 0);
-            PlayerPrefs.SetInt("color2", color2.isSelected ? color2.currentHex : 0);
-            PlayerPrefs.SetInt("color3", color3.isSelected ? color3.currentHex : 0);
-            PlayerPrefs.SetInt("color4", color4.isSelected ? color4.currentHex : 0);
-
-            PlayerPrefs.SetInt("CurrentMap", 1);
-            PlayerPrefs.SetInt("NumMaps", 1);
-
-            if (color1.isSelected)
-                PlayerPrefs.SetInt("CurrentPlayer", 1);
-            else if (color2.isSelected)
-                PlayerPrefs.SetInt("CurrentPlayer", 2);
-            else if (color3.isSelected)
-                PlayerPrefs.SetInt("CurrentPlayer", 3);
-            else if (color4.isSelected)
-                PlayerPrefs.SetInt("CurrentPlayer", 4);
-            else
-            {
-                SceneManager.LoadScene("Select");
-                return;
-            }
-
-            SceneManager.LoadScene("Settings");
+            HandleStart();
         }
     }
 
@@ -108,5 +88,40 @@ public class ColorTimer : MonoBehaviour {
 
             yield return null;
         }
+    }
+
+    private void HandleEarlyFinish()
+    {
+        if (color1.isSelected && color2.isSelected && color3.isSelected && color4.isSelected)
+        {
+            HandleStart();
+        }
+    }
+
+    private void HandleStart()
+    {
+        PlayerPrefs.SetInt("color1", color1.isSelected ? color1.currentHex : 0);
+        PlayerPrefs.SetInt("color2", color2.isSelected ? color2.currentHex : 0);
+        PlayerPrefs.SetInt("color3", color3.isSelected ? color3.currentHex : 0);
+        PlayerPrefs.SetInt("color4", color4.isSelected ? color4.currentHex : 0);
+
+        PlayerPrefs.SetInt("CurrentMap", 1);
+        PlayerPrefs.SetInt("NumMaps", 1);
+
+        if (color1.isSelected)
+            PlayerPrefs.SetInt("CurrentPlayer", 1);
+        else if (color2.isSelected)
+            PlayerPrefs.SetInt("CurrentPlayer", 2);
+        else if (color3.isSelected)
+            PlayerPrefs.SetInt("CurrentPlayer", 3);
+        else if (color4.isSelected)
+            PlayerPrefs.SetInt("CurrentPlayer", 4);
+        else
+        {
+            SceneManager.LoadScene("Select");
+            return;
+        }
+
+        SceneManager.LoadScene("Settings");
     }
 }
