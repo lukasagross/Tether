@@ -20,6 +20,7 @@ public class ModeSelector : MonoBehaviour
     private int numModes = 3;
     private float moveDistance = 4000f;
 
+    public PlayerControls player;
     public float scrollTime;
 
     void Start()
@@ -45,6 +46,9 @@ public class ModeSelector : MonoBehaviour
 
         ModeRT.position = new Vector2(moveDistance, ModeRT.position.y);
         ModeTextRT.position = new Vector2(moveDistance, ModeTextRT.position.y);
+
+        player.playerNum = PlayerPrefs.GetInt("CurrentPlayer");
+        player.controller = (XboxCtrlrInput.XboxController)player.playerNum;
     }
 
     void Update()
@@ -71,17 +75,17 @@ public class ModeSelector : MonoBehaviour
 
     private void HandleInput()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (player.getHorizontalAxis() > 0 || Input.GetKeyDown(KeyCode.RightArrow))
         {
             selected = Mathf.Min(selected + 1, numModes - 1);
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (player.getHorizontalAxis() < 0 || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             selected = Mathf.Max(selected - 1, 0);
         }
 
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (player.getJumpAxis() || Input.GetKeyDown(KeyCode.Return))
         {
             HandleSelect();
         }
