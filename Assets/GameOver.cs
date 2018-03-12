@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour {
+
+    private PlayerControls plc;
+    
 
     public GameObject Round1;
     public GameObject Round2;
@@ -88,6 +92,8 @@ public class GameOver : MonoBehaviour {
         PlayerPrefs.SetInt("color2", 0);
         PlayerPrefs.SetInt("color3", 0);
         PlayerPrefs.SetInt("color4", 0);
+
+        plc = GetComponent<PlayerControls>();
     }
 
     private void HandleRound1()
@@ -128,6 +134,9 @@ public class GameOver : MonoBehaviour {
 
 
     void Update () {
-		
-	}
+        if (plc.getReset())
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+    }
 }
