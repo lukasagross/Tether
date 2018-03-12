@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wall
   - InfoText
+  - SubText
   layers:
   - Default
   - TransparentFX
