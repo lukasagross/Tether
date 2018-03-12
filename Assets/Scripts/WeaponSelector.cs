@@ -104,6 +104,8 @@ public class WeaponSelector : MonoBehaviour {
         IEnumerator moveWeaponText = MoveRectTo(WeaponTextRT, WeaponTextRT.position.x, RT.position.x, scrollTime);
         StartCoroutine(moveWeapon);
         StartCoroutine(moveWeaponText);
+
+        GameObject.FindGameObjectWithTag("SubText").GetComponent<UnityEngine.UI.Text>().text = "Choose A Weapon";
     }
 
     IEnumerator MoveRectTo(RectTransform rect, float oldx, float newx, float time)

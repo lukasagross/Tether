@@ -125,6 +125,8 @@ public class ModeSelector : MonoBehaviour
         IEnumerator moveModeText = MoveRectTo(ModeTextRT, ModeTextRT.position.x, RT.position.x, scrollTime);
         StartCoroutine(moveMode);
         StartCoroutine(moveModeText);
+
+        GameObject.FindGameObjectWithTag("SubText").GetComponent<Text>().text = "Choose A Mode";
     }
 
     IEnumerator MoveRectTo(RectTransform rect, float oldx, float newx, float time)
