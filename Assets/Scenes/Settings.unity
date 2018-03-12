@@ -1560,7 +1560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d426749b2167fce4793ab5a6c2e1f4f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1202436424}
   modeselector: {fileID: 962086619}
   scrollTime: 0.75
 --- !u!82 &1202436423
