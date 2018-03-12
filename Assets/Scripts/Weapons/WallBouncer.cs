@@ -12,6 +12,7 @@ public class WallBouncer : MonoBehaviour {
     private int playerNumber;
     private Aim aim;
     private Score score;
+    private GameMode gm;
 
     public float hitboxDuration = 0.2f;
     public float coolDown = 0.6f;
@@ -27,6 +28,7 @@ public class WallBouncer : MonoBehaviour {
         score = FindObjectOfType<Score>();
         playerNumber = GetComponentInParent<PlayerControls>().playerNum;
         aim = GetComponentInParent<PlayerControls>().GetComponentInChildren<Aim>();
+        gm = FindObjectOfType<GameMode>();
     }
 	
 	void Update () {
@@ -82,7 +84,10 @@ public class WallBouncer : MonoBehaviour {
             if (collidedObject.GetComponent<PlayerHealth>().canDamage())
             {
                 collidedObject.GetComponent<PlayerHealth>().takeDamage();
-                score.AddScore(playerNumber, 1);
+                if (gm.currentMode == GameMode.Mode.hits)
+                {
+                    score.AddScore(playerNumber, 1);
+                }
                 col.enabled = false;
             }
         }else if (collidedObject.GetComponent<Obstacle>())

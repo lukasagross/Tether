@@ -15,6 +15,7 @@ public class Dagger : MonoBehaviour
     private PlayerControls player;
     private Vector2 dashDir;
     private Score score;
+    private GameMode gm;
 
     public float hitboxDuration = 0.6f;
     public float coolDown = 1.6f;
@@ -31,6 +32,7 @@ public class Dagger : MonoBehaviour
         playerNumber = GetComponentInParent<PlayerControls>().playerNum;
         aim = GetComponentInParent<PlayerControls>().GetComponentInChildren<Aim>();
         player = GetComponentInParent<PlayerControls>();
+        gm = FindObjectOfType<GameMode>();
     }
 
     void Update()
@@ -136,7 +138,10 @@ public class Dagger : MonoBehaviour
             if (collidedObject.GetComponent<PlayerHealth>().canDamage())
             {
                 collidedObject.GetComponent<PlayerHealth>().takeDamage();
-                score.AddScore(playerNumber, 1);
+                if (gm.currentMode == GameMode.Mode.hits)
+                {
+                    score.AddScore(playerNumber, 1);
+                }
                 col.enabled = false;
             }
         }

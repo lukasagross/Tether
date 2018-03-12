@@ -14,6 +14,7 @@ public class Lance : MonoBehaviour
     private Score score;
     private int playerNumber;
     private Aim aim;
+    private GameMode gm;
 
     public float hitboxDuration = 0.4f;
     public float coolDown = 1f;
@@ -28,6 +29,7 @@ public class Lance : MonoBehaviour
         score = FindObjectOfType<Score>();
         playerNumber = GetComponentInParent<PlayerControls>().playerNum;
         aim = GetComponentInParent<PlayerControls>().GetComponentInChildren<Aim>();
+        gm = FindObjectOfType<GameMode>();
     }
 
     void Update()
@@ -85,7 +87,10 @@ public class Lance : MonoBehaviour
             if (collidedObject.GetComponent<PlayerHealth>().canDamage())
             {
                 collidedObject.GetComponent<PlayerHealth>().takeDamage();
-                score.AddScore(playerNumber, 1);
+                if(gm.currentMode == GameMode.Mode.hits)
+                {
+                    score.AddScore(playerNumber, 1);
+                }
                 col.enabled = false;
             }
         }

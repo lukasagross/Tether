@@ -15,6 +15,7 @@ public class Score : MonoBehaviour {
     private Text playerThreeText;
     private Text playerFourText;
     private RectTransform rt;
+    private int scoreToWin;
 
 	void Start () {
         playerOneText = transform.GetChild(0).GetComponent<Text>();
@@ -28,10 +29,11 @@ public class Score : MonoBehaviour {
 
     void Awake()
     {
+        scoreToWin = FindObjectOfType<GameMode>().scoreToWin;
         StartCoroutine(changeRes());
     }
 
-    private void Win(string playernum)
+    public void Win(string playernum)
     {
         PlayerPrefs.SetString("Winner", playernum);
         PlayerPrefs.Save();
@@ -51,43 +53,63 @@ public class Score : MonoBehaviour {
             case 1:
                 {
                     playerOneScore += score;
+                    playerOneScore = (playerOneScore < 0 ? 0 : playerOneScore);
                     var text = playerOneScore.ToString();
                     if (playerOneScore < 10) text = "0" + text;
                     playerOneText.text = text;
-                    if (playerOneScore >= 15) Win("Player One");
+                    if (playerOneScore >= scoreToWin) Win("Player One");
                     break;
                 }
 
             case 2:
                 {
                     playerTwoScore += score;
+                    playerTwoScore = (playerTwoScore < 0 ? 0 : playerTwoScore);
                     var text = playerTwoScore.ToString();
                     if (playerTwoScore < 10) text = "0" + text;
                     playerTwoText.text = text;
-                    if (playerTwoScore >= 15) Win("Player Two");
+                    if (playerTwoScore >= scoreToWin) Win("Player Two");
                     break;
                 }
 
             case 3:
                 {
                     playerThreeScore += score;
+                    playerThreeScore = (playerThreeScore < 0 ? 0 : playerThreeScore);
                     var text = playerThreeScore.ToString();
                     if (playerThreeScore < 10) text = "0" + text;
                     playerThreeText.text = text;
-                    if (playerThreeScore >= 15) Win("Player Three");
+                    if (playerThreeScore >= scoreToWin) Win("Player Three");
                     break;
                 }
 
             case 4:
                 {
                     playerFourScore += score;
+                    playerFourScore = (playerFourScore < 0 ? 0 : playerFourScore);
                     var text = playerFourScore.ToString();
                     if (playerFourScore < 10) text = "0" + text;
                     playerFourText.text = text;
-                    if (playerFourScore >= 15) Win("Player Four");
+                    if (playerFourScore >= scoreToWin) Win("Player Four");
                     break;
                 }
         }
+    }
+
+    public int GetScore(int playerNum)
+    {
+        switch (playerNum)
+        {
+            case 1:
+                return playerOneScore;
+            case 2:
+                return playerTwoScore;
+            case 3:
+                return playerThreeScore;
+            case 4:
+                return playerFourScore;
+        }
+        return -1;
     }
 
     private IEnumerator changeRes()
