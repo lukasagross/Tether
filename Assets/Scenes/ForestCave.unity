@@ -8912,7 +8912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acf2595a02131a1468b33670970d4fbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentMode: 2
+  currentMode: 0
   startHealth: 0
   startCarrots: 3
   scoreToWin: 15
@@ -12340,7 +12340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0615577249667ec4987ab38f7a188cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNum: 0
+  playerNum: -1
   controller: 0
 --- !u!1 &2116934523
 GameObject:
