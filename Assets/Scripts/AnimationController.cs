@@ -23,6 +23,9 @@ public class AnimationController : MonoBehaviour {
             transform.parent.gameObject.SetActive(false);
             return;
         }
+
+        if (IsTutorial)
+            index = Random.Range(1, 6);
         animators[1] = "Yellow";
         animators[2] = "Green";
         animators[3] = "Blue";
