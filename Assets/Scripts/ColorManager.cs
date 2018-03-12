@@ -178,12 +178,14 @@ public class ColorManager : MonoBehaviour {
     public void RestrictColor(int color)
     {
         taken.Add(color);
-        hexes[color].GetComponent<Image>().color = Color.white;
+        if (!isSelected)
+            hexes[color].GetComponent<Image>().color = Color.white;
     }
 
     public void UnrestrictColor(int color)
     {
         taken.Remove(color);
-        hexes[color].GetComponent<Image>().color = colors[color];
+        if (!isSelected)
+            hexes[color].GetComponent<Image>().color = colors[color];
     }
 }
