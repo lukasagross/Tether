@@ -15,6 +15,7 @@ public class MainMenu : MonoBehaviour {
     private Text[] texts;
     private int selected = 0;
     private Color c;
+    private float delay = 0f;
 
     void Start()
     {
@@ -45,15 +46,6 @@ public class MainMenu : MonoBehaviour {
 
     private void HandleInput()
     {
-        if (player.getVerticalAxis() > 0 || Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            selected = Mathf.Max(0, selected - 1);
-        }
-
-        if (player.getVerticalAxis() < 0 || Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            selected = Mathf.Min(2, selected + 1);
-        }
 
         if (player.getJumpAxis() || Input.GetKeyDown(KeyCode.Return))
         {
@@ -75,6 +67,24 @@ public class MainMenu : MonoBehaviour {
                         break;
                     }
             }
+        }
+
+        delay += Time.deltaTime;
+
+        if (delay < 0.2f)
+        {
+            return;
+        }
+        delay = 0f;
+
+        if (player.getVerticalAxis() > 0 || Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            selected = Mathf.Max(0, selected - 1);
+        }
+
+        if (player.getVerticalAxis() < 0 || Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            selected = Mathf.Min(2, selected + 1);
         }
     }
 

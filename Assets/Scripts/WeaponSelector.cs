@@ -16,6 +16,7 @@ public class WeaponSelector : MonoBehaviour {
     private int selected = 0;
     private int numWeapons = 4;
     private float moveDistance = 4000f;
+    private float delay = 0f;
 
     public PlayerControls player;
     public ModeSelector modeselector;
@@ -70,6 +71,19 @@ public class WeaponSelector : MonoBehaviour {
 
     private void HandleInput()
     {
+        if (player.getJumpAxis() || Input.GetKeyDown(KeyCode.Return))
+        {
+            HandleSelect();
+        }
+
+        delay += Time.deltaTime;
+
+        if (delay < 0.2f)
+        {
+            return;
+        }
+        delay = 0f;
+
         if (player.getHorizontalAxis() > 0 || Input.GetKeyDown(KeyCode.RightArrow))
         {
             selected = Mathf.Min(selected + 1, numWeapons - 1);
@@ -78,11 +92,6 @@ public class WeaponSelector : MonoBehaviour {
         if (player.getHorizontalAxis() < 0 || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             selected = Mathf.Max(selected - 1, 0);
-        }
-
-        if (player.getJumpAxis() || Input.GetKeyDown(KeyCode.Return))
-        {
-            HandleSelect();
         }
     }
 
