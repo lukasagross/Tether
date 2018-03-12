@@ -16,6 +16,7 @@ public class Dagger : MonoBehaviour
     private Vector2 dashDir;
     private Score score;
     private GameMode gm;
+    private AudioSource clash;
 
     public float hitboxDuration = 0.6f;
     public float coolDown = 1.6f;
@@ -33,6 +34,7 @@ public class Dagger : MonoBehaviour
         aim = GetComponentInParent<PlayerControls>().GetComponentInChildren<Aim>();
         player = GetComponentInParent<PlayerControls>();
         gm = FindObjectOfType<GameMode>();
+        clash = GetComponentInParent<AudioSource>();
     }
 
     void Update()
@@ -128,6 +130,7 @@ public class Dagger : MonoBehaviour
         {
             GetComponentInParent<PlayerMovement>().SetVelocity(reboundDir);
             col.enabled = false;
+            clash.Play();
         }
         else if (collidedObject.GetComponent<PlayerMovement>() != null)
         {

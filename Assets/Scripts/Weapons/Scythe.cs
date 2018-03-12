@@ -14,6 +14,7 @@ public class Scythe : MonoBehaviour
     private Aim aim;
     private Score score;
     private GameMode gm;
+    private AudioSource clash;
 
     public float hitboxDuration = .25f;
     public float coolDown = .75f;
@@ -30,6 +31,7 @@ public class Scythe : MonoBehaviour
         playerNumber = GetComponentInParent<PlayerControls>().playerNum;
         aim = GetComponentInParent<PlayerControls>().GetComponentInChildren<Aim>();
         gm = FindObjectOfType<GameMode>();
+        clash = GetComponentInParent<AudioSource>();
     }
 
     void Update()
@@ -92,6 +94,7 @@ public class Scythe : MonoBehaviour
         {
             GetComponentInParent<PlayerMovement>().SetVelocity(reboundDir);
             col.enabled = false;
+            clash.Play();
         }
         else if (collidedObject.GetComponent<PlayerMovement>() != null)
         {
