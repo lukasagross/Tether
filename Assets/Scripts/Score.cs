@@ -89,12 +89,14 @@ public class Score : MonoBehaviour {
         int nummaps = PlayerPrefs.GetInt("NumMaps");
         PlayerPrefs.SetInt("winner" + currentmap, playernum);
         PlayerPrefs.Save();
+        float temp = Time.timeScale;
         Time.timeScale = 0;
         System.Threading.Thread.Sleep(1000);
         GamePad.SetVibration(PlayerIndex.One, 0f, 0f);
         GamePad.SetVibration(PlayerIndex.Two, 0f, 0f);
         GamePad.SetVibration(PlayerIndex.Three, 0f, 0f);
         GamePad.SetVibration(PlayerIndex.Four, 0f, 0f);
+        Time.timeScale = temp;
 
         if (nummaps > currentmap)
         {
