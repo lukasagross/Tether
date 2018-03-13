@@ -624,7 +624,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: '
 
-    First to Twenty Hits'
+    First to Fifteen Hits'
 --- !u!222 &562641707
 CanvasRenderer:
   m_ObjectHideFlags: 0
