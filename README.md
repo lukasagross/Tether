@@ -7,16 +7,20 @@ Created in Northwestern's Game Development Studio course
 
 **System Requirements**
 
-Windows x86_64, two-four XBox360 Controllers
+Windows x86_64, 2-4 XBox360 Controllers
 
------Please play on 1280 x 720 resolution-----
+Please play on 1280 x 720 resolution
 
 **Controls**
 
 Left Joystick - Control look direction in-game and menu navigation
+
 A Button - Jump in-game and menu select
+
 Select + Back - Return to main menu (while not selecting maps)
+
 Left Trigger - Grapple in-game
+
 Right Trigger - Weapon in-game
 
 Further information is available in the tutorial level.
